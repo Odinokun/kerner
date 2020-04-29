@@ -1,0 +1,41 @@
+//begin #hero-footer
+.hero-footer{
+  .container {
+    display: flex;
+  }
+}
+
+.hero-footer__item{
+  flex: 1;
+  display: flex;
+  padding-right: 10px;
+}
+.hero-footer__icon{
+  flex: none;
+  width: 52px;
+  img {
+
+  }
+}
+
+.hero-footer__info{
+  padding-left: 20px;
+}
+.hero-footer__title{
+
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  line-height: 24px;
+
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+
+}
+.hero-footer__text{
+  font-size: 14px;
+  line-height: 20px;
+  color: #CCCCCC;
+}
+//end #hero-footer

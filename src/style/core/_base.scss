@@ -12,7 +12,7 @@ body {
 
 html {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.38;
   color: $text;
 }
@@ -74,10 +74,9 @@ h4 {
 }
 
 p {
-  margin: 0 0 16px 0;
-
   font-size: 14px;
   line-height: 24px;
+  margin: 0 0 16px 0;
   strong {
     font-weight: bold;
   }
@@ -124,12 +123,9 @@ button {
 }
 
 input {
-  padding: 3px 10px 5px 10px;
+  padding: 5px 10px 3px 10px;
   color: $text;
   border: 1px solid $text;
-  &::placeholder {
-    @include placeholder-color($text);
-  }
 }
 
 textarea {
@@ -145,6 +141,17 @@ textarea.error {
 svg {
   display: block;
   overflow: visible;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .main-wrap {

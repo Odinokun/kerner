@@ -1,0 +1,68 @@
+//begin hero
+.hero
+  //begin hero__header
+  header.hero__header.hero-header
+    .container
+      //begin hero-header__logo
+      .hero-header__logo
+        .hero-header__logo-img
+          img(src="assets/img/logo-white.svg" alt="kerner")
+        span.hero-header__logo-descr Обрудование для сверления и металлообработки
+      //end hero-header__logo
+
+      //begin hero-header__search
+      form.hero-header__search
+        input(type='search' placeholder='Поиск по сайту...').hero-header__search-input
+        input(type='submit').hero-header__search-submit
+        span.hero-header__search-btn
+          +svg('magnify')
+      //end hero-header__search
+        
+      //begin hero-header__call
+      .hero-header__call
+        a(href="tel:+88124540080").hero-header__call-phone 8 812 454-00-80
+        button.hero-header__call-callback Обратный звонок
+      //end hero-header__call
+  //end hero-header__header
+
+  //begin hero__main
+  section.hero__main.hero-main
+    .container
+      h1.hero-main__title Промышленное оборудование для сверления и металлообработки
+      .hero-main__open
+        span.hero-main__open-burger
+        span.hero-main__open-text Открыть каталог
+  //end hero__main
+
+  //begin hero__footer
+  footer.hero__footer.hero-footer
+    .container
+      //begin hero-footer__item
+      .hero-footer__item
+        .hero-footer__icon
+          img(src="assets/img/icons/hero-01.svg" alt="icon")
+        .hero-footer__info
+          h3.hero-footer__title поставка оборудования<br>и запчастей
+          span.hero-footer__text От 11 ведущих производителей
+      //end hero-footer__item
+
+      //begin hero-footer__item
+      .hero-footer__item
+        .hero-footer__icon
+          img(src="assets/img/icons/hero-02.svg" alt="icon")
+        .hero-footer__info
+          h3.hero-footer__title индивидуальный<br>подход
+          span.hero-footer__text Отгрузка в день оплаты.<br>Гибкая система скидок
+      //end hero-footer__item
+
+      //begin hero-footer__item
+      .hero-footer__item
+        .hero-footer__icon
+          img(src="assets/img/icons/hero-03.svg" alt="icon")
+        .hero-footer__info
+          h3.hero-footer__title доставка<br>товаров
+          span.hero-footer__text Международная и междугородняя<br>в срок до 10 дней
+      //end hero-footer__item
+  //end hero__footer
+
+//end hero
