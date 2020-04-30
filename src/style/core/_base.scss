@@ -37,9 +37,9 @@ h1 {
   font-size: 40px;
   line-height: 50px;
 
-  @include max(768) {
-    //font-size: 26px;
-    //line-height: 32px;
+  @include max(767) {
+    font-size: 26px;
+    line-height: 32px;
   }
 }
 
@@ -47,9 +47,9 @@ h2 {
   font-size: 30px;
   line-height: 40px;
 
-  @include max(768) {
-    //font-size: 21px;
-    //line-height: 26px;
+  @include max(767) {
+    font-size: 21px;
+    line-height: 26px;
   }
 }
 
@@ -57,9 +57,9 @@ h3 {
   font-size: 24px;
   line-height: 32px;
 
-  @include max(768) {
-    //font-size: 20px;
-    //line-height: 27px;
+  @include max(767) {
+    font-size: 20px;
+    line-height: 27px;
   }
 }
 
@@ -67,9 +67,9 @@ h4 {
   font-size: 18px;
   line-height: 30px;
 
-  @include max(768) {
-    //font-size: 18px;
-    //line-height: 24px;
+  @include max(767) {
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
@@ -145,13 +145,13 @@ svg {
 
 .hidden {
   position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  border: 0;
 }
 
 .main-wrap {
@@ -170,4 +170,8 @@ svg {
   max-width: 1230px;
   margin: 0 auto;
   padding: 0 30px;
+
+  @include max(1023) {
+    padding: 0 20px;
+  }
 }

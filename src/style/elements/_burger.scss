@@ -1,45 +1,33 @@
-.burger__menu {
-  font-family: $font, sans-serif;
-  font-size: 22px;
-  position: absolute;
-  top: 4px;
-  left: 50px;
-  letter-spacing: 1px;
-  color: #fafafa;
-}
-
 .burger {
   position: relative;
-  z-index: 25;
-  width: 31px;
-  height: 31px;
+  width: 16px;
+  height: 14px;
 }
 
-.burger input {
+#burger input {
   display: none;
 }
 
 .burger label {
   position: relative;
   display: block;
-  width: 31px;
-  height: 31px;
+  width: 16px;
+  height: 14px;
   cursor: pointer;
   background: transparent;
 }
 
-/* Exit Icon */
+//begin #middle line
 .burger label:before,
 .burger input:checked + label:before {
   position: absolute;
   top: 50%;
-  width: 30px;
+  width: 16px;
   height: 2px;
   margin-top: -1px;
   content: '';
   transition: background-color .5s;
-  border-radius: 2px;
-  background-color: $text;
+  background-color: #fff;
 }
 
 .burger label:before {
@@ -80,13 +68,12 @@
 .burger input:checked + label:after {
   position: absolute;
   top: 50%;
-  width: 30px;
+  width: 16px;
   height: 2px;
   margin-top: -1px;
   content: '';
   transition: background-color .5s;
-  border-radius: 2px;
-  background-color: $text;
+  background-color: #fff;
 }
 
 .burger label:after {
@@ -123,17 +110,18 @@
   }
 }
 
-/* Burger Icon */
+//end #middle line
+
+//begin #top+bottom line
 .burger label .burger__icon:before {
   position: absolute;
-  top: 7px;
-  width: 30px;
+  top: 0;
+  width: 16px;
   height: 2px;
   content: '';
   transition: background-color .5s;
   animation: animationBurgerTopReverse 1s ease forwards;
-  border-radius: 2px;
-  background-color: $text;
+  background-color: #fff;
 }
 
 @keyframes animationBurgerTopReverse {
@@ -174,14 +162,13 @@
 
 .burger label .burger__icon:after {
   position: absolute;
-  bottom: 6px;
-  width: 30px;
+  bottom: 0;
+  width: 16px;
   height: 2px;
   content: '';
   transition: background-color .5s;
   animation: animationBurgerBottomReverse 1s ease forwards;
-  border-radius: 2px;
-  background-color: $text;
+  background-color: #fff;
 }
 
 @keyframes animationBurgerBottomReverse {
@@ -219,3 +206,5 @@
     opacity: 0;
   }
 }
+
+//end #top+bottom line

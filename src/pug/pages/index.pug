@@ -7,13 +7,15 @@ block variables
   - var ogimage     = 'assets/img/social.jpg'
 
 block content
-  .main-wrap
-    //include ../sections/header
+  .main-wrap.index
+    include ../sections/header
+    include ../sections/header-mobile
 
     //begin content
     main.main
       include ../sections/hero
+      include ../sections/under-hero
 
     //end content
 
-    //include ../sections/footer
+    include ../sections/footer

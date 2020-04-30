@@ -1,11 +1,20 @@
 .hero {
-  min-height: 100vh;
-  padding: 110px 0 60px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 100vh;
+  padding: 110px 0 60px 0;
+  background-color: #0b0e10;
   background-image: url('../img/bg-hero.jpg');
   background-repeat: no-repeat;
   background-position: 90% 50%;
   background-size: cover;
+
+  @include max(1150) {
+    padding: 0 0 60px 0;
+  }
+  @include max(480) {
+    padding: 0;
+    background-image: none;
+  }
 }

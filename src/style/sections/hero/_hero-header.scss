@@ -1,5 +1,8 @@
 //begin #hero-header
 .hero-header {
+  @include max(1150) {
+    display: none;
+  }
   .container {
     display: flex;
     align-items: center;
@@ -10,8 +13,8 @@
 .hero-header__logo {
   display: flex;
   align-items: center;
-  margin-right: auto;
   flex: none;
+  margin-right: auto;
 }
 
 .hero-header__logo-img {
@@ -39,10 +42,6 @@
   width: 100%;
   max-width: 270px;
   margin: 0 48px 0 15px;
-  @include max(1160) {
-  margin: 0 15px;
-
-  }
 }
 
 .hero-header__search-input {

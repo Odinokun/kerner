@@ -1,6 +1,21 @@
 //begin #hero-main
 .hero-main {
   padding: 15px 0 25px 0;
+
+  @include max(1150) {
+
+    display: flex;
+    align-items: center;
+    padding: 100px 0 50px 0;
+    flex-grow: 1;
+  }
+  @include max(480) {
+    background-image: url('../img/bg-hero.jpg');
+    background-repeat: no-repeat;
+    background-position: 70% 50%;
+    background-size: cover;
+
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -14,6 +29,11 @@
   max-width: 680px;
   margin-bottom: 30px;
   color: #fff;
+
+  @include max(767) {
+    font-size: 26px;
+    line-height: 32px;
+  }
 }
 
 .hero-main__open {
@@ -25,6 +45,11 @@
   transition: .5s ease-in-out;
   border: 1px solid rgba(255, 255, 255, .3);
   background-color: transparent;
+
+  @include max(480) {
+    justify-content: center;
+    width: 100%;
+  }
   &:hover {
     border-color: $highlight;
     background-color: $highlight;
@@ -32,23 +57,11 @@
 }
 
 .hero-main__open-burger {
-  position: relative;
   width: 16px;
   height: 14px;
   margin-right: 20px;
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  &::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 16px;
-    height: 2px;
-    margin: auto;
-    content: '';
-    background-color: #fff;
+  .burger {
+    pointer-events: none;
   }
 }
 

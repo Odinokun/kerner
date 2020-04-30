@@ -1,8 +1,30 @@
-// begin header
-header.header
+// begin header-mobile
+header.header-mobile#header-mobile
   .container
+    //begin header-mobile__logo
+    a(href="/").header-mobile__logo
+      +svg('logo-mobile')
+    //end header-mobile__logo
+
+
+    //begin header-mobile__search
+    .header-mobile__search#header-mobile__search
+      +svg('magnify')
+    //end header-mobile__search
+
+    //begin header-mobile__call
+    a(href="tel:+88124540080").header-mobile__call
+      +svg('call')
+    //end header-mobile__call
+
+    //begin header-mobile__burger
+    .header-mobile__burger#header-mobile__burger
+      include ../elements/burger
+    //end header-mobile__burger
+
+
     //begin header__menu
-    nav.header__menu.header-menu
+    //nav.header__menu.header-menu
       ul.header-menu__list
         li.header-menu__item
           a(href="#").header-menu__link О компании
@@ -19,7 +41,7 @@ header.header
     //end header__menu
 
     //begin header__social
-    .header__social.header-social
+    //.header__social.header-social
       ul.header-social__list
         .header-social__item
           a(href="" target="_blank" rel="nofollow noopener noreferrer").header-social__link.header-social__link--vk
@@ -36,7 +58,7 @@ header.header
     //end header__social
       
     //begin header__login
-    .header__login.header-login
+    //.header__login.header-login
       ul.header-login__list
         li.header-login__item
           a(href="#").header-login__link
@@ -48,4 +70,4 @@ header.header
             span.header-login__text Регистрация
             //span.header-login__text Выйти
     //end header__login
-// end header
+// end header-mobile

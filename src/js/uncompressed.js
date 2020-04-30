@@ -28,3 +28,22 @@ function pageWidget(pages) {
 
 
 //====== Begin Programmer code ======
+//background top menu
+$(function() {
+  $(window).scroll(function() {
+    var topToDocument = window.pageYOffset || document.documentElement.scrollTop;
+    var menu = document.getElementById('header-mobile');
+    if (topToDocument <= 20) {
+      $(menu).removeClass('colored');
+    } else {
+      $(menu).addClass('colored');
+    }
+  });
+  var topToDocument = window.pageYOffset || document.documentElement.scrollTop;
+  var menu = document.getElementById('header');
+  if (topToDocument <= 20) {
+    $(menu).removeClass('colored');
+  } else {
+    $(menu).addClass('colored');
+  }
+});
