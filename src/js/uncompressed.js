@@ -31,19 +31,29 @@ function pageWidget(pages) {
 //background top menu
 $(function() {
   $(window).scroll(function() {
-    var topToDocument = window.pageYOffset || document.documentElement.scrollTop;
-    var menu = document.getElementById('header-mobile');
+    let topToDocument = window.pageYOffset || document.documentElement.scrollTop;
+    let menu = document.getElementById('header-mobile');
     if (topToDocument <= 20) {
       $(menu).removeClass('colored');
     } else {
       $(menu).addClass('colored');
     }
   });
-  var topToDocument = window.pageYOffset || document.documentElement.scrollTop;
-  var menu = document.getElementById('header');
+  let topToDocument = window.pageYOffset || document.documentElement.scrollTop;
+  let menu = document.getElementById('header');
   if (topToDocument <= 20) {
     $(menu).removeClass('colored');
   } else {
     $(menu).addClass('colored');
   }
+});
+
+
+// index blocks visible/hidden
+$('.visible-767').on('click', function (e) {
+  e.preventDefault();
+  let clickParent = $(this).parents('.hidden-767--parent');
+
+  $(clickParent).find('.hidden-767').slideToggle();
+  $(clickParent).find('.visible-767__open, .visible-767__close').fadeToggle(0);
 });

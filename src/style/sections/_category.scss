@@ -43,9 +43,6 @@
   }
   @include max(767) {
     width: 100%;
-    &:nth-child(n + 6) {
-      display: none;
-    }
   }
 }
 
@@ -120,9 +117,6 @@
   border: 1px solid #0cbcf1;
   background-color: transparent;
 
-  @include max(767) {
-    display: flex;
-  }
   &:hover {
     color: #fff;
     background-color: #0cbcf1;

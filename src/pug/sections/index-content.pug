@@ -1,3 +1,91 @@
+mixin index-about__products-item(text, className)
+  li(class='index-about__products-item ' + className + '')
+    a(href="#").index-about__products-link #{text}
+
+mixin index-about__partners-item(pic)
+  li.index-about__partners-item
+    a(href="#").index-about__partners-link
+      img(src="assets/img/brands/" + pic + ".png" alt="logo")
+
 //begin index-content
 .index__content.index-content
+  //begin index-content__header
+  header.index-content__header
+    h2.index-content__title О нас
+  //end index-content__header
+
+  //begin index-content__about
+  .index-content__about.index-about
+    //begin index-about__item
+    .index-about__item.hidden-767--parent
+      h3.index-about__title Поставка промышленного оборудования и расходных материалов
+      p.index-about__text Продажа промышленного оборудования — это то, на чем специализируется компания Kerner. Мы работаем в сфере промышленного оборудования для металлообработки с 2000 года, помогая российским и зарубежным компаниям. <span class='hidden-767'>Наши клиенты — все, кто использует в своей работе металлоконструкции: заводы по обработке листового металла, судостроители и судоремонтники, мостостроители, специалисты добывающей промышленности, строители и монтажники.</span>
+      p.index-about__text.hidden-767 Компания Kerner накопила опыт, благодаря которому успешно выполняет поставки промышленного оборудования для сверления и сопутствующих расходных материалов — сверл, фрез, борфрез, держателей, переходников, ленточных пил.
+      a(href="#").index-about__text-btn.visible-767
+        span.visible-767__open Читать далее
+        span.visible-767__close Скрыть
+    //end index-about__item
+
+    //begin index-about__item
+    .index-about__item.hidden-767--parent
+      h3.index-about__title Наша продукция
+      ul.index-about__products-list
+        +index-about__products-item('Магнитные сверлильные станки', '')
+        +index-about__products-item('Корончатые сверла по металлу', '')
+        +index-about__products-item('Аксессуары к сверлильным станкам на магните', '')
+        +index-about__products-item('Бензогайковерты, комплектующие и запчасти', '')
+        +index-about__products-item('Борфрезы', 'hidden-767')
+        +index-about__products-item('Отрезные диски', 'hidden-767')
+        +index-about__products-item('Отрезные пилы', 'hidden-767')
+        +index-about__products-item('Рельсорезные станки и комплектующие', 'hidden-767')
+        +index-about__products-item('Станки для снятия фаски', 'hidden-767')
+        +index-about__products-item('Услуги', 'hidden-767')
+      p.index-about__text Мы первые и единственные, кто предлагает российскому рынку продажу промышленного оборудования компаний Rotabroach и Vessel.
+
+      a(href="#").index-about__all.visible-767.open
+        span.visible-767__open Смотреть все категории
+        span.visible-767__close Скрыть категории
+    //end index-about__item
+
+    //begin index-about__item
+    .index-about__item
+      h3.index-about__title Наши партнеры
+      ul.index-about__partners-list
+        +index-about__partners-item('bohre')
+        +index-about__partners-item('vessel')
+        +index-about__partners-item('euroboor')
+        +index-about__partners-item('unibor')
+    //end index-about__item
+
+    //begin index-about__item
+    .index-about__item.hidden-767--parent
+      h3.index-about__title Продажа промышленного оборудования
+      ul.index-about__custom-lines-list
+        li.index-about__custom-lines-item
+          span Передовая техника и качественные расходные материалы.
+          span Каждый поставляемый в Россию экземпляр техники и все комплектующие протестированы специалистами Kerner.
+        li.index-about__custom-lines-item
+          span Широкая линейка промышленного оборудования для металлообработки и сверления.
+          span Чтобы предложить нашим клиентам большой выбор, мы заключаем долгосрочные контракты с производителями. Это позволяет иметь весь спектр моделей промышленного оборудования для сверления и металлообработки. Например, в нашем каталоге представлено 11 сверлильных станков на магнитном основании и более 10 видов аксессуаров, спиральных и кольцевых сверл от компании Rotabroach.
+        li.index-about__custom-lines-item.hidden-767
+          span Сервисный подход в работе с каждым проектом.
+          span Мы предлагаем нашим клиентам не только продажу промышленного оборудования по выгодным ценам, но и доставку заказа в любой город России и мира. Это особенно актуально, когда компании с распределенной структурой требуется оперативно купить оборудование для удаленных работ. С помощью калькулятора предлагаем вам самостоятельно рассчитать стоимость и срок, за который произойдет поставка промышленного оборудования в требуемую локацию.
+        li.index-about__custom-lines-item.hidden-767
+          span Быстрый заказ промышленного оборудования для металлообработки и сверления.
+          span Не только у нас в офисе, но и удаленно онлайн вы можете оформить заказ на интересующее вас оборудование и расходные материалы.
+
+      a(href="#").index-about__sale-btn.visible-767
+        span.visible-767__open Читать далее
+        span.visible-767__close Скрыть
+
+      p.index-about__text Купить понравившийся товар просто — достаточно связаться с одним из наших специалистов любым удобным для вас способом:
+
+      ul.index-about__custom-dots-list
+        li позвонить по телефону;
+        li заказать обратный звонок на сайте;
+        li оставить онлайн-заявку на доставку;
+        li подъехать на склад и купить товар самостоятельно.
+      p.index-about__text Компания Kerner отвечает международному уровню качества менеджмента: все оборудование, представленное в <a href="#">каталоге</a>, соответствует европейским стандартам качества ISO 9001:2008 и ISO 14001:2007.
+    //end index-about__item
+  //end index-content__about
 //end index-content

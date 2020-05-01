@@ -143,17 +143,6 @@ svg {
   overflow: visible;
 }
 
-.hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-}
-
 .main-wrap {
   display: flex;
   flex-direction: column;
@@ -173,5 +162,25 @@ svg {
 
   @include max(1023) {
     padding: 0 20px;
+  }
+}
+
+.hidden-767--parent {
+  .hidden-767 {
+    @include max(767) {
+      display: none;
+    }
+  }
+
+  .visible-767 {
+    display: none;
+
+    @include max(767) {
+      display: flex;
+    }
+  }
+
+  .visible-767__close {
+    display: none;
   }
 }
