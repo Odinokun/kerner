@@ -34,6 +34,7 @@
   line-height: 40px;
   margin-bottom: 28px;
   color: #272425;
+
   @include max(767) {
     font-size: 21px;
     line-height: 26px;
@@ -43,6 +44,7 @@
     margin-top: 30px;
   }
 }
+
 .index-about__item {
   padding: 20px 0 5px 0;
 }
@@ -53,6 +55,7 @@
   line-height: 24px;
   margin-bottom: 20px;
   color: #272425;
+
   @include max(767) {
     font-size: 16px;
     line-height: 22px;
@@ -77,9 +80,9 @@
     }
   }
 }
+
 .index-about__text-btn {
   text-decoration: none;
-
 }
 
 .index-about__products-list {
@@ -94,7 +97,7 @@
   margin-bottom: 14px;
   padding: 6px 12px;
   list-style: none;
-  transition: border-color.5s, background-color.5s;
+  transition: border-color .5s, background-color .5s;
   border: 1px solid #e5e5e5;
   &:hover {
     border-color: $highlight;
@@ -154,6 +157,7 @@
   list-style: none;
   border-right: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
+
   @include max(480) {
     width: 100%;
   }
@@ -195,16 +199,17 @@
   max-width: 750px;
   margin: 0 0 30px 0;
   padding: 0 0 0 36px;
-  @include max(767) {
-  margin: 0 ;
 
+  @include max(767) {
+    margin: 0;
   }
 }
-.index-about__sale-btn{
-  text-decoration: none;
-  margin-bottom: 20px;
+
+.index-about__sale-btn {
   display: block;
+  margin-bottom: 20px;
   padding-left: 36px;
+  text-decoration: none;
 }
 
 .index-about__custom-lines-item {
@@ -254,8 +259,7 @@
   }
 }
 
-
-.index-about-hidden{
+.index-about-hidden {
   @include max(480) {
     display: none;
   }
