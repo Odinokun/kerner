@@ -1,0 +1,31 @@
+.brands-line {
+  @include max(480) {
+    display: none;
+  }
+  .container {
+    max-width: 1260px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.brands-line__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.brands-line__item {
+  width: 25%;
+  list-style: none;
+}
+
+.brands-line__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
