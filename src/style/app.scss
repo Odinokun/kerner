@@ -9,22 +9,26 @@
 //@import 'elements/pagination';
 //@import 'elements/popup';
 //@import 'elements/slickBase';
-// @import 'elements/stickyHeader';
+//@import 'elements/stickyHeader';
 
-//section
+//main section
 @import 'sections/footer';
 @import 'sections/header';
 @import 'sections/header-mobile';
 
+//hero section
 @import 'sections/hero/hero';
 @import 'sections/hero/hero-header';
 @import 'sections/hero/hero-main';
 @import 'sections/hero/hero-footer';
 
+//index-page section
 @import 'sections/under-hero';
 @import 'sections/category';
 @import 'sections/help-line';
 @import 'sections/brands-line';
+@import 'sections/index-aside';
+@import 'sections/index-content';
 
 //pages
 @import 'pages/index';
