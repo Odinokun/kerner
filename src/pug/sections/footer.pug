@@ -1,4 +1,27 @@
 //begin footer
-footer.footer(style='background-color:#167;color:#fff;text-align:center;text-transform:uppercase;')
-  h1 footer
+.footer
+  .container
+    //begin footer__info
+    .footer__info
+      span.footer__copyright 2017 — 2020 © Компания «Kerner»
+      span.footer__text Оборудование для сверления и металлообработки
+      span.footer__text Политика компании в отношении обработки персональных данных
+    //end footer__info
+
+    //begin footer__calls
+    .footer__calls
+      a(href="tel:+88124540080").footer__phone 8 812 454-00-80
+      a(href="#").footer__callback Обратный звонок
+    //end footer__calls
+
+    //begin footer__mails
+    .footer__mails
+      .footer__mails-left
+        span.footer__mails-text.footer__mails-text--bold Есть вопросы?
+        span.footer__mails-text Напишите нам!
+        a(href="mailto:info@kerner.ru").footer__mails-link info@kerner.ru
+      .footer__mails-right
+        a(href="#").footer__mails-callback
+          +svg('call')
+    //end footer__mails
 //end footer
