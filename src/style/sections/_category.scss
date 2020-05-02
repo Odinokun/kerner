@@ -1,0 +1,124 @@
+.catergory__header {
+  padding: 40px 0 30px 0;
+}
+
+.category__title {
+  font-size: 30px;
+  line-height: 40px;
+  margin: 0;
+  text-align: center;
+  color: #272425;
+
+  @include max(767) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+.category__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 0 60px 0;
+  padding: 0;
+  border-top: 1px solid #f4f4f4;
+  border-left: 1px solid #f4f4f4;
+
+  @include max(767) {
+    max-width: 450px;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-left: auto;
+  }
+}
+
+.category__item {
+  width: 33.33%;
+  list-style: none;
+  border-right: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+
+  @include max(1023) {
+    width: 50%;
+  }
+  @include max(767) {
+    width: 100%;
+  }
+}
+
+.category__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 17px 20px 17px 20px;
+  text-decoration: none;
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+  &::before {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+    content: '';
+    transition: opacity .5s;
+    pointer-events: none;
+    opacity: 0;
+    border: 2px solid $highlight;
+    background-color: transparent;
+  }
+}
+
+.category__icon {
+  flex: none;
+  margin-right: 20px;
+  svg {
+    fill: #0499c5;
+    width: 80px;
+    height: 80px;
+
+    @include max(767) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.category__name {
+  font-size: 16px;
+  line-height: 24px;
+  color: #253a5a;
+
+  @include max(767) {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+.category__all {
+  font-size: 14px;
+  line-height: 14px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  height: 48px;
+  margin: 0 auto 30px auto;
+  padding: 10px 20px;
+  transition: .5s;
+  text-align: center;
+  text-decoration: none;
+  color: #009bc9;
+  border: 1px solid #0cbcf1;
+  background-color: transparent;
+
+  &:hover {
+    color: #fff;
+    background-color: #0cbcf1;
+  }
+}

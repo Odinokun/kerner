@@ -8,10 +8,21 @@ block variables
 
 block content
   .main-wrap.index
-    //include ../sections/header
+    include ../sections/header
+    include ../sections/header-mobile
 
     //begin content
     main.main
+      include ../sections/hero
+      include ../sections/under-hero
+      include ../sections/category
+      include ../sections/help-line
+      include ../sections/brands-line
+      .index__content-wrap
+        .container
+          include ../sections/index-aside
+          include ../sections/index-content
+      include ../sections/footer-top
     //end content
 
     include ../sections/footer

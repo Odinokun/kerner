@@ -1,0 +1,109 @@
+.under-hero {
+  background-color: $highlight-hov;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+
+    @include max(767) {
+      flex-direction: column;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.under-hero__shield {
+  position: relative;
+
+  @include max(767) {
+    margin-bottom: 10px;
+  }
+  svg {
+    fill: #fff;
+    width: 40px;
+    height: 42px;
+    opacity: .5;
+  }
+}
+
+.under-hero__shield-rub {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 17px;
+  height: 22px;
+  margin: auto;
+  svg {
+    fill: #fff;
+    width: 17px;
+    height: 22px;
+    opacity: 1;
+  }
+}
+
+.under-hero__title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  margin-right: 30px;
+  margin-left: 30px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #fff;
+
+  @include max(1023) {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  @include max(767) {
+    margin: 0 0 5px 0;
+  }
+}
+
+.under-hero__text {
+  font-size: 14px;
+  line-height: 20px;
+  display: inline-block;
+  color: #fff;
+
+  @include max(767) {
+    margin-bottom: 15px;
+  }
+}
+
+.under-hero__btn {
+  font-size: 14px;
+  line-height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 174px;
+  height: 40px;
+  margin-left: 60px;
+  padding: 0 15px;
+  transition: .5s ease-in-out;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .3);
+
+  @include max(1023) {
+    margin-left: 20px;
+  }
+  @include max(767) {
+    margin-left: 0;
+  }
+  @include max(480) {
+    min-width: 280px;
+  }
+  &:hover {
+    color: $highlight-hov;
+    border-color: #fff;
+    background-color: #fff;
+  }
+}

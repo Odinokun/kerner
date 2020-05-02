@@ -1,0 +1,31 @@
+mixin category__item(icon, title, className)
+  li(class="category__item " + className)
+    a(href="#").category__link
+      .category__icon
+        img(src="assets/img/icons/category-" + icon + ".svg" alt="icon")
+      span.category__name #{title}
+
+
+//begin category
+.category.hidden-767--parent
+  .container
+    header.catergory__header
+      h2.category__title Категории товаров
+
+    ul.category__list
+      +category__item('01', 'Магнитные сверлильные станки', '')
+      +category__item('02', 'Корончатые сверла по металлу', '')
+      +category__item('03', 'Аксессуары к сверлильным станкам на магните', '')
+      +category__item('04', 'Бензогайковерты, комплектующие и запчасти', '')
+      +category__item('05', 'Борфрезы', 'hidden-767')
+      +category__item('06', 'Отрезные диски', 'hidden-767')
+      +category__item('07', 'Отрезные пилы', 'hidden-767')
+      +category__item('08', 'Рельсорезные станки и комплектующие', 'hidden-767')
+      +category__item('09', 'Рельсосверлильные станки и комплектующие', 'hidden-767')
+      +category__item('10', 'Станки для снятия фаски', 'hidden-767')
+      +category__item('11', 'Услуги', 'hidden-767')
+
+    a(href="#").category__all.visible-767.open
+      span.visible-767__open Смотреть все категории
+      span.visible-767__close Скрыть категории
+//end category

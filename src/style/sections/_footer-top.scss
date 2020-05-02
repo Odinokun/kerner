@@ -1,0 +1,37 @@
+.footer-top {
+  background-color: #f2f2f2;
+
+  @include max(767) {
+    display: none;
+  }
+  .container {
+    padding-top: 40px;
+    padding-bottom: 26px;
+  }
+}
+
+.footer-top__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-top__item {
+  width: 33.33%;
+  margin-bottom: 14px;
+  padding-right: 10px;
+  list-style: none;
+
+  @include max(1023) {
+    width: 50%;
+  }
+}
+
+.footer-top__link {
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: none;
+  letter-spacing: .02em;
+  color: #0f385a;
+}

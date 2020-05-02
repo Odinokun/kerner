@@ -12,7 +12,7 @@ body {
 
 html {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.38;
   color: $text;
 }
@@ -37,9 +37,9 @@ h1 {
   font-size: 40px;
   line-height: 50px;
 
-  @include max(768) {
-    //font-size: 26px;
-    //line-height: 32px;
+  @include max(767) {
+    font-size: 26px;
+    line-height: 32px;
   }
 }
 
@@ -47,9 +47,9 @@ h2 {
   font-size: 30px;
   line-height: 40px;
 
-  @include max(768) {
-    //font-size: 21px;
-    //line-height: 26px;
+  @include max(767) {
+    font-size: 21px;
+    line-height: 26px;
   }
 }
 
@@ -57,9 +57,9 @@ h3 {
   font-size: 24px;
   line-height: 32px;
 
-  @include max(768) {
-    //font-size: 20px;
-    //line-height: 27px;
+  @include max(767) {
+    font-size: 20px;
+    line-height: 27px;
   }
 }
 
@@ -67,17 +67,16 @@ h4 {
   font-size: 18px;
   line-height: 30px;
 
-  @include max(768) {
-    //font-size: 18px;
-    //line-height: 24px;
+  @include max(767) {
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
 p {
-  margin: 0 0 16px 0;
-
   font-size: 14px;
   line-height: 24px;
+  margin: 0 0 16px 0;
   strong {
     font-weight: bold;
   }
@@ -124,12 +123,9 @@ button {
 }
 
 input {
-  padding: 3px 10px 5px 10px;
+  padding: 5px 10px 3px 10px;
   color: $text;
   border: 1px solid $text;
-  &::placeholder {
-    @include placeholder-color($text);
-  }
 }
 
 textarea {
@@ -163,4 +159,28 @@ svg {
   max-width: 1230px;
   margin: 0 auto;
   padding: 0 30px;
+
+  @include max(1023) {
+    padding: 0 20px;
+  }
+}
+
+.hidden-767--parent {
+  .hidden-767 {
+    @include max(767) {
+      display: none;
+    }
+  }
+
+  .visible-767 {
+    display: none;
+
+    @include max(767) {
+      display: flex;
+    }
+  }
+
+  .visible-767__close {
+    display: none;
+  }
 }

@@ -1,0 +1,79 @@
+.help-line {
+  background-color: $brand;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1055px;
+    min-height: 97px;
+    background-image: url('../img/bg-help-line.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 30px) 50%;
+    background-size: 119px 125px;
+
+    @include max(1023) {
+      flex-direction: column;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-position: calc(50% + 170px) calc(100% - 30px);
+      background-size: 73px 77px;
+
+      @include max(480) {
+        align-items: flex-start;
+        max-width: 350px;
+        background-position: calc(100% - 20px) calc(100% - 30px);
+      }
+    }
+  }
+}
+
+.help-line__text {
+  font-size: 18px;
+  line-height: 24px;
+  display: inline-block;
+  color: #fff;
+
+  @include max(1023) {
+    margin-bottom: 20px;
+  }
+  @include max(767) {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+.help-line__phone {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  display: block;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+
+  @include max(1023) {
+    margin-bottom: 20px;
+  }
+  @include max(767) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  @include max(480) {
+    margin: 0 0 30px 0;
+  }
+}
+
+.help-line__btn {
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 150px;
+  height: 33px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 17px;
+  background-color: $highlight;
+}

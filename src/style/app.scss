@@ -4,16 +4,32 @@
 @import 'core/base';
 
 //elements
+@import 'elements/burger';
 //@import 'elements/breadcrumbs';
-//@import 'elements/burger';
 //@import 'elements/pagination';
 //@import 'elements/popup';
 //@import 'elements/slickBase';
-// @import 'elements/stickyHeader';
+//@import 'elements/stickyHeader';
 
-//section
-@import 'sections/footer';
+//main section
 @import 'sections/header';
+@import 'sections/header-mobile';
+@import 'sections/footer';
+@import 'sections/footer-top';
+
+//hero section
+@import 'sections/hero/hero';
+@import 'sections/hero/hero-header';
+@import 'sections/hero/hero-main';
+@import 'sections/hero/hero-footer';
+
+//index-page section
+@import 'sections/under-hero';
+@import 'sections/category';
+@import 'sections/help-line';
+@import 'sections/brands-line';
+@import 'sections/index-aside';
+@import 'sections/index-content';
 
 //pages
 @import 'pages/index';

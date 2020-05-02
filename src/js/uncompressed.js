@@ -5,8 +5,7 @@
 
 $(document).ready(function ($) {
   pageWidget([
-    'index',
-    'inner'
+    'index'
     ]);
 });
 
@@ -29,3 +28,22 @@ function pageWidget(pages) {
 
 
 //====== Begin Programmer code ======
+//background top menu
+$(function() {
+  $(window).scroll(function() {
+    let topToDocument = window.pageYOffset || document.documentElement.scrollTop;
+    let menu = document.getElementById('header-mobile');
+    if (topToDocument <= 20) {
+      $(menu).removeClass('colored');
+    } else {
+      $(menu).addClass('colored');
+    }
+  });
+  let topToDocument = window.pageYOffset || document.documentElement.scrollTop;
+  let menu = document.getElementById('header');
+  if (topToDocument <= 20) {
+    $(menu).removeClass('colored');
+  } else {
+    $(menu).addClass('colored');
+  }
+});

@@ -1,0 +1,132 @@
+//begin #hero-header
+.hero-header {
+  @include max(1150) {
+    display: none;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+//begin #hero-header__logo
+.hero-header__logo {
+  display: flex;
+  align-items: center;
+  flex: none;
+  margin-right: auto;
+}
+
+.hero-header__logo-img {
+  flex: none;
+  margin-right: 29px;
+  img {
+    width: 180px;
+    height: 53px;
+  }
+}
+
+.hero-header__logo-descr {
+  font-size: 14px;
+  line-height: 20px;
+  display: inline-block;
+  max-width: 188px;
+  color: rgba(255, 255, 255, .7);
+}
+
+//end #hero-header__logo
+
+//begin #hero-header__search
+.hero-header__search {
+  position: relative;
+  width: 100%;
+  max-width: 270px;
+  margin: 0 48px 0 15px;
+}
+
+.hero-header__search-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 39px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 20px !important;
+  background-color: transparent;
+
+  @include placeholder-color(#fff);
+}
+
+.hero-header__search-submit {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  margin: auto;
+  opacity: 0;
+  border-radius: 50% !important;
+}
+
+.hero-header__search-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  width: 18px;
+  height: 18px;
+  margin: auto;
+  cursor: pointer;
+  &:hover {
+    svg {
+      fill: $highlight;
+    }
+  }
+  svg {
+    fill: #979ea0;
+    width: 18px;
+    height: 19px;
+    transition: fill .5s;
+  }
+}
+
+//end #hero-header__search
+
+//begin #hero-header__call
+.hero-header__call {
+  display: flex;
+  align-items: center;
+}
+
+.hero-header__call-phone {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  margin-right: 20px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+}
+
+.hero-header__call-callback {
+  font-size: 14px;
+  line-height: 1;
+  display: block;
+  flex: none;
+  min-width: 150px;
+  height: 33px;
+  padding: 0 5px;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+  color: #fff;
+  border: none;
+  border-radius: 17px !important;
+  background-color: $highlight;
+  box-shadow: none;
+  &:hover {
+    background-color: $highlight-hov;
+  }
+}
+
+//end #hero-header__call
+//end #hero-header
