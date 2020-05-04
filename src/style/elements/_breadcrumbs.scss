@@ -8,27 +8,53 @@
 .breadcrumbs__item {
   position: relative;
   list-style: none;
-  &::after {
-    font-size: 12px;
-    margin: 0 3px 0 4px;
-    content: '/';
-  }
   &:last-child {
     .breadcrumbs__link {
-      text-decoration: none;
+      margin-right: 0;
       pointer-events: none;
-    }
-    &::after {
-      display: none;
+      color: #979ea0;
+      &::after {
+        display: none;
+      }
     }
   }
 }
 
 .breadcrumbs__link {
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 1;
+  position: relative;
+  display: block;
+  margin-right: 35px;
   white-space: nowrap;
-  color: #403549;
+  text-decoration: none;
+  color: #253a5a;
   &:hover {
-    text-decoration: none;
+    color: #253a5a;
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    margin: auto;
+    content: '';
+    transition: width .5s;
+    background-color: #979ea0;
+  }
+  &::after {
+    position: absolute;
+    right: -25px;
+    bottom: 7px;
+    width: 15px;
+    height: 1px;
+    content: '';
+    background-color: $brand;
   }
 }

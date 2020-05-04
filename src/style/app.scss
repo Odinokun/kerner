@@ -5,17 +5,21 @@
 
 //elements
 @import 'elements/burger';
-//@import 'elements/breadcrumbs';
+@import 'elements/social';
+@import 'elements/breadcrumbs';
+@import 'elements/slickBase';
 //@import 'elements/pagination';
 //@import 'elements/popup';
-//@import 'elements/slickBase';
-//@import 'elements/stickyHeader';
 
 //main section
 @import 'sections/header';
 @import 'sections/header-mobile';
+@import 'sections/under-header';
+@import 'sections/info-line';
 @import 'sections/footer';
 @import 'sections/footer-top';
+@import 'sections/pages-aside';
+@import 'sections/pages-header';
 
 //hero section
 @import 'sections/hero/hero';
@@ -33,3 +37,4 @@
 
 //pages
 @import 'pages/index';
+@import 'pages/about';

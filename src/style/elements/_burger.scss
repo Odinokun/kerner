@@ -18,6 +18,7 @@
 }
 
 //begin #middle line
+
 .burger label:before,
 .burger input:checked + label:before {
   position: absolute;
@@ -27,7 +28,7 @@
   margin-top: -1px;
   content: '';
   transition: background-color .5s;
-  background-color: #fff;
+  background-color: $brand;
 }
 
 .burger label:before {
@@ -73,7 +74,7 @@
   margin-top: -1px;
   content: '';
   transition: background-color .5s;
-  background-color: #fff;
+  background-color: $brand;
 }
 
 .burger label:after {
@@ -121,7 +122,7 @@
   content: '';
   transition: background-color .5s;
   animation: animationBurgerTopReverse 1s ease forwards;
-  background-color: #fff;
+  background-color: $brand;
 }
 
 @keyframes animationBurgerTopReverse {
@@ -168,7 +169,7 @@
   content: '';
   transition: background-color .5s;
   animation: animationBurgerBottomReverse 1s ease forwards;
-  background-color: #fff;
+  background-color: $brand;
 }
 
 @keyframes animationBurgerBottomReverse {
@@ -208,3 +209,24 @@
 }
 
 //end #top+bottom line
+
+//begin #colors
+.index,
+.info-line__catalog-btn {
+  .burger label:before,
+  .burger input:checked + label:before {
+    background-color: #fff;
+  }
+  .burger label:after,
+  .burger input:checked + label:after {
+    background-color: #fff;
+  }
+  .burger label .burger__icon:before {
+    background-color: #fff;
+  }
+  .burger label .burger__icon:after {
+    background-color: #fff;
+  }
+}
+
+//end #colors

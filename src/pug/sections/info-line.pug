@@ -1,0 +1,42 @@
+//begin info-line
+#info-line__wrap
+  .info-line#info-line
+    .container
+      //begin info-line__logo
+      .info-line__logo
+        +svg('logo-mobile')
+      //end info-line__logo
+
+      //begin info-line__catalog-btn
+      .info-line__catalog-btn
+        include ../elements/burger
+        span.info-line__catalog-btn-text Каталог
+      //end info-line__catalog-btn
+
+      //begin info-line__search
+      form.info-line__search
+        input(type='search' placeholder='Поиск по сайту...').info-line__search-input
+        input(type='submit').info-line__search-submit
+        span.info-line__search-btn
+          +svg('magnify')
+      //end info-line__search
+
+      //begin info-line__compare
+      .info-line__compare
+        a(href="#").info-line__compare-text Сравнение товаров
+        span.info-line__compare-num 9+
+      //end info-line__compare
+
+      //begin info-line__basket
+      a(href="#").info-line__basket
+        .info-line__basket-icon
+          +svg('basket')
+        .info-line__basket-info
+          .info-line__basket-quantity
+            span.info-line__basket-quantity-text Товаров:
+            span.info-line__basket-quantity-num 2
+          .info-line__basket-money
+            span.info-line__basket-money-num 2 182
+            span.info-line__basket-money-rub ₽
+      //end info-line__basket
+//end info-line
