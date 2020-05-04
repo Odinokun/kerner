@@ -151,6 +151,7 @@ svg {
 
 .main {
   flex-grow: 1;
+  padding-top: 50px;
 }
 
 .container {
@@ -183,4 +184,13 @@ svg {
   .visible-767__close {
     display: none;
   }
+}
+
+.fixed {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
 }

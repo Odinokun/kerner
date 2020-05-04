@@ -1,0 +1,107 @@
+//begin #under-header
+.under-header {
+  @include max(1150) {
+    display: none;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 28px;
+  }
+}
+
+//begin #under-header__logo
+.under-header__logo {
+  display: flex;
+  align-items: center;
+  flex: none;
+}
+
+.under-header__logo-img {
+  flex: none;
+  margin-right: 29px;
+  img {
+    width: 180px;
+    height: 53px;
+  }
+}
+
+.under-header__logo-descr {
+  font-size: 14px;
+  line-height: 20px;
+  display: inline-block;
+  max-width: 188px;
+  color: #979ea0;
+}
+
+//end #under-header__logo
+
+//begin #under-header__price
+.under-header__price {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  &:hover {
+    .under-header__price-text {
+      color: $highlight;
+    }
+  }
+  svg {
+    flex: none;
+    fill: $highlight;
+    width: 18px;
+    height: 22px;
+    margin-right: 15px;
+  }
+}
+
+.under-header__price-text {
+  font-size: 14px;
+  line-height: 20px;
+  transition: color .5s;
+  white-space: nowrap;
+  color: #272425;
+}
+
+//end #under-header__price
+
+//begin #under-header__call
+.under-header__call {
+  display: flex;
+  align-items: center;
+}
+
+.under-header__call-phone {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  margin-right: 20px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #272425;
+}
+
+.under-header__call-callback {
+  font-size: 14px;
+  line-height: 1;
+  display: block;
+  flex: none;
+  min-width: 150px;
+  height: 33px;
+  padding: 0 5px;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+  color: #fff;
+  border: none;
+  border-radius: 17px !important;
+  background-color: $highlight;
+  box-shadow: none;
+  &:hover {
+    background-color: $highlight-hov;
+  }
+}
+
+//end #under-header__call
+//end #under-header

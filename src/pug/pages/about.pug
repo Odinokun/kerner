@@ -1,0 +1,132 @@
+extends ../_template
+
+block variables
+  - var title           = 'About | Kerner'
+  - var description     = 'About | Kerner'
+  - var ogtitle         = 'About | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'О компании'
+
+block content
+  .main-wrap.about
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+        
+      //begin about__content-wrap
+      .about__content-wrap
+        .container
+          include ../sections/pages-aside
+
+          //begin about-content
+          .about__content.about-content
+            include ../sections/pages-header
+              
+            .about-content__img
+              img(src="assets/img/about-img.jpg" alt="picture")
+
+            ul.about-content__custom-lines-list
+              li.about-content__custom-lines-item
+                span Kerner успешно развивается в своем сегменте на территории России и стран СНГ и видит широкие возможности для дальнейшего развития в различных направлениях, связанных с промышленным оборудованием.
+
+            //begin about-content__article
+            .about-content__article.about-article
+              h2.about-article__title Структура бизнеса <span>Kerner</span>
+              .about-article__row
+                .about-article__item.about-article__item--33
+                  h3.about-article__subtitle Продажа
+                  span.about-article__text Основная сфера деятельности компании — продажа оборудования и расходных материалов отечественных и иностранных производителей: Rotabroach (Англия), BDS (Германия), «Вектор» (Белоруссия), Vessel (Япония), Bohre (Россия) и др
+                .about-article__item.about-article__item--33
+                  h3.about-article__subtitle Логистика
+                  span.about-article__text Дополнительно компания предоставляет услуги по хранению и доставке оборудования. Хранение осуществляется на собственных складских помещениях в Санкт-Петербурге. Транспортировка груза — на собственном автотранспорте в пределах Санкт-Петербурга (бесплатная доставка) и через логистические компании по всему миру.
+                .about-article__item.about-article__item--33
+                  h3.about-article__subtitle Сервис
+                  span.about-article__text Специалисты компании осуществляют гарантийный и платный ремонт, а также заточку режущего инструмента, а именно корончатых сверл. Мы диагностируем и ремонтируем инструмент, приобретенный в Kerner или других компаниях.
+            //end about-content__article
+
+            //begin about-content__article
+            .about-content__article.about-article
+              h2.about-article__title Преимущества <span>Kerner</span>
+              .about-article__row
+                .about-article__item.about-article__item--33
+                  h3.about-article__subtitle Низкие цены
+                  span.about-article__text Прямые поставки от производителей обеспечивают более привлекательную цену на оборудование и запасные части: пневматические магнитные сверлильные станки Raven (МСС-52П) и Eagle (МСС-52ПИ), пневматические гайковерты Vessel (более 40 наименований) и др.
+                .about-article__item.about-article__item--33
+                  h3.about-article__subtitle Широкий ассортиментный ряд
+                  span.about-article__text В каталоге компании более 45 моделей магнитных сверлильных станков, 14 моделей шлифовальных машин, 13 моделей заточных станков, 47 моделей пневматических гайковертов, 48 моделей электрогенераторов и др.
+                .about-article__item.about-article__item--33
+                  h3.about-article__subtitle Индивидуальный подход к каждому клиенту
+                  span.about-article__text Удобные условия и сроки доставки: бесплатная доставка по Санкт-Петербургу в день заказа, доставка груза за границу — до 10 дней. Гибкая система предоставления скидок.
+
+              .about-article__row
+                .about-article__item
+                  h3.about-article__subtitle Опыт реализации крупных российских проектов
+                  span.about-article__text Среди клиентов — ведущие предприятия России, Казахстана, Белоруссии, Узбекистана, Литвы, Латвии, Эстонии: «Сибур», «Северсталь», «Севмаш», НИИ мостов, НПО им. С. А. Лавочкина, «Восточно-Сибирский ЗМК», «Стройметалконструкция», «Кузнецкие металлоконструкции», «Краснодарский завод металлоконструкций» и др.
+            //end about-content__article
+
+            //begin about-content__article
+            .about-content__article.about-article
+              h2.about-article__title Задача <span>Kerner</span>
+              .about-article__row
+                .about-article__item
+                  span.about-article__text Комплексное обеспечение предприятий качественным иностранным и российским оборудованием по металлообработке за короткие сроки.
+            //end about-content__article
+
+
+            //begin about-content__slider
+            .about-content__slider.about-slider
+              h2.about-slider__title Команда <span>Kerner</span>
+
+              //begin about-slider__list
+              ul.about-slider__list#about-slider__list
+                li.about-slider__item
+                  .about-slider__img
+                    img(src="assets/img/about-team-01.jpg" alt="picture")
+                  .about-slider__info
+                    h4.about-slider__name Ольховик Никита
+                    span.about-slider__position Генеральный директор
+                    span.about-slider__phone Тел. 8 (800) 333-05-20 доб. 220
+                    a(href="mailto:olhovik@kerner.ru").about-slider__mail olhovik@kerner.ru
+
+                li.about-slider__item
+                  .about-slider__img
+                    img(src="assets/img/about-team-02.jpg" alt="picture")
+                  .about-slider__info
+                    h4.about-slider__name Таймасов Николай
+                    span.about-slider__position Коммерческий директор
+                    span.about-slider__phone Тел. 8 (800) 333-05-20 доб. 210
+                    span.about-slider__phone Моб. +7 911 104 17 10
+                    a(href="mailto:olhovik@kerner.ru").about-slider__mail olhovik@kerner.ru
+
+                li.about-slider__item
+                  .about-slider__img
+                    img(src="assets/img/about-team-03.jpg" alt="picture")
+                  .about-slider__info
+                    h4.about-slider__name Ермакова Наталья
+                    span.about-slider__position Помощник генерального директора
+                    span.about-slider__phone Тел. 8 (800) 333-05-20 доб. 210
+                    span.about-slider__phone Моб. +7 911 104 17 10
+                    a(href="mailto:olhovik@kerner.ru").about-slider__mail olhovik@kerner.ru
+
+                li.about-slider__item
+                  .about-slider__img
+                    img(src="assets/img/about-team-04.jpg" alt="picture")
+                  .about-slider__info
+                    h4.about-slider__name Князев Вячеслав
+                    span.about-slider__position Менеджер по продажам
+                    span.about-slider__phone Тел. 8 (800) 333-05-20 доб. 225
+                    span.about-slider__phone Моб. +7 (911) 711-89-51
+                    a(href="mailto:knyazev@kerner.ru").about-slider__mail knyazev@kerner.ru
+
+              //end about-slider__list
+            //end about-content__slider
+          //end about-content
+      //end about__content-wrap
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer

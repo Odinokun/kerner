@@ -1,0 +1,281 @@
+.about__content-wrap {
+  padding-top: 40px;
+  padding-bottom: 30px;
+
+  @include max(767) {
+    padding-top: 0;
+  }
+  .container {
+    display: flex;
+
+    @include max(767) {
+      flex-direction: column;
+    }
+  }
+}
+
+.about__content {
+  width: calc(100% - 300px);
+
+  @include max(1023) {
+    width: calc(100% - 280px);
+  }
+  @include max(767) {
+    width: 100%;
+  }
+}
+
+.about-content__img {
+  margin-bottom: 40px;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.about-content__custom-lines-list {
+  margin-bottom: 25px;
+}
+
+.about-content__custom-lines-item {
+  position: relative;
+  display: block;
+  margin-bottom: 5px;
+  list-style: none;
+  &::before {
+    position: absolute;
+    top: 15px;
+    left: -36px;
+    width: 20px;
+    height: 2px;
+    content: '';
+    background-color: $highlight;
+
+    @include max(767) {
+      top: 7px;
+    }
+  }
+  span {
+    font-size: 18px;
+    line-height: 30px;
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #272425;
+
+    @include max(767) {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+}
+
+.about-article {
+  margin-bottom: 20px;
+}
+
+.about-article__title {
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 40px;
+  margin-bottom: 20px;
+  color: #272425;
+
+  @include max(767) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+  span {
+    display: inline-block;
+    color: $highlight;
+  }
+}
+
+.about-article__row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-article__item {
+  margin-bottom: 20px;
+}
+
+.about-article__item--33 {
+  width: 30.5%;
+
+  @include max(1023) {
+    width: 100%;
+  }
+}
+
+.about-article__subtitle {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+  margin-bottom: 11px;
+  color: #979ea0;
+
+  @include max(767) {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+.about-article__text {
+  font-size: 14px;
+  line-height: 24px;
+  color: #272425;
+}
+
+.about-slider__title {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 32px;
+  margin-bottom: 25px;
+  color: #272425;
+
+  @include max(767) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+  span {
+    display: inline-block;
+    color: $highlight;
+  }
+}
+
+.about-slider__list {
+  width: calc(100% + 30px);
+  margin: 0;
+  margin-left: -15px;
+  padding: 0;
+  &.slick-slider {
+    margin-bottom: 85px;
+  }
+  .slick-track {
+    display: flex;
+  }
+  .prev,
+  .next {
+    position: absolute;
+    z-index: 1;
+    top: 135px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: .5s;
+    background-color: $highlight;
+    &:hover {
+      background-color: $highlight-hov;
+    }
+  }
+  .prev {
+    left: -3px;
+  }
+  .next {
+    right: -3px;
+  }
+  .slick-dots {
+    bottom: -53px;
+    li {
+      width: 10px;
+      height: 10px;
+      transition: .5s;
+      opacity: .3;
+      border: 1px solid $highlight;
+      border-radius: 50%;
+      background-color: transparent;
+      &.slick-active {
+        opacity: 1;
+        background-color: $highlight;
+      }
+    }
+  }
+}
+
+.about-slider__item {
+  position: relative;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  padding: 30px 45px;
+
+  @include max(1023) {
+    padding: 30px 35px;
+  }
+  @include max(480) {
+    padding: 30px 45px;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 30px);
+    height: 100%;
+    margin: auto;
+    content: '';
+    pointer-events: none;
+    border: 1px solid #e5e5e5;
+  }
+}
+
+.about-slider__img {
+  overflow: hidden;
+  width: 140px;
+  height: 140px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.about-slider__info {
+  display: flex;
+  flex-direction: column;
+
+  flex-grow: 1;
+}
+
+.about-slider__name {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+  margin-bottom: 5px;
+  color: #272425;
+}
+
+.about-slider__position {
+  font-size: 14px;
+  line-height: 16px;
+  display: block;
+  min-height: 35px;
+  margin-bottom: 15px;
+  color: #979ea0;
+}
+
+.about-slider__phone {
+  font-size: 14px;
+  line-height: 1;
+  display: block;
+  margin-bottom: 10px;
+  color: #272425;
+}
+
+.about-slider__mail {
+  font-size: 14px;
+  line-height: 1;
+  transition: color .5s;
+  text-decoration: none;
+  color: #253a5a;
+  &:hover {
+    color: $highlight;
+  }
+}

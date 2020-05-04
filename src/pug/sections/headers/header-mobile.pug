@@ -2,8 +2,13 @@
 header.header-mobile#header-mobile
   .container
     //begin header-mobile__logo
-    a(href="/").header-mobile__logo
+    a(href="/").header-mobile__logo.header-mobile__logo--index
       +svg('logo-mobile')
+    //end header-mobile__logo
+
+    //begin header-mobile__logo
+    a(href="/").header-mobile__logo.header-mobile__logo--pages
+      include ../../../img/logo-mobile-color.svg
     //end header-mobile__logo
 
 
@@ -19,7 +24,7 @@ header.header-mobile#header-mobile
 
     //begin header-mobile__burger
     .header-mobile__burger#header-mobile__burger
-      include ../elements/burger
+      include ../../elements/burger
     //end header-mobile__burger
 
 

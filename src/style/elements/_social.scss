@@ -1,0 +1,51 @@
+//begin #header-social
+
+.index {
+  .header-social--index {
+    display: block;
+  }
+  .header-social--pages {
+    display: none;
+  }
+  .header-social__link {
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.header-social--index {
+  display: none;
+}
+
+.header-social__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header-social__item {
+  padding: 10px;
+  list-style: none;
+}
+
+.header-social__link {
+  display: block;
+  transition: opacity .5s;
+  &:hover {
+    svg {
+      fill: $highlight;
+      opacity: .7;
+    }
+  }
+  svg {
+    fill: #fff;
+    width: 24px;
+    height: 24px;
+    transition: fill .5s ease-in-out, opacity .5s ease-in-out;
+  }
+}
+
+//end #header-social

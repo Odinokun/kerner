@@ -1,19 +1,20 @@
 .header-mobile {
   position: fixed;
+  //position: relative;
   z-index: 10;
   top: 0;
   right: 0;
   left: 0;
   display: none;
   width: 100%;
-  transition: .5s;
+  transition: .3s;
   border-bottom: 1px solid rgba(255, 255, 255, .1);
   background-color: transparent;
 
   @include max(1150) {
     display: block;
     &.colored {
-      background-color: $brand;
+      background-color: #fff;
     }
   }
   .container {
@@ -24,8 +25,25 @@
 }
 
 //begin #header-mobile__logo
-.header-mobile__logo {
+
+.index {
+  .header-mobile__logo--pages {
+    display: none;
+  }
+  .header-mobile__logo--index {
+    display: block;
+  }
+}
+
+.header-mobile__logo--pages {
   display: block;
+}
+
+.header-mobile__logo--index {
+  display: none;
+}
+
+.header-mobile__logo {
   margin-right: auto;
   svg {
     fill: #fff;
@@ -38,6 +56,14 @@
 //end #header-mobile__logo
 
 //begin #.header-mobile__search
+.index {
+  .header-mobile__search {
+    svg {
+      fill: #fff;
+    }
+  }
+}
+
 .header-mobile__search {
   display: flex;
   justify-content: center;
@@ -51,7 +77,7 @@
     }
   }
   svg {
-    fill: #fff;
+    fill: $brand;
     width: 18px;
     height: 18px;
     transition: fill .5s;
@@ -61,6 +87,14 @@
 //end #header-mobile__search
 
 //begin #header-mobile__call
+.index {
+  .header-mobile__call {
+    svg {
+      fill: #fff;
+    }
+  }
+}
+
 .header-mobile__call {
   display: flex;
   justify-content: center;
@@ -74,7 +108,7 @@
     }
   }
   svg {
-    fill: #fff;
+    fill: $brand;
     width: 17px;
     height: 17px;
     transition: fill .5s;
