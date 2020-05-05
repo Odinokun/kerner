@@ -150,8 +150,9 @@ svg {
 }
 
 .main {
-  flex-grow: 1;
   padding-top: 50px;
+
+  flex-grow: 1;
 }
 
 .container {
@@ -186,11 +187,31 @@ svg {
   }
 }
 
+.hidden-480--parent {
+  .hidden-480 {
+    @include max(480) {
+      display: none;
+    }
+  }
+
+  .visible-480 {
+    display: none;
+
+    @include max(480) {
+      display: flex;
+    }
+  }
+
+  .visible-480__close {
+    display: none;
+  }
+}
+
 .fixed {
   position: fixed;
   z-index: 99;
-  width: 100%;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
+  width: 100%;
 }
