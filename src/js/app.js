@@ -3,8 +3,8 @@ $(function() {
   // begin SVG for IE
   require('./modules/svg4everybody')();
 
-  // begin index page mobile accordion
-  require('./modules/accordion')();
+  // begin hide/open elements in mobile version
+  require('./modules/hideOpenElements')();
 
   // begin change top menu background
   require('./modules/bgTopMenu')();

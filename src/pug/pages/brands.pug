@@ -1,0 +1,63 @@
+extends ../_template
+
+mixin brands-list__item(pic, className)
+  li(class="brands-list__item " + className + "")
+    a(href="#").brands-list__link
+      img(src="assets/img/brands/" + pic + ".png" alt="logo")
+
+block variables
+  - var title           = 'Производители | Kerner'
+  - var description     = 'Производители | Kerner'
+  - var ogtitle         = 'Производители | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Производители'
+
+block content
+  .main-wrap.brands
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+        
+      //begin about__content-wrap
+      .about__content-wrap.hidden-480--parent
+        .container
+          include ../sections/pages-aside
+
+          //begin about-content
+          .about__content.about-content
+            include ../sections/pages-header
+
+            //begin brands__list
+            ul.brands__list.brands-list
+              +brands-list__item('bohre', '')
+              +brands-list__item('vector', '')
+              +brands-list__item('magtron', '')
+              +brands-list__item('vessel', '')
+              +brands-list__item('bds', '')
+              +brands-list__item('karnasch', '')
+              +brands-list__item('euroboor', '')
+              +brands-list__item('rotabroach', 'hidden-480')
+              +brands-list__item('cayken', 'hidden-480')
+              +brands-list__item('unibor', 'hidden-480')
+              +brands-list__item('bds', 'hidden-480')
+              +brands-list__item('karnasch', 'hidden-480')
+              +brands-list__item('bohre', 'hidden-480')
+              +brands-list__item('vector', 'hidden-480')
+              +brands-list__item('magtron', 'hidden-480')
+              +brands-list__item('vessel', 'hidden-480')
+            //end brands__list
+
+            a(href="#").category__all.visible-480.open
+              span.visible-480__open Смотреть все категории
+              span.visible-480__close Скрыть категории
+              
+          //end about-content
+      //end about__content-wrap
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
