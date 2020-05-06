@@ -1,0 +1,261 @@
+extends ../_template
+
+mixin product-card-01(pic, price, text)
+  .product-card-01
+    a(href="#").product-card-01__img
+      img(src="assets/img/product-" + pic + ".jpg" alt="picture")
+    .product-card-01__row
+      label.product-card-01__compare
+        input(type='checkbox')
+        span
+          |В сравнение
+          svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+
+    a(href="#").product-card-01__name #{text}
+
+    .product-card-01__price
+      span #{price}
+      span ₽
+
+    .product-card-01__footer
+      .product-card-01__counter
+        include ../elements/counter
+      a(href="#").product-card-01__basket В корзину
+
+mixin product-card-02(pic, price, text, review)
+  .product-card-01
+    a(href="#").product-card-01__img
+      img(src="assets/img/product-" + pic + ".jpg" alt="picture")
+    .product-card-01__row
+      label.product-card-01__compare
+        input(type='checkbox')
+        span
+          |В сравнение
+          svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+
+      a(href="#").product-card-01__reviews Отзывы: #{review}
+
+    a(href="#").product-card-01__name #{text}
+
+    .product-card-01__price
+      span #{price}
+      span ₽
+
+    .product-card-01__footer
+      .product-card-01__counter
+        include ../elements/counter
+      a(href="#").product-card-01__basket В корзину
+
+
+mixin brand-item__open(title)
+  //begin brand-item__open
+  .brand-item__open
+    span.brand-item__open-text #{title}
+    span.brand-item__open-arr
+      svg(width='7', height='12', viewBox='0 0 7 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+        path(d='M6 1L2 6L6 11', stroke='#253A5A', stroke-width='2')
+  //end brand-item__open
+
+mixin brand-item__close()
+  //begin brand-item__close
+  .brand-item__close
+    span.brand-item__close-text Свернуть
+    span.brand-item__close-arr
+      svg(width='7', height='12', viewBox='0 0 7 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+        path(d='M6 1L2 6L6 11', stroke='#253A5A', stroke-width='2')
+  //end brand-item__close
+
+
+block variables
+  - var title           = 'Bohre | Kerner'
+  - var description     = 'Bohre | Kerner'
+  - var ogtitle         = 'Bohre | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Bohre'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+        
+      //begin page__content-wrap
+      .page__content-wrap
+        .container
+          include ../sections/pages-aside
+
+          //begin page-content
+          .page__content.brand
+            include ../sections/headers/pages-header-brand
+
+            .brand-top__logo.brand-top__logo--mobile
+              img(src="assets/img/brands/bohre.png" alt="logo")
+
+            //begin brand-item
+            .brand__top.brand-item.brand-item--mobile-hidden
+              +brand-item__open('О производителе')
+              .brand-item__inn
+                .brand-top__row
+                  .brand-top__logo.brand-top__logo--desktop
+                    img(src="assets/img/brands/bohre.png" alt="logo")
+                  .brand-top__text
+                    p Молодая и перспективная марка <strong>Bohre (Борэ)</strong>, которая вышла на рынок промышленного оборудования в 2016 году, уже заняла свою нишу в сегменте режущих инструментов для металлообработки, комплектующих и расходных материалов для корончатого сверления.
+                p Сверла и борфрезы этого бренда зарекомендовали себя как высокопрочные и долговечные расходные материалы для магнитных и рельсосверлильных станков, а смазочно-охлаждающая жидкость СОЖ марки Bohre (Борэ) обладает высочайшими технологическими показателями.
+                .brand__img
+                  img(src="assets/img/brand-img.jpg" alt="picture")
+                p В нашем каталоге представлен широкий ассортимент корончатых сверл, борфрез, комплектующих, смазочно-охлаждающей жидкости (СОЖ) производителя Bohre.
+                +brand-item__close
+            //end brand-item
+
+            //begin brand-item
+            .brand__item.brand-item.brand-item--mobile-hidden
+              +brand-item__open('Продукция Bohre (Борэ)')
+              .brand-item__inn
+                h2.brand-item__title Продукция Bohre (Борэ)
+                ul.brand-item__list.custom-dots-list
+                  li.brand-item__item
+                    a(href="#").brand-item__link корончатые (кольцевые) HSS сверла по металлу Bohre;
+                  li.brand-item__item
+                    a(href="#").brand-item__link твердосплавные TCT коронки по металлу Bohre;
+                  li.brand-item__item
+                    a(href="#").brand-item__link борфрезы твердосплавные Bohre;
+                  li.brand-item__item
+                    a(href="#").brand-item__link смазочно-охлаждающая жидкость СОЖ Bohre.
+                .brand-item__img
+                  img(src="assets/img/brand-item-img.jpg" alt="picture")
+                +brand-item__close
+            //end brand-item
+
+            //begin brand-item
+            .brand__item.brand-item.brand-item--mobile-hidden
+              +brand-item__open('Преимущества Bohre (Борэ)')
+              .brand-item__inn
+                h3.brand-item__subtitle Преимущества Bohre (Борэ)
+                ul.brand-item__list.brand-item__list--lg.custom-dots-list
+                  li.brand-item__item Невысокая стоимость при достойном качестве
+                p Основным преимуществом марки Bohre является отсутствие наценки за бренд, что позволяет удерживать уровень цен на 50% ниже, чем у аналогов от ведущих европейских производителей, при сохранении того же высокого уровня качества.
+                ul.brand-item__list.brand-item__list--lg.custom-dots-list
+                  li.brand-item__item Широкий ассортимент продукции
+                p В нашем каталоге представлено 8 моделей быстрорежущих коронок, 2 модели твердосплавов и более 15 наименований борфрез. Продукция есть как в наличии, так и на заказ.
+
+                a(href="#").brand-item__img
+                  img(src="assets/img/brand-item-link.jpg" alt="picture")
+                +brand-item__close
+            //end brand-item
+
+            //begin brand-item
+            .brand__item.brand-item
+              +brand-item__open('Доставка продукции Bohre (Борэ)')
+                h3.brand-item__subtitle Доставка продукции Bohre (Борэ)
+                p Заготовки для расходных материалов Bohre выпускаются на современных производственных площадках в Китае. Благодаря наличию склада в России (Санкт-Петербурге) инструменты, расходные материалы и оснастка для станков регулярно доставляются в заранее согласованные сроки и без задержек.
+                p В Санкт-Петербурге (в пределах КАД) товаров Bohre мы осуществляем бесплатно. Доставка в другие города по России и страны СНГ производится транспортными компаниями. В зависимсти от удалённости потребителя, средний срок доставки составляет от 1 до 10 дней.
+                +brand-item__close
+            //end brand-item
+
+            //begin brand-item
+            .brand__item.brand-item
+              h3.brand-item__subtitle Корончатые сверла по металлу Bohre
+              p Наша компания продает корончатые сверла (кольцевые фрезы) по металлу производителя Bohre. В каталоге продукции представлены сверла Bohre и коронки с напаянными твердосплавными пластинами.
+            //end brand-item
+
+            //begin brand-item
+            .brand__item.brand-item
+              h3.brand-item__subtitle Каталог продукции Bohre
+              .brand-item__list-double
+                ul.brand-item__list.custom-dots-list
+                  li.brand-item__item HSS L30 — сверло Bohre, глубина отверстий до 30 мм;
+                  li.brand-item__item HSS L55 — сверло Bohre, глубина отверстий до 55 мм;
+                  li.brand-item__item HSS L80 — сверло Bohre, глубина отверстий до 80 мм;
+                  li.brand-item__item HSS L110 — сверло Bohre, глубина отверстий до 110 мм;
+                ul.brand-item__list.custom-dots-list
+                  li.brand-item__item HSS L30 — сверло Bohre, глубина отверстий до 30 мм;
+                  li.brand-item__item HSS L55 — сверло Bohre, глубина отверстий до 55 мм;
+                  li.brand-item__item HSS L80 — сверло Bohre, глубина отверстий до 80 мм;
+                  li.brand-item__item HSS L110 — сверло Bohre, глубина отверстий до 110 мм;
+            //end brand-item
+
+            //begin brand-item
+            .brand__item.brand-item
+              p В нашем каталоге представлены корончатые сверла двух видов:
+              ul.brand-item__list.custom-dots-list
+                li.brand-item__item Корончатые сверла по металлу Bohre из быстрорежущей стали HSS. Их используют при работе со сталью Ст3 (мягкой сталью). Данные фрезы являются износостойкими, зубья ломаются в крайне редких случаях.
+                li.brand-item__item Корончатые сверла по металлу Bohre с напаянными твердосплавными пластинами TCT. Их используют в первую очередь для сверления отверстий в более твердых сталях, например Ст45.
+            //end brand-item
+
+            //begin brand-item
+            .brand__item.brand-item.brand-item--slider-wrap
+              h3.brand-item__subtitle Борфрезы тип B - цилиндрические с заточенным торцом
+              a(href="#").brand-item__products-btn
+                span в каталог "Борфрезы тип В - циллиндрические с заточенным торцом"
+
+              //begin brand-item__product-card-slider
+              .brand-item__product-card-slider.product-card-slider
+                ul.product-card-slider__list
+                  li.product-card-slider__item
+                    +product-card-01('01', '1 876', 'Борфреза цилиндр с торцовыми зубьями, тип формы - B (')
+                  li.product-card-slider__item
+                    +product-card-01('01', '1 059', 'Борфреза цилиндр с торцовыми зубьями, тип формы - B (')
+                  li.product-card-slider__item
+                    +product-card-01('01', '586', 'Борфреза цилиндр с торцовыми зубьями, тип формы - B (')
+                  li.product-card-slider__item
+                    +product-card-01('01', '1 876', 'Борфреза цилиндр с торцовыми зубьями, тип формы - B (')
+              //end brand-item__product-card-slider
+            //end brand-item
+
+            //begin brand-item
+            .brand__item.brand-item.brand-item--slider-wrap
+              h3.brand-item__subtitle Рельсовые корончатые сверла
+              a(href="#").brand-item__products-btn
+                span в каталог "Рельсовые корончатые сверла"
+
+              //begin brand-item__product-card-slider
+              .brand-item__product-card-slider.product-card-slider
+                ul.product-card-slider__list
+                  li.product-card-slider__item
+                    +product-card-01('02', '2 900', 'Сверло рельсовое корончатое Weldon d36 "Bohre" с покрытием')
+                  li.product-card-slider__item
+                    +product-card-01('03', '1 615', 'Спиральное сверло "Bohre" с хвостовиком Weldon 19,05 10,2 мм')
+                  li.product-card-slider__item
+                    +product-card-01('04', '2 700', 'Сверло рельсовое корончатое Weldon d22 "Bohre" с покрытием')
+                  li.product-card-slider__item
+                    +product-card-01('03', '1 615', 'Спиральное сверло "Bohre" с хвостовиком Weldon 19,05 10,2 мм')
+              //end brand-item__product-card-slider
+            //end brand-item
+
+            //begin brand-item
+            .brand__item.brand-item.brand-item--slider-wrap
+              h3.brand-item__subtitle Услуги
+              a(href="#").brand-item__products-btn
+                span в каталог "Услуги"
+
+              //begin brand-item__product-card-slider
+              .brand-item__product-card-slider.product-card-slider
+                ul.product-card-slider__list
+                  li.product-card-slider__item
+                    +product-card-02('05', '600', 'Заточка корончатого сверла', '3')
+                  li.product-card-slider__item
+                    +product-card-02('06', '1 500', 'Ремонт сверлильного станка на магните', '1')
+                  li.product-card-slider__item
+                    +product-card-02('07', '1 500', 'Аренда сверлильного станка на магните', '2')
+                  li.product-card-slider__item
+                    +product-card-02('06', '1 500', 'Ремонт сверлильного станка на магните', '1')
+              //end brand-item__product-card-slider
+            //end brand-item
+
+            //begin brand-item
+            .brand__item.brand-item
+              h3.brand-item__subtitle Как купить инструмент Bohre
+              p Получить консультацию, узнать стоимость интересующего сверлильного станка, цену на дополнительные сервисы и аксессуары в наличии вы можете у наших менеджеров, позвонив по телефону <strong>+7 (812) 454-00-80</strong> или <a href="#">оставив заявку на сайте</a>.
+            //end brand-item
+          //end page-content
+      //end page__content-wrap
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer

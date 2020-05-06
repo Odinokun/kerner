@@ -7,7 +7,8 @@ $(document).ready(function ($) {
   pageWidget([
     'index',
     'about',
-    'brands'
+    'brands',
+    'brand'
     ]);
 });
 
@@ -31,7 +32,24 @@ function pageWidget(pages) {
 
 //====== Begin Programmer code ======
 
+//выпадающий aside в мобильной версии
 $('.pages-aside__top-arr').on('click', function () {
   $('.pages-aside-menu').slideToggle();
   $(this).toggleClass('active');
+});
+
+//счетчик в карте товара
+$('.counter__count').on('click', function() {
+  const targetCounter = $(this).parent('.counter');
+  const counter = $(targetCounter).children('.counter__input');
+  let   counterVal = $(counter).val();
+
+  if ($(this).hasClass('counter__count--up')) {
+    counterVal++;
+  } else {
+    counterVal--;
+  }
+
+  counterVal = counterVal < 1 ? 1 : counterVal;
+  $(counter).val(counterVal);
 });

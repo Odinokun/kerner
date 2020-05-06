@@ -26,6 +26,42 @@ module.exports = function() {
     ]
   });
 
+  $('.product-card-slider__list').slick({
+    dots: false,
+    arrows:false,
+    infinite: true,
+    autoplay: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1151,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 861,
+        settings: {
+          dots: true,
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 481,
+        settings: {
+          dots: true,
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
   // end Slick slider
 
 };
