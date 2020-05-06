@@ -8,7 +8,8 @@ $(document).ready(function ($) {
     'index',
     'about',
     'brands',
-    'brand'
+    'brand',
+    'reviews'
     ]);
 });
 

@@ -25,9 +25,8 @@ module.exports = function() {
     e.preventDefault();
     let clickParent = $(this).parents('.brand-item');
 
-    $('.brand-item').removeClass('active');
-    $('.brand-item__inn').slideUp();
-
+    // $('.brand-item').removeClass('active');
+    // $('.brand-item__inn').slideUp();
 
     $(clickParent).addClass('active');
     $(clickParent).find('.brand-item__inn').slideDown();

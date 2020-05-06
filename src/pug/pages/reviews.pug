@@ -1,0 +1,121 @@
+extends ../_template
+
+block variables
+  - var title           = 'Отзывы | Kerner'
+  - var description     = 'Отзывы | Kerner'
+  - var ogtitle         = 'Отзывы | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Отзывы'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+        
+      //begin page__content-wrap
+      .page__content-wrap
+        .container
+          include ../sections/pages-aside
+
+          //begin page-content
+          .page__content.reviews.hidden-480--parent
+            include ../sections/headers/pages-header
+
+            .reviews__header
+              p Дорожим мнением тех, кто уже работает с нами, и с гордостью размещаем на нашем официальном сайте отзывы клиентов и партнеров Kerner.
+
+              a(href="#").reviews__header-add-btn Добавить отзыв
+
+            //begin revews__list
+            ul.revews__list
+              //begin reviews__item
+              li.reviews__item
+                .reviews__person
+                  span.review__person-name Александр
+                  span.review__person-position ООО "Сибирские ресурсы"
+                .reviews__main
+                  span.reviews__text Искал подходящий сверлильный станок, специ ориентировали на цену от 100т.р. и проблем не будет. Доверился я данной организации "Кернер" и приобрёл бюджетный Коммандо 40 и три фрезы, с запасом, надо было
+                  span.reviews__date 24 сентября 2019 в 15:23
+                .reviews__docs
+              //end reviews__item
+
+              //begin reviews__item
+              li.reviews__item
+                .reviews__person
+                  span.review__person-name Егоров И.А.
+                  span.review__person-position ООО «Трудовой десант»
+                .reviews__main
+                  span.reviews__text Бензиновые ударные гайковёрты Vessel GT-3500GE производства Японии эксплуатируем на предприятии с 2008 года
+                  span.reviews__date 18 февраля 2019 в 08:28
+                .reviews__docs
+                  a(href="#" target='_blank').reviews__certificate
+                    img(src="assets/img/file-preview.jpg" alt="picture")
+              //end reviews__item
+
+              //begin reviews__item
+              li.reviews__item
+                .reviews__person
+                  span.review__person-name Фомин А.В.
+                  span.review__person-position ГУП "Московский метрополитен"
+                .reviews__main
+                  span.reviews__text Отзыв о работе бензогайковерта VESSEL GT-3500GE
+                  span.reviews__date 15 августа 2018 в 11:14
+                .reviews__docs
+                  a(href="#" target='_blank').reviews__certificate
+                    img(src="assets/img/file-preview.jpg" alt="picture")
+              //end reviews__item
+
+              //begin reviews__item
+              li.reviews__item
+                .reviews__person
+                  span.review__person-name Игорь Викторович
+                  span.review__person-position Филиал концерна "Росэнергоатом" "Кольская АЭС"
+                .reviews__main
+                  span.reviews__text Отзыв о компании Кернер и магнитных сверлильных станках Rotabroach Element 100
+                  span.reviews__date 15 августа 2018 в 11:14
+                .reviews__docs
+                  a(href="#" target='_blank').reviews__certificate
+                    img(src="assets/img/file-preview.jpg" alt="picture")
+              //end reviews__item
+
+              //begin reviews__item
+              li.reviews__item
+                .reviews__person
+                  span.review__person-name Золотухин А.П.
+                  span.review__person-position ООО "Ленмонтаж"
+                .reviews__main
+                  span.reviews__text Отзыв о магнитных сверлильных станках Rotabroach Element 30 Element 40 Commando 40
+                  span.reviews__date 15 августа 2018 в 11:14
+                .reviews__docs
+                  a(href="#" target='_blank').reviews__certificate
+                    img(src="assets/img/file-preview.jpg" alt="picture")
+              //end reviews__item
+
+              //begin reviews__item
+              li.reviews__item.hidden-480
+                .reviews__person
+                  span.review__person-name Ибрагимов Валерий
+                  span.review__person-position Филиал " Харанорская ГРЭС" АО "Интер РАО - Электрогенерация"
+                .reviews__main
+                  span.reviews__text Отзыв о компании Кернер и магнитном сверлильном станке Rotabroach Element 100
+                  span.reviews__date 18 апреля 2018 в 11:38
+                .reviews__docs
+                  a(href="#" target='_blank').reviews__certificate
+                    img(src="assets/img/file-preview.jpg" alt="picture")
+              //end reviews__item
+            //end revews__list
+
+            a(href="#").index-about__all.visible-480.open
+              span.visible-480__open Смотреть все отзывы
+              span.visible-480__close Скрыть отзывы
+          //end page-content
+      //end page__content-wrap
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer

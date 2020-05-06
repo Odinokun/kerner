@@ -4,7 +4,7 @@
 
 .brand-item--mobile-hidden {
   @include max(480) {
-    margin-bottom: 0;
+    margin-top: -40px;
   }
 }
 
@@ -57,6 +57,9 @@
 
   @include max(1023) {
     margin-bottom: 20px;
+  }
+  @include max(480) {
+    margin-bottom: 60px;
   }
   img {
     display: block;
@@ -256,7 +259,7 @@
   &:hover {
     border-color: $highlight;
     background-color: $highlight;
-    .index-about__products-link {
+    span {
       color: #fff;
     }
   }
