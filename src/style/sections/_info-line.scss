@@ -1,4 +1,7 @@
 #info-line__wrap {
+  @include max(1150) {
+    display: none !important;
+  }
   @include max(767) {
     display: none;
   }

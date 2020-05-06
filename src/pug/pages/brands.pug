@@ -13,7 +13,7 @@ block variables
   - var pageHeaderTitle = 'Производители'
 
 block content
-  .main-wrap.brands
+  .main-wrap.page
     include ../sections/headers/header
     include ../sections/headers/header-mobile
 
@@ -22,14 +22,14 @@ block content
       include ../sections/under-header
       include ../sections/info-line
         
-      //begin about__content-wrap
-      .about__content-wrap.hidden-480--parent
+      //begin page__content-wrap
+      .page__content-wrap
         .container
           include ../sections/pages-aside
 
-          //begin about-content
-          .about__content.about-content
-            include ../sections/pages-header
+          //begin page-content
+          .page__content.brands.hidden-480--parent
+            include ../sections/headers/pages-header
 
             //begin brands__list
             ul.brands__list.brands-list
@@ -55,8 +55,8 @@ block content
               span.visible-480__open Смотреть все категории
               span.visible-480__close Скрыть категории
               
-          //end about-content
-      //end about__content-wrap
+          //end page-content
+      //end page__content-wrap
     //end content
 
     include ../sections/footer-top

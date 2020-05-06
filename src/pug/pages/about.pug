@@ -8,7 +8,7 @@ block variables
   - var pageHeaderTitle = 'О компании'
 
 block content
-  .main-wrap.about
+  .main-wrap.page
     include ../sections/headers/header
     include ../sections/headers/header-mobile
 
@@ -17,14 +17,14 @@ block content
       include ../sections/under-header
       include ../sections/info-line
         
-      //begin about__content-wrap
-      .about__content-wrap
+      //begin page__content-wrap
+      .page__content-wrap
         .container
           include ../sections/pages-aside
 
-          //begin about-content
-          .about__content.about-content
-            include ../sections/pages-header
+          //begin page-content
+          .page__content.about-content
+            include ../sections/headers/pages-header
               
             .about-content__img
               img(src="assets/img/about-img.jpg" alt="picture")
@@ -121,11 +121,10 @@ block content
                     span.about-slider__phone Тел. 8 (800) 333-05-20 доб. 225
                     span.about-slider__phone Моб. +7 (911) 711-89-51
                     a(href="mailto:knyazev@kerner.ru").about-slider__mail knyazev@kerner.ru
-
               //end about-slider__list
             //end about-content__slider
-          //end about-content
-      //end about__content-wrap
+          //end page-content
+      //end page__content-wrap
     //end content
 
     include ../sections/footer-top

@@ -105,6 +105,30 @@ ul {
   }
 }
 
+.custom-dots-list {
+  margin: 0 0 40px 0;
+  padding: 0 0 0 36px;
+  li {
+    font-size: 14px;
+    line-height: 24px;
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    list-style: none;
+    color: #272425;
+    &::before {
+      position: absolute;
+      top: 9px;
+      left: -20px;
+      width: 5px;
+      height: 5px;
+      content: '';
+      border-radius: 50%;
+      background-color: $highlight;
+    }
+  }
+}
+
 //кастомные пункты списка с цифрами
 ol {
   // list-style: none;
@@ -164,6 +188,33 @@ svg {
 
   @include max(1023) {
     padding: 0 20px;
+  }
+}
+
+.page__content-wrap {
+  padding-top: 40px;
+  padding-bottom: 30px;
+
+  @include max(767) {
+    padding-top: 0;
+  }
+  .container {
+    display: flex;
+
+    @include max(767) {
+      flex-direction: column;
+    }
+  }
+}
+
+.page__content {
+  width: calc(100% - 300px);
+
+  @include max(1023) {
+    width: calc(100% - 280px);
+  }
+  @include max(767) {
+    width: 100%;
   }
 }
 
