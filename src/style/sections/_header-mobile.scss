@@ -35,6 +35,17 @@
   }
 }
 
+.index .header-mobile.colored {
+  @include max(1150) {
+    .header-mobile__logo--pages {
+      display: block;
+    }
+    .header-mobile__logo--index {
+      display: none;
+    }
+  }
+}
+
 .header-mobile__logo--pages {
   display: block;
 }
@@ -60,6 +71,16 @@
   .header-mobile__search {
     svg {
       fill: #fff;
+    }
+  }
+}
+.index .header-mobile.colored {
+  @include max(1150) {
+    .header-mobile__search,
+    .header-mobile__call {
+      svg {
+        fill: $brand;
+      }
     }
   }
 }

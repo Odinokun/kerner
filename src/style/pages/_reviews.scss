@@ -1,0 +1,135 @@
+.reviews__header {
+  position: relative;
+}
+
+.reviews__header-add-btn {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  position: absolute;
+  top: -75px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: $highlight;
+
+  @include max(767) {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  &:hover {
+    color: #fff;
+    background-color: $highlight-hov;
+  }
+}
+
+.revews__list {
+  margin: 52px 0 40px 0;
+  padding: 0;
+
+  @include max(767) {
+    margin: 30px 0 40px 0;
+  }
+}
+
+.reviews__item {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 30px;
+  list-style: none;
+  border: 1px solid #e5e5e5;
+
+  @include max(1023) {
+    flex-direction: column;
+  }
+  @include max(767) {
+    padding: 20px;
+  }
+}
+
+.reviews__person {
+  width: 270px;
+  padding-right: 30px;
+
+  @include max(1150) {
+    width: 220px;
+  }
+  @include max(1023) {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+.review__person-name {
+  font-size: 18px;
+  line-height: 24px;
+  display: block;
+  margin-bottom: 10px;
+  color: #253a5a;
+}
+
+.review__person-position {
+  font-size: 14px;
+  line-height: 20px;
+  display: block;
+  color: #979ea0;
+}
+
+.reviews__main {
+  flex: 1;
+  padding-right: 30px;
+
+  @include max(1023) {
+    padding-right: 0;
+  }
+}
+
+.reviews__text {
+  font-size: 14px;
+  line-height: 24px;
+  display: block;
+  margin-bottom: 20px;
+  color: #272425;
+}
+
+.reviews__date {
+  font-size: 14px;
+  line-height: 1;
+  display: block;
+  //margin-bottom: 20px;
+  color: #c4c4c4;
+}
+
+.reviews__docs {
+  flex: none;
+  width: 80px;
+
+  @include max(1023) {
+    padding-top: 20px;
+  }
+  @include max(480) {
+    margin: 0 auto;
+  }
+}
+
+.reviews__certificate {
+  display: inline-block;
+  &:hover {
+    img {
+      box-shadow: 0 4px 24px rgba(10, 43, 71, .3);
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+    max-width: 80px;
+    transition: .5s;
+    box-shadow: 0 4px 24px rgba(10, 43, 71, .1);
+  }
+}

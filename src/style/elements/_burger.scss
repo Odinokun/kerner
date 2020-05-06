@@ -214,19 +214,25 @@
 .index,
 .info-line__catalog-btn {
   .burger label:before,
-  .burger input:checked + label:before {
-    background-color: #fff;
-  }
+  .burger input:checked + label:before,
   .burger label:after,
-  .burger input:checked + label:after {
-    background-color: #fff;
-  }
-  .burger label .burger__icon:before {
-    background-color: #fff;
-  }
+  .burger input:checked + label:after,
+  .burger label .burger__icon:before,
   .burger label .burger__icon:after {
     background-color: #fff;
   }
 }
+
+.index .header-mobile.colored {
+  @include max(1150) {
+    .burger label:before,
+    .burger input:checked + label:before,
+    .burger label:after,
+    .burger input:checked + label:after,
+    .burger label .burger__icon:before,
+    .burger label .burger__icon:after {
+      background-color: $brand;
+    }
+  }}
 
 //end #colors
