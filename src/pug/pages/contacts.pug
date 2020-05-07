@@ -1,0 +1,92 @@
+extends ../_template
+
+block variables
+  - var title           = 'Контакты | Kerner'
+  - var description     = 'Контакты | Kerner'
+  - var ogtitle         = 'Контакты | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Контакты'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+        
+      //begin page__content-wrap
+      .page__content-wrap
+        .container
+          include ../sections/pages-aside
+
+          //begin page-content
+          .page__content.contacts
+            include ../sections/headers/pages-header
+
+            //begin contacts__top
+            .contacts__top.contacts-top
+              .contacts-top__left
+                .contacts-top__row
+                  span.contacts-top__descr Время работы:
+                  span.contacts-top__info-schedule
+                    |8.00 – 16.30, Пятница до 16.00<br>
+                    span.contacts-top__info-schedule--sm (Обед 12:00 – 12:30)
+                    |Сб, Вс – выходные дни
+                .contacts-top__row
+                  span.contacts-top__descr Телефоны:
+                  span.contacts-top__info
+                    a(href="tel:+88124540080").contacts-top__info-phone
+                      .contacts-top__info-phone--sm 8 (812)
+                      |454-00-80
+                    a(href="tel:+88003330520").contacts-top__info-phone
+                      .contacts-top__info-phone--sm 8 (800)
+                      |333-05-20
+                    span.contacts-top__info-phone--ps (Бесплатный номер по России)
+                .contacts-top__row
+                  span.contacts-top__descr Эл.почта:
+                  span.contacts-top__info
+                    a(href="mailto:info@kerner.ru").contacts-top__info-mail info@kerner.ru
+
+              .contacts-top__map#map
+
+              .contacts-top__footer
+                .contacts-top__row
+                  span.contacts-top__descr Адрес:
+                  span.contacts-top__info
+                    a(href="#" target="_blank" rel="nofollow noopener noreferrer").contacts-top__info-adress 192019, г. Санкт-Петербург, ул. Седова, д.11А, бизнес-центр "Эврика"
+                    span.contacts-top__info-adress-ps офис № 1004
+            //end contacts__top
+
+            //begin contacts__form-section
+            .contacts__form-section
+              h3.contacts__form-title Обратная связь
+
+              //begin contacts-form
+              form.contacts__form.contacts-form
+                input(name='name' placeholder='Ваше имя').contacts-form__input
+                input(name='mail' placeholder='Ваша эл. почта').contacts-form__input
+                textarea(name='message' placeholder='Сообщение').contacts-form__textarea
+                .contacts-form__input-file
+                  input(type='file')
+                  +svg('attached')
+                  span Прикрепить файл (не более 30Мб)
+
+                .contacts-form__footer
+                  .contacts-form__capcha
+                    div(class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX")
+                  .contacts-form__submit
+                    input(type='submit' value='Отправить').contacts-form__submit-input
+                    span.contacts-form__submit-agree Нажимая на кнопку, Вы даете согласие на <a href='#'>обработку</a> своих персональных данных
+              //end contacts-form
+            //end contacts__form-section
+
+            include ../sections/team-slider
+          //end page-content
+      //end page__content-wrap
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer

@@ -9,7 +9,8 @@ $(document).ready(function ($) {
     'about',
     'brands',
     'brand',
-    'reviews'
+    'reviews',
+    'contacts'
     ]);
 });
 

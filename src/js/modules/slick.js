@@ -2,7 +2,7 @@ module.exports = function() {
 
   // begin Slick slider
 
-  $('#about-slider__list').slick({
+  $('#team-slider__list').slick({
     dots: true,
     infinite: true,
     autoplay: false,
