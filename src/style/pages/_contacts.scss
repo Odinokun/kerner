@@ -1,21 +1,25 @@
-.contacts-top{
+.contacts-top {
   display: flex;
   flex-wrap: wrap;
+
   @include max(1023) {
     flex-direction: column;
   }
 }
-.contacts-top__left{
 
+.contacts-top__left {
   width: 58%;
+
   @include max(1023) {
     width: 100%;
   }
 }
-.contacts-top__row{
+
+.contacts-top__row {
   display: flex;
-  padding-right: 20px;
   margin-bottom: 43px;
+  padding-right: 20px;
+
   @include max(1150) {
     padding-right: 10px;
   }
@@ -27,169 +31,192 @@
     margin-bottom: 30px;
   }
 }
-.contacts-top__descr{
-  width: 200px;
-  flex: none;
-  font-weight: normal;
+
+.contacts-top__descr {
   font-size: 18px;
+  font-weight: normal;
   line-height: 24px;
   display: block;
-  color: #979EA0;
+  flex: none;
+  width: 200px;
+  color: #979ea0;
+
   @include max(1150) {
     width: 150px;
   }
   @include max(480) {
-    width: 100%;
-    margin-bottom: 10px;
     font-size: 15px;
     line-height: 20px;
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
-.contacts-top__info-schedule{
-  font-weight: normal;
+
+.contacts-top__info-schedule {
   font-size: 18px;
+  font-weight: normal;
   line-height: 24px;
   display: inline-block;
   color: #272425;
+
   @include max(480) {
     font-size: 15px;
     line-height: 20px;
   }
 }
-.contacts-top__info-schedule--sm{
-  display: block;
-  font-weight: normal;
-  margin: 5px 0 10px 0;
+
+.contacts-top__info-schedule--sm {
   font-size: 14px;
+  font-weight: normal;
   line-height: 20px;
-  color: #979EA0;
+  display: block;
+  margin: 5px 0 10px 0;
+  color: #979ea0;
+
   @include max(480) {
     margin: 5px 0;
   }
 }
-.contacts-top__info-phone{
-  display: flex;
-  align-items:baseline;
-  text-decoration: none;
-  font-weight: normal;
+
+.contacts-top__info-phone {
   font-size: 24px;
-  white-space: nowrap;
+  font-weight: normal;
   line-height: 1;
-  color: #272425;
+  display: flex;
+  align-items: baseline;
   margin-bottom: 17px;
-  &:hover {
-.contacts-top__info-phone--sm {
-  color: $highlight-hov;
-}
-  }
+  white-space: nowrap;
+  text-decoration: none;
+  color: #272425;
+
   @include max(767) {
     font-size: 20px;
     margin-bottom: 13px;
   }
+  &:hover {
+    .contacts-top__info-phone--sm {
+      color: $highlight-hov;
+    }
+  }
 }
-.contacts-top__info-phone--sm{
-  font-weight: normal;
+
+.contacts-top__info-phone--sm {
   font-size: 18px;
-  padding-right: 6px;
+  font-weight: normal;
   line-height: 1;
+  position: relative;
+  padding-right: 6px;
+  padding-bottom: 2px;
   transition: .5s;
   transform: translateY(-1px);
-  position: relative;
   white-space: nowrap;
-  padding-bottom: 2px;
-  color: #979EA0;
+  color: #979ea0;
+
   @include max(480) {
     font-size: 15px;
   }
 }
-.contacts-top__info-phone--ps{
-  display: block;
-  font-weight: normal;
-  margin-top: -5px;
+
+.contacts-top__info-phone--ps {
   font-size: 14px;
-  line-height: 20px;
-  color: #979EA0;
-}
-.contacts-top__info-mail{
-  text-decoration: none;
   font-weight: normal;
+  line-height: 20px;
+  display: block;
+  margin-top: -5px;
+  color: #979ea0;
+}
+
+.contacts-top__info-mail {
   font-size: 18px;
+  font-weight: normal;
   line-height: 24px;
-  color: #253A5A;
   margin-bottom: 40px;
+  text-decoration: none;
+  color: #253a5a;
+
   @include max(480) {
     font-size: 15px;
     line-height: 20px;
   }
 }
-.contacts-top__info-adress{
-  font-weight: normal;
+
+.contacts-top__info-adress {
   font-size: 18px;
+  font-weight: normal;
   line-height: 24px;
-  color: #272425;
-  text-decoration: none;
   display: block;
   margin-bottom: 15px;
+  text-decoration: none;
+  color: #272425;
+
   @include max(480) {
     font-size: 15px;
     line-height: 20px;
   }
 }
-.contacts-top__info-adress-ps{
-  display: block;
-  font-weight: normal;
+
+.contacts-top__info-adress-ps {
   font-size: 14px;
+  font-weight: normal;
   line-height: 20px;
-  color: #979EA0;
+  display: block;
+  color: #979ea0;
+
   @include max(480) {
     display: none;
   }
 }
 
-
-.contacts-top__map{
+.contacts-top__map {
+  flex: none;
   width: 42%;
   height: 285px;
   margin-bottom: 40px;
-  flex: none;
-  background-color: #936;
+  background-color: #e5e5e5;
+
   @include max(1023) {
     order: 10;
     width: 100%;
   }
-  .gm-fullscreen-control, .gmnoprint{
+  .gm-fullscreen-control,
+  .gmnoprint {
     display: none;
   }
 }
 
-.contacts-top__footer{
+.contacts-top__footer {
   width: 100%;
-  .contacts-top__row{
+  .contacts-top__row {
     margin-bottom: 27px;
   }
 }
 
 //begin #FORM
-.contacts__form-section{
+.contacts__form-section {
   margin-bottom: 40px;
 }
-.contacts__form-title{
-  margin-bottom: 20px;
-  font-weight: normal;
+
+.contacts__form-title {
   font-size: 24px;
+  font-weight: normal;
   line-height: 32px;
+  margin-bottom: 20px;
   color: #272425;
+
   @include max(767) {
     font-size: 20px;
     line-height: 27px;
   }
 }
-.contacts-form{
-  background-color: #f2f2f2;
-  padding: 50px;
-  width: 100%;
-  display: flex;flex-wrap: wrap;
+
+.contacts-form {
+  display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 50px;
+  background-color: #f2f2f2;
+
   @include max(1150) {
     padding: 40px 30px;
   }
@@ -198,77 +225,79 @@
   }
 }
 
-.contacts-form__input{
-  width:calc(50% - 15px);
+.contacts-form__input {
+  width: calc(50% - 15px);
+  margin-bottom: 15px;
+  padding: 11px 20px;
   border: none;
   background-color: #fff;
-  padding: 11px 20px;
-  margin-bottom: 15px;
+
   @include max(1023) {
     width: 100%;
   }
 }
-.contacts-form__textarea{
+
+.contacts-form__textarea {
+  width: 100%;
+  height: 133px;
+  margin-bottom: 20px;
   padding: 20px;
   border: none;
   background-color: #fff;
-  margin-bottom: 20px;
-  width: 100%;
-  height: 133px;
-
 }
 
-
-
-.contacts-form__input-file{
-  display: flex;
-  margin-bottom: 17px;
-  overflow: hidden;
+.contacts-form__input-file {
   position: relative;
-  height: 17px;
+  display: flex;
+  overflow: hidden;
   align-items: center;
+  height: 17px;
+  margin-bottom: 17px;
+
   @include max(480) {
     height: auto;
   }
   input {
     position: absolute;
+    z-index: 1;
     top: 0;
     right: 0;
-    z-index: 1;
-    cursor: pointer;
-    opacity: 0;
     bottom: 0;
     left: 0;
     padding-top: 20px;
+    cursor: pointer;
+    opacity: 0;
   }
   svg {
     flex: none;
+    fill: $highlight;
     width: 12px;
-
     height: 17px;
-    fill:$highlight;
     margin-right: 15px;
   }
   span {
-    font-weight: normal;
     font-size: 14px;
+    font-weight: normal;
     line-height: 17px;
-    color: #253A5A;
+    color: #253a5a;
   }
 }
 
-.contacts-form__footer{
+.contacts-form__footer {
   display: flex;
-  width: 100%;
   justify-content: space-between;
+  width: 100%;
+
   @include max(1023) {
     flex-direction: column;
   }
 }
-.contacts-form__capcha{
-  max-width: 300px;
-  width: 100%;
+
+.contacts-form__capcha {
   flex: none;
+  width: 100%;
+  max-width: 300px;
+
   @include max(1023) {
     margin-bottom: 20px;
   }
@@ -276,45 +305,49 @@
     transform: scale(.8) translateX(-30px);
   }
 }
-.contacts-form__submit{
+
+.contacts-form__submit {
   width: 340px;
   padding-left: 20px;
+
   @include max(1023) {
     width: 100%;
     padding-left: 0;
   }
 }
-.contacts-form__submit-input{
-  font-weight: normal;
+
+.contacts-form__submit-input {
   font-size: 14px;
+  font-weight: normal;
   line-height: 1;
-  border: none;
-  padding: 13px 20px;
-  background-color: $highlight;
-  text-decoration: none;
-  transition: .5s;
   margin-bottom: 10px;
+  padding: 13px 20px;
+  transition: .5s;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  background-color: $highlight;
 
   &:hover {
-    background-color: $highlight-hov;
     color: #fff;
+    background-color: $highlight-hov;
   }
-
-  color: #FFFFFF;
 }
-.contacts-form__submit-agree{
-  display: block;
-  font-weight: normal;
+
+.contacts-form__submit-agree {
   font-size: 12px;
+  font-weight: normal;
   line-height: 16px;
-  color: #979EA0;
+  display: block;
+  color: #979ea0;
   a {
     text-decoration: none;
     color: $brand;
     &:hover {
-      color: $highlight;
       text-decoration: underline;
+      color: $highlight;
     }
   }
 }
+
 //end #FORM

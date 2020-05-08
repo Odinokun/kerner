@@ -1,0 +1,22 @@
+mixin category__item(icon, title)
+  li.category__item
+    a(href="#").category__link
+      .category__icon
+        img(src="assets/img/icons/category-" + icon + ".svg" alt="icon")
+      span.category__name #{title}
+
+
+//begin category__list
+ul.category__list
+  +category__item('01', 'Магнитные сверлильные станки')
+  +category__item('02', 'Корончатые сверла по металлу')
+  +category__item('03', 'Аксессуары к сверлильным станкам на магните')
+  +category__item('04', 'Бензогайковерты, комплектующие и запчасти')
+  +category__item('05', 'Борфрезы')
+  +category__item('06', 'Отрезные диски')
+  +category__item('07', 'Отрезные пилы')
+  +category__item('08', 'Рельсорезные станки и комплектующие')
+  +category__item('09', 'Рельсосверлильные станки и комплектующие')
+  +category__item('10', 'Станки для снятия фаски')
+  +category__item('11', 'Услуги')
+//end category__list
