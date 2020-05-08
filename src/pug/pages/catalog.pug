@@ -1,0 +1,107 @@
+extends ../_template
+
+mixin popular-slider__card(pic, title, price)
+  .popular-slider__card
+    .popular-slider__img
+      img(src="assets/img/popular-slider-" + pic + ".jpg" alt="picture")
+      label.popular-slider__compare
+        input(type='checkbox')
+        span
+          | В сравнение
+          svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+
+    .popular-slider__title #{title}
+    .popular-slider__descr Характеристика 1: 220 Вт
+    .popular-slider__descr Характеристика с очень длинным названием: 220 Вт
+    .popular-slider__price
+      span #{price}
+      span ₽
+
+    .popular-slider__footer
+      a(href="#").popular-slider__basket В корзину
+      .popular-slider__counter
+        include ../elements/counter
+
+
+block variables
+  - var title           = 'Каталог | Kerner'
+  - var description     = 'Каталог | Kerner'
+  - var ogtitle         = 'Каталог | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Каталог'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+
+      .catalog
+        .container
+          include ../sections/headers/pages-header
+          .catalog__category-list
+            include ../sections/category-list
+
+          .catalog__header
+            h2.catalog__title Заголовок
+          .catalog__text.hidden-480--parent
+            p Оборудование для металлообработки и сверления - многозадачные станки, выполняющие различные функции, заменяют сразу не один инструмент. Когда нужно фрезеровать, сверлить либо сделать резьбу в заготовках из металла, то можно использовать сверлильный магнитный станок. Их преимущество над фрезеровальными, а также привычными сверлильными устройствами - отличная маневренность.
+            p.hidden-480 Производители стремятся комплектовать оборудование для металлообработки и сверления электрическими приводами или пневматическими. Объясняется выбор следующим моментом: иногда нельзя подвести источник питания либо в здании имеется взрывоопасная атмосфера. В данной ситуации нужно применять только магнитный станок. В других ситуациях логично использовать модели с электрическим приводом, которые подключаются к рабочим сетям.
+            p.hidden-480 Помимо этого, в комплекте с техникой могут идти аккумуляторы, если подача электроэнергии прекратится, то некоторое время вы сможете все равно продолжить работы. Выбирая магнитный станок, необходимо обратить внимание на то, как подается шпиндель. Когда требуется хорошая скорость обработки заготовок, то лучший вариант - автоматическая подача (работает на 30% мощнее).
+            a(href="#").catalog__text-btn.visible-480
+              span.visible-480__open Читать далее
+              span.visible-480__close Скрыть
+
+          .catalog__header
+            h2.catalog__title Популярные товары
+
+          //begin catalog__popular
+          .catalog__popular
+            //begin popular-slider
+            .popular-slider
+              ul.popular-slider__list#popular-slider__list
+                li.popular-slider__item
+                  +popular-slider__card('01', 'Магнитный электрический сверлильный станок COMMANDO', '48 000')
+                li.popular-slider__item
+                  +popular-slider__card('02', 'Пилот 6,34х103 "Bohre"', '400')
+                li.popular-slider__item
+                  +popular-slider__card('03', 'Смазочно-охлаждающая жидкость СОЖ (концентрат 1:10)', '4 000')
+                li.popular-slider__item
+                  +popular-slider__card('01', 'Магнитный электрический сверлильный станок COMMANDO', '48 000')
+                li.popular-slider__item
+                  +popular-slider__card('02', 'Пилот 6,34х103 "Bohre"', '400')
+                li.popular-slider__item
+                  +popular-slider__card('03', 'Смазочно-охлаждающая жидкость СОЖ (концентрат 1:10)', '4 000')
+            //end popular-slider
+          //end catalog__popular
+
+          .catalog__header
+            h2.catalog__title Полезные статьи
+          .catalog__text.catalog__text-3.hidden-480--parent
+            .catalog__text-3-item
+              a(href="#").catalog__text-3-title Сверла по металлу, что выбрать: корончатое сверло или спиральное сверло?
+              p Сравним два типа сверл для сверления отверстий в металлических изделиях - корончатые и спиральные сверла.
+              span.catalog__text-3-date 05 октября 2017
+            .catalog__text-3-item.hidden-480
+              a(href="#").catalog__text-3-title Как пользоваться корончатым сверлом
+              p Несколько рекомендаций тем, кто только начал разбираться, как пользоваться корончатым сверлом (по-другому - кольцевой фрезой).
+              span.catalog__text-3-date 05 октября 2017
+            .catalog__text-3-item.hidden-480
+              a(href="#").catalog__text-3-title Kerner примет участие в железнодорожной выставке PRO//Движение.Экспо 2019! Если заголовок длинее трех строк...
+              p Кернер - участник международной выставки железнодорожного транспорта и технологий 2019 в Щербинке! Кернер - участник международной выставки железнодорож если текст длинне 4 строк...
+              span.catalog__text-3-date 05 октября 2017
+
+            a(href="#").catalog__text-3__all.visible-480.open
+              span.visible-480__open Все статьи
+              span.visible-480__close Скрыть статьи
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
+
+  include ../sections/scripts

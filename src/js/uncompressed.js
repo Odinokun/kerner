@@ -10,7 +10,8 @@ $(document).ready(function ($) {
     'brands',
     'brand',
     'reviews',
-    'contacts'
+    'contacts',
+    'catalog'
     ]);
 });
 
@@ -55,3 +56,9 @@ $('.counter__count').on('click', function() {
   counterVal = counterVal < 1 ? 1 : counterVal;
   $(counter).val(counterVal);
 });
+
+//появления счетчика по клику кнопки с слайдере каталога
+$('.popular-slider__basket').on('click', function (e) {
+  e.preventDefault();
+  $(this).parents('.popular-slider__footer').addClass('active');
+})
