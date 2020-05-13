@@ -11,6 +11,7 @@ block content
   .main-wrap.page
     include ../sections/headers/header
     include ../sections/headers/header-mobile
+    include ../sections/catalog-menu
 
     //begin content
     main.main
@@ -29,7 +30,7 @@ block content
             .reviews__header
               p Дорожим мнением тех, кто уже работает с нами, и с гордостью размещаем на нашем официальном сайте отзывы клиентов и партнеров Kerner.
 
-              a(href="#").reviews__header-add-btn Добавить отзыв
+              a(href="#" data-popup='review-popup').reviews__header-add-btn.popup-open Добавить отзыв
 
             //begin revews__list
             ul.revews__list
@@ -53,7 +54,7 @@ block content
                   span.reviews__text Бензиновые ударные гайковёрты Vessel GT-3500GE производства Японии эксплуатируем на предприятии с 2008 года
                   span.reviews__date 18 февраля 2019 в 08:28
                 .reviews__docs
-                  a(href="#" target='_blank').reviews__certificate
+                  a(data-fancybox="gallery" href="assets/img/file-lg.jpg").reviews__certificate
                     img(src="assets/img/file-preview.jpg" alt="picture")
               //end reviews__item
 
@@ -66,7 +67,7 @@ block content
                   span.reviews__text Отзыв о работе бензогайковерта VESSEL GT-3500GE
                   span.reviews__date 15 августа 2018 в 11:14
                 .reviews__docs
-                  a(href="#" target='_blank').reviews__certificate
+                  a(data-fancybox="gallery" href="assets/img/file-lg.jpg").reviews__certificate
                     img(src="assets/img/file-preview.jpg" alt="picture")
               //end reviews__item
 
@@ -79,7 +80,7 @@ block content
                   span.reviews__text Отзыв о компании Кернер и магнитных сверлильных станках Rotabroach Element 100
                   span.reviews__date 15 августа 2018 в 11:14
                 .reviews__docs
-                  a(href="#" target='_blank').reviews__certificate
+                  a(data-fancybox="gallery" href="assets/img/file-lg.jpg").reviews__certificate
                     img(src="assets/img/file-preview.jpg" alt="picture")
               //end reviews__item
 
@@ -92,7 +93,7 @@ block content
                   span.reviews__text Отзыв о магнитных сверлильных станках Rotabroach Element 30 Element 40 Commando 40
                   span.reviews__date 15 августа 2018 в 11:14
                 .reviews__docs
-                  a(href="#" target='_blank').reviews__certificate
+                  a(data-fancybox="gallery" href="assets/img/file-lg.jpg").reviews__certificate
                     img(src="assets/img/file-preview.jpg" alt="picture")
               //end reviews__item
 
@@ -105,7 +106,7 @@ block content
                   span.reviews__text Отзыв о компании Кернер и магнитном сверлильном станке Rotabroach Element 100
                   span.reviews__date 18 апреля 2018 в 11:38
                 .reviews__docs
-                  a(href="#" target='_blank').reviews__certificate
+                  a(data-fancybox="gallery" href="assets/img/file-lg.jpg").reviews__certificate
                     img(src="assets/img/file-preview.jpg" alt="picture")
               //end reviews__item
             //end revews__list
@@ -119,5 +120,6 @@ block content
 
     include ../sections/footer-top
     include ../sections/footer
+    include ../elements/popup
 
   include ../sections/scripts

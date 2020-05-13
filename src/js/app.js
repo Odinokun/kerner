@@ -15,8 +15,14 @@ $(function() {
   // begin Slick slider
   require('./modules/slick')();
 
+  // begin scroll On/Off
+  require('./modules/scrollOnOff')();
 
+  // begin Popup
+  require('./modules/popup')();
 
+  // begin open/close mobile menu, catalog menu & search
+  require('./modules/openCloseMobileMenuCatalogMenuAndSearch')();
 
 
 
@@ -25,10 +31,6 @@ $(function() {
 
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();
-
-  // begin Popup
-  // require('./modules/popup')();
-
 
   // begin Fancybox3
   // require('./modules/fancybox')();

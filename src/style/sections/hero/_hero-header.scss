@@ -54,6 +54,9 @@
   background-color: transparent;
 
   @include placeholder-color(#fff);
+  &:focus {
+    border: 1px solid $highlight;
+  }
 }
 
 .hero-header__search-submit {

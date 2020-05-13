@@ -266,3 +266,12 @@ svg {
   left: 0;
   width: 100%;
 }
+
+.disable-scroll {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}

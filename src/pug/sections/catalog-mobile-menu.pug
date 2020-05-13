@@ -1,0 +1,91 @@
+mixin catalog-mobile-menu__item-top(text, className)
+  li(class="catalog-mobile-menu__item catalog-mobile-menu__item--" + className)
+    a(href="#").catalog-mobile-menu__link
+      |#{text}
+    +svg('arr-left')
+
+mixin catalog-mobile-menu__item(text)
+  li.catalog-mobile-menu__item
+    a(href="#").catalog-mobile-menu__link #{text}
+
+//begin catalog-mobile-menu
+.catalog-mobile-menu#catalog-mobile-menu
+  .catalog-mobile-menu__header
+    .catalog-mobile-menu__close.scroll-on
+      +svg('arr-left')
+      span Назад
+
+  .catalog-mobile-menu__col
+    ul.catalog-mobile-menu__list
+      +catalog-mobile-menu__item-top('Магнитные сверлильные станки', 'first')
+      +catalog-mobile-menu__item('Магнитные сверлильные станки Rotabroach')
+      +catalog-mobile-menu__item('Магнитные сверлильные станки Euroboor')
+      +catalog-mobile-menu__item('Магнитные сверлильные станки Вектор')
+      +catalog-mobile-menu__item('Магнитные сверлильные станки BDS')
+      +catalog-mobile-menu__item('Магнитные сверлильные станки Magtron')
+      +catalog-mobile-menu__item('Магнитные сверлильные станки Cayken')
+      +catalog-mobile-menu__item('Магнитные сверлильные станки FE Powertools')
+      +catalog-mobile-menu__item('Магнитные сверлильные станки RUKO')
+      +catalog-mobile-menu__item('Магнитные сверлильные станки Unibor')
+    ul.catalog-mobile-menu__list
+      +catalog-mobile-menu__item-top('Корончатые сверла по металлу', 'first')
+      +catalog-mobile-menu__item('Bohre станки Rotabroach')
+      +catalog-mobile-menu__item('Корончатые сверла по металлу Karnasch')
+      +catalog-mobile-menu__item('Корончатые сверла по металлу Rotabroach (Англия)')
+    ul.catalog-mobile-menu__list
+      +catalog-mobile-menu__item-top('Аксессуары к сверлильным станкам на магните', 'first')
+      +catalog-mobile-menu__item('Адаптеры')
+      +catalog-mobile-menu__item('Быстрозажимные патроны')
+      +catalog-mobile-menu__item('Переходники')
+      +catalog-mobile-menu__item('Пилоты')
+      +catalog-mobile-menu__item('Сверла-метчики')
+      +catalog-mobile-menu__item('Смазочно-охлаждающая жидкость')
+      +catalog-mobile-menu__item('Спиральные сверла с хвостовиком Weldon')
+      +catalog-mobile-menu__item('Удлинители')
+      +catalog-mobile-menu__item('Фаскосъемники')
+    ul.catalog-mobile-menu__list
+      +catalog-mobile-menu__item-top('Бензогайковерты, комплектующие и запчасти', 'first')
+      +catalog-mobile-menu__item('Бензогайковерт VESSEL GT-3500GE и комплектующие ')
+      +catalog-mobile-menu__item('Запасные части бензогайковерта VESSEL GT-3500GE')
+    ul.catalog-mobile-menu__list
+      +catalog-mobile-menu__item-top('Борфрезы', 'first')
+      +catalog-mobile-menu__item('Борфрезы тип A - цилиндрические с гладким торцом')
+      +catalog-mobile-menu__item('Борфрезы тип B - цилиндрические с заточенным торцом')
+      +catalog-mobile-menu__item('Борфрезы тип C - цилиндрические со сферическим концом')
+      +catalog-mobile-menu__item('Борфрезы тип D - сферические')
+      +catalog-mobile-menu__item('Борфрезы тип E - овальные')
+      +catalog-mobile-menu__item('Борфрезы тип F - параболы с закругленной головкой')
+      +catalog-mobile-menu__item('Борфрезы тип G - параболы с заостренной головкой')
+      +catalog-mobile-menu__item('Борфрезы тип H - язычок пламени')
+      +catalog-mobile-menu__item('Борфрезы тип J - конические 60 градусов')
+      +catalog-mobile-menu__item('Борфрезы тип K - конические 90 градусов')
+      +catalog-mobile-menu__item('Борфрезы тип L - сфероконические')
+      +catalog-mobile-menu__item('Борфрезы тип M - конические')
+      +catalog-mobile-menu__item('Борфрезы тип N - обратноконические')
+    ul.catalog-mobile-menu__list
+      +catalog-mobile-menu__item-top('Отрезные диски', '')
+    ul.catalog-mobile-menu__list
+      +catalog-mobile-menu__item-top('Отрезные пилы', '')
+    ul.catalog-mobile-menu__list
+      +catalog-mobile-menu__item-top('Рельсорезные станки и комплектующие', '')
+    ul.catalog-mobile-menu__list
+      +catalog-mobile-menu__item-top('Рельсосверлильные станки и комплектующие', 'first')
+      +catalog-mobile-menu__item('Рельсовые корончатые сверла')
+      +catalog-mobile-menu__item('Рельсосверлильные станки BDS-machines')
+      +catalog-mobile-menu__item('Рельсосверлильные станки Rotabroach')
+      +catalog-mobile-menu__item('Рельсосверлильные станки Вектор')
+      +catalog-mobile-menu__item('Рельсосверлильные станки Хайтек инструмент')
+    ul.catalog-mobile-menu__list
+      +catalog-mobile-menu__item-top('Станки для снятия фаски', 'first')
+      +catalog-mobile-menu__item('Аксессуары')
+      +catalog-mobile-menu__item('Кромкорезные машины')
+      +catalog-mobile-menu__item('Пластины твердосплавные')
+      +catalog-mobile-menu__item('Ручные фаскосниматели')
+      +catalog-mobile-menu__item('Фрезы и фрезерные головки')
+    ul.catalog-mobile-menu__list
+      +catalog-mobile-menu__item-top('Услуги', 'first')
+      +catalog-mobile-menu__item('Аренда сверлильного станка на магните')
+      +catalog-mobile-menu__item('Заточка корончатого сверла')
+      +catalog-mobile-menu__item('Ремонт сверлильного станка на магните')
+      +catalog-mobile-menu__item('Ремонт бензинового ударного гайковерта')
+//end catalog-mobile-menu

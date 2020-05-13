@@ -14,5 +14,5 @@ module.exports = [
   // './src/vendors/maskedinput/jquery.maskedinput.min.js',
 
   // include fancybox3
-  // './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+  './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js'
 ];

@@ -68,6 +68,7 @@ module.exports = function() {
       {
         breakpoint: 1151,
         settings: {
+          dots: true,
           slidesToShow: 2
         }
       },
@@ -81,6 +82,7 @@ module.exports = function() {
       {
         breakpoint: 768,
         settings: {
+          dots: true,
           slidesToShow: 2
         }
       },

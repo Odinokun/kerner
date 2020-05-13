@@ -13,7 +13,7 @@ header.header-mobile#header-mobile
 
 
     //begin header-mobile__search
-    .header-mobile__search#header-mobile__search
+    .header-mobile__search.scroll-on-off#header-mobile__search
       +svg('magnify')
     //end header-mobile__search
 
@@ -23,56 +23,173 @@ header.header-mobile#header-mobile
     //end header-mobile__call
 
     //begin header-mobile__burger
-    .header-mobile__burger#header-mobile__burger
-      include ../../elements/burger
+    .header-mobile__burger
+      //begin burger
+      .burger#header-mobile__burger
+        input#header-mobile__burger-input.scroll-on-off(name='exit' type='checkbox')
+        label(for='header-mobile__burger-input')
+          span.burger__icon
+      //end burger
     //end header-mobile__burger
 
+  //begin header-mobile-body
+  #header-mobile-body
+    .header-mobile-body
+      //begin header-mobile__login
+      .header-mobile__login.header-mobile-login
+        ul.header-mobile-login__list
+          li.header-mobile-login__item
+            a(href="#").header-mobile-login__link
+              +svg('user')
+              span.header-mobile-login__text Войти
+              //span.header-mobile-login__text Личный кабинет
+          li.header-mobile-login__item
+            a(href="#").header-mobile-login__link
+              span.header-mobile-login__text Регистрация
+              //span.header-mobile-login__text Выйти
+      //end header-mobile__login
 
-    //begin header__menu
-    //nav.header__menu.header-menu
-      ul.header-menu__list
-        li.header-menu__item
-          a(href="#").header-menu__link О компании
-        li.header-menu__item
-          a(href="#").header-menu__link Оплата и доставка
-        li.header-menu__item
-          a(href="#").header-menu__link Производители
-        li.header-menu__item
-          a(href="#").header-menu__link Новости и статьи
-        li.header-menu__item
-          a(href="#").header-menu__link Контакты
-        li.header-menu__item
-          a(href="#").header-menu__link Отзывы
-    //end header__menu
+      //begin header-mobile__menu
+      nav.header-mobile__menu.header-mobile-menu
+        ul.header-mobile-menu__list
+          li.header-mobile-menu__item.header-mobile-menu__item--catalog
+            a(href="#").header-mobile-menu__link Каталог
+          li.header-mobile-menu__item
+            a(href="#").header-mobile-menu__link О компании
+          li.header-mobile-menu__item
+            a(href="#").header-mobile-menu__link Оплата и доставка
+          li.header-mobile-menu__item
+            a(href="#").header-mobile-menu__link Производители
+          li.header-mobile-menu__item
+            a(href="#").header-mobile-menu__link Новости и статьи
+          li.header-mobile-menu__item
+            a(href="#").header-mobile-menu__link Контакты
+          li.header-mobile-menu__item
+            a(href="#").header-mobile-menu__link Отзывы
+          li.header-mobile-menu__item
+            a(href="#").header-mobile-menu__link
+              +svg('file')
+              |Скачать прайс лист
+      //end header-mobile__menu
 
-    //begin header__social
-    //.header__social.header-social
-      ul.header-social__list
-        .header-social__item
-          a(href="" target="_blank" rel="nofollow noopener noreferrer").header-social__link.header-social__link--vk
-            +svg('vk')
-        .header-social__item
-          a(href="" target="_blank" rel="nofollow noopener noreferrer").header-social__link.header-social__link--fb
-            +svg('fb')
-        .header-social__item
-          a(href="" target="_blank" rel="nofollow noopener noreferrer").header-social__link.header-social__link--youtube
-            +svg('youtube')
-        .header-social__item
-          a(href="" target="_blank" rel="nofollow noopener noreferrer").header-social__link.header-social__link--inst
-            +svg('inst')
-    //end header__social
-      
-    //begin header__login
-    //.header__login.header-login
-      ul.header-login__list
-        li.header-login__item
-          a(href="#").header-login__link
-            +svg('user')
-            span.header-login__text Войти
-            //span.header-login__text Личный кабинет
-        li.header-login__item
-          a(href="#").header-login__link
-            span.header-login__text Регистрация
-            //span.header-login__text Выйти
-    //end header__login
+      //begin header-mobile__calls
+      .header-mobile__calls.header-mobile-calls
+        a(href="tel:+88124540080").header-mobile-calls__link 8 812 454-00-80
+        a(href="#").header-mobile-calls__callback Обратный звонок
+      //end header-mobile__calls
+
+      //begin header-mobile__social
+      .header-mobile__social.header-mobile-social
+        ul.header-mobile-social__list
+          .header-mobile-social__item
+            a(href="" target="_blank" rel="nofollow noopener noreferrer").header-mobile-social__link.header-mobile-social__link--vk
+              +svg('vk')
+          .header-mobile-social__item
+            a(href="" target="_blank" rel="nofollow noopener noreferrer").header-mobile-social__link.header-mobile-social__link--fb
+              +svg('fb')
+          .header-mobile-social__item
+            a(href="" target="_blank" rel="nofollow noopener noreferrer").header-mobile-social__link.header-mobile-social__link--youtube
+              +svg('youtube')
+          .header-mobile-social__item
+            a(href="" target="_blank" rel="nofollow noopener noreferrer").header-mobile-social__link.header-mobile-social__link--inst
+              +svg('inst')
+      //end header-mobile__social
+  //end header-mobile-body
+
+  //begin header-mobile-search-result
+  #header-mobile-search-result
+    .header-mobile-search-result
+      .header-mobile-search-result__header
+        form.header-mobile-search-result__form
+          input(type='search').header-mobile-search-result__input
+          input(type='submit').header-mobile-search-result__submit
+          +svg('magnify')
+        .header-mobile-search-result__burger
+          //begin burger
+          .burger#header-mobile-search-result__burger
+            input#header-mobile-search-result__burger-input.scroll-on(name='exit' type='checkbox' checked)
+            label(for='header-mobile-search-result__burger-input')
+              span.burger__icon
+          //end burger
+
+      .header-mobile-search-result__lists
+        //begin header-mobile-search-result__list
+        ul.header-mobile-search-result__list
+          li.header-mobile-search-result__item
+            a(href="#").header-mobile-search-result__link Категории
+          li.header-mobile-search-result__item
+            a(href="#").header-mobile-search-result__link Корнчатые сверла по металлу Rotabroach (Англия)
+          li.header-mobile-search-result__item
+            a(href="#").header-mobile-search-result__link Магнитные сверлильные станки Rotzbroach
+          li.header-mobile-search-result__item
+            a(href="#").header-mobile-search-result__link Магнитные сверлильные станки Вектор
+        //end header-mobile-search-result__list
+
+        //begin header-mobile-search-result__list
+        ul.header-mobile-search-result__list
+          li.header-mobile-search-result__item
+            a(href="#").header-mobile-search-result__link Товары
+          li.header-mobile-search-result__item
+            .header-mobile-search-result__card
+              a(href="#").header-mobile-search-result__card-img
+                img(src="assets/img/search-01.jpg" alt="picture")
+              .header-mobile-search-result__card-descr
+                a(href="#").header-mobile-search-result__card-title Магнитный пневматический сверлильный станок Raven МСС-52П "Rotabroach"
+                .header-mobile-search-result__card-price
+                  span 275 000
+                  span ₽
+                a(href="#").header-mobile-search-result__card-bth В корзину
+
+          li.header-mobile-search-result__item
+            .header-mobile-search-result__card
+              a(href="#").header-mobile-search-result__card-img
+                img(src="assets/img/search-01.jpg" alt="picture")
+              .header-mobile-search-result__card-descr
+                a(href="#").header-mobile-search-result__card-title Магнитный пневматический сверлильный станок Raven МСС-52П "Rotabroach"
+                .header-mobile-search-result__card-price
+                  span 275 000
+                  span ₽
+                a(href="#").header-mobile-search-result__card-bth В корзину
+
+          li.header-mobile-search-result__item
+            .header-mobile-search-result__card
+              a(href="#").header-mobile-search-result__card-img
+                img(src="assets/img/search-01.jpg" alt="picture")
+              .header-mobile-search-result__card-descr
+                a(href="#").header-mobile-search-result__card-title Магнитный пневматический сверлильный станок Raven МСС-52П "Rotabroach"
+                .header-mobile-search-result__card-price
+                  span 275 000
+                  span ₽
+                a(href="#").header-mobile-search-result__card-bth В корзину
+
+          li.header-mobile-search-result__item
+            .header-mobile-search-result__card
+              a(href="#").header-mobile-search-result__card-img
+                img(src="assets/img/search-01.jpg" alt="picture")
+              .header-mobile-search-result__card-descr
+                a(href="#").header-mobile-search-result__card-title Магнитный пневматический сверлильный станок Raven МСС-52П "Rotabroach"
+                .header-mobile-search-result__card-price
+                  span 275 000
+                  span ₽
+                a(href="#").header-mobile-search-result__card-bth В корзину
+
+          li.header-mobile-search-result__item
+            .header-mobile-search-result__card
+              a(href="#").header-mobile-search-result__card-img
+                img(src="assets/img/search-01.jpg" alt="picture")
+              .header-mobile-search-result__card-descr
+                a(href="#").header-mobile-search-result__card-title Магнитный пневматический сверлильный станок Raven МСС-52П "Rotabroach"
+                .header-mobile-search-result__card-price
+                  span 275 000
+                  span ₽
+                a(href="#").header-mobile-search-result__card-bth В корзину
+
+
+        //end header-mobile-search-result__list
+
+  //end header-mobile-search-result
+
+  include ../../sections/catalog-mobile-menu
+
+
 // end header-mobile

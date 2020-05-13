@@ -135,9 +135,19 @@
 .team-slider__phone {
   font-size: 14px;
   line-height: 1;
-  display: block;
+  display: flex;
   margin-bottom: 10px;
   color: #272425;
+  span {
+    padding-right: 5px;
+  }
+  a {
+    text-decoration: none;
+    color: #272425;
+    &:hover {
+      color: $highlight;
+    }
+  }
 }
 
 .team-slider__mail {

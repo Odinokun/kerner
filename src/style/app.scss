@@ -8,8 +8,8 @@
 @import 'elements/social';
 @import 'elements/breadcrumbs';
 @import 'elements/slickBase';
+@import 'elements/popup';
 //@import 'elements/pagination';
-//@import 'elements/popup';
 
 //main section
 @import 'sections/header';
@@ -21,6 +21,8 @@
 @import 'sections/pages-aside';
 @import 'sections/pages-header';
 @import 'sections/team-slider';
+@import 'sections/catalog-menu';
+@import 'sections/catalog-mobile-menu';
 
 //hero section
 @import 'sections/hero/hero';
