@@ -1,0 +1,33 @@
+.popup__layer#popup__layer
+//begin review-popup
+.popup.review-popup#review-popup
+  .popup__close
+    +svg('close')
+
+  .popup__header
+    h2.popup__title Оставить отзыв
+
+  .popup__body
+    form.popup__form.popup-form
+      label.popup-form__label
+        span Имя <i>*</i>
+        input(name='name' placeholder='' required).popup-form__input
+      label.popup-form__label
+        span Почта <i>*</i>
+        input(type='email' name='email' placeholder='' required).popup-form__input
+      label.popup-form__label
+        span Компания
+        input(name='company' placeholder='').popup-form__input
+      label.popup-form__label
+        span Коментарий <i>*</i>
+        textarea(name='message' placeholder='').popup-form__textarea
+
+      .popup-form__input-file
+        input(type='file')
+        +svg('attached')
+        span Прикрепить файл (не более 30Мб)
+
+      .popup-form__submit
+        input(type='submit' value='Отправить').popup-form__submit-input
+        span.popup-form__submit-agree Нажимая на кнопку, Вы даете согласие на <a href='#'>обработку</a> своих персональных данных
+//end review-popup

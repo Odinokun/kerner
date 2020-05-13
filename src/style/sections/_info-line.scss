@@ -1,9 +1,8 @@
 #info-line__wrap {
+  width: 100%;
+
   @include max(1150) {
     display: none !important;
-  }
-  @include max(767) {
-    display: none;
   }
 }
 
@@ -29,6 +28,7 @@
 .info-line__catalog-btn {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .info-line__catalog-btn-text {

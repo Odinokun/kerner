@@ -21,8 +21,8 @@
   width: 100%;
   margin: 0 0 60px 0;
   padding: 0;
-  border-top: 1px solid #f4f4f4;
-  border-left: 1px solid #f4f4f4;
+  border-top: 1px solid #e2e2e2;
+  border-left: 1px solid #e2e2e2;
 
   @include max(767) {
     max-width: 450px;
@@ -35,8 +35,8 @@
 .category__item {
   width: 33.33%;
   list-style: none;
-  border-right: 1px solid #f4f4f4;
-  border-bottom: 1px solid #f4f4f4;
+  border-right: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
 
   @include max(1023) {
     width: 50%;

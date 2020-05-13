@@ -1,22 +1,25 @@
 module.exports = function() {
 
   // begin фиксируем информационную строку при скролле
-  $(function() {
-    let element = $("#info-line");
-    let heightElem = element.offset().top;
+  let element = $("#info-line");
+  let heightElem;
 
-    $("#info-line__wrap").css({
-      "width": 100 + '%',
-      "height": element.outerHeight()
-    });
+  if(element.length > 0) {
+    heightElem = element.offset().top;
+  } else {
+    heightElem = 0;
+  }
 
-    $(window).scroll(function() {
-      if($(window).scrollTop() > heightElem) {
-        element.addClass("fixed");
-      } else {
-        element.removeClass("fixed");
-      }
-    });
+  $("#info-line__wrap").css({
+    "height": element.outerHeight()
+  });
+
+  $(window).scroll(function() {
+    if($(window).scrollTop() > heightElem) {
+      element.addClass("fixed");
+    } else {
+      element.removeClass("fixed");
+    }
   });
   // end фиксируем информационную строку при скролле
 

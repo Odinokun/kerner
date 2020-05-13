@@ -72,8 +72,13 @@
   min-width: 150px;
   height: 33px;
   padding: 5px 10px;
+  transition: .5s;
   text-decoration: none;
   color: #fff;
   border-radius: 17px;
   background-color: $highlight;
+  &:hover {
+    color: #fff;
+    background-color: $highlight-hov;
+  }
 }

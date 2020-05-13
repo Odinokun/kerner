@@ -298,25 +298,23 @@
     }
   }
   .slick-dots {
-    @include max(860) {
-      bottom: 35px;
+    @include max(1150) {
+      bottom: 10px;
     }
     @include max(480) {
       bottom: 10px;
     }
     li {
-      @include max(860) {
-        width: 10px;
-        height: 10px;
-        transition: .5s;
-        opacity: .3;
-        border: 1px solid $highlight;
-        border-radius: 50%;
-        background-color: transparent;
-        &.slick-active {
-          opacity: 1;
-          background-color: $highlight;
-        }
+      width: 10px;
+      height: 10px;
+      transition: .5s;
+      opacity: .3;
+      border: 1px solid $highlight;
+      border-radius: 50%;
+      background-color: transparent;
+      &.slick-active {
+        opacity: 1;
+        background-color: $highlight;
       }
     }
   }
@@ -512,6 +510,10 @@
   pointer-events: none;
   opacity: 0;
   background-color: $highlight;
+
+  @include max(1150) {
+    opacity: 1;
+  }
 }
 
 .product-card-01__counter {

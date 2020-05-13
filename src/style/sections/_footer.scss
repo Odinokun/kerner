@@ -112,6 +112,7 @@
     background-color: transparent;
   }
   &:hover {
+    color: #fff;
     background-color: $highlight-hov;
 
     @include max(767) {
