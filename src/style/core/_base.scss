@@ -258,6 +258,20 @@ svg {
   }
 }
 
+.hidden-desktop--parent {
+  .hidden-desktop {
+    display: none;
+  }
+
+  .visible-desktop {
+    display: flex;
+  }
+
+  .visible-desktop__close {
+    display: none;
+  }
+}
+
 .fixed {
   position: fixed;
   z-index: 99;
@@ -268,10 +282,10 @@ svg {
 }
 
 .disable-scroll {
-  overflow: hidden;
-  height: 100vh;
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
+  overflow: hidden;
   width: 100%;
+  height: 100vh;
 }
