@@ -1,0 +1,214 @@
+mixin filter-menu__item-top(text, className)
+  li(class="filter-menu__item filter-menu__item--" + className)
+    a(href="#").filter-menu__link #{text}
+
+mixin filter-menu__item(text)
+  li.filter-menu__item
+    a(href="#").filter-menu__link #{text}
+
+mixin filter-form-item__checkbox(text)
+  label.filter-form-item__checkbox
+    input(type='checkbox')
+    span
+      |#{text}
+      svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+        path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+
+//begin filter-aside
+.filter-aside
+  //begin filter-aside__menu
+  .filter-aside__menu.filter-menu.hidden-desktop--parent
+    ul.filter-menu__list.filter-menu__list--active
+      +filter-menu__item-top('Магнитные сверлильные станки', 'first')
+      +filter-menu__item('Магнитные сверлильные станки Rotabroach')
+      +filter-menu__item('Магнитные сверлильные станки Euroboor')
+      li.filter-menu__item.hidden-desktop
+        a(href="#").filter-menu__link Магнитные сверлильные станки Вектор
+      li.filter-menu__item.hidden-desktop
+        a(href="#").filter-menu__link Магнитные сверлильные станки BDS
+      li.filter-menu__item.hidden-desktop
+        a(href="#").filter-menu__link Магнитные сверлильные станки Magtron
+      li.filter-menu__item.hidden-desktop
+        a(href="#").filter-menu__link Магнитные сверлильные станки Cayken
+      li.filter-menu__item.hidden-desktop
+        a(href="#").filter-menu__link Магнитные сверлильные станки FE Powertools
+      li.filter-menu__item.hidden-desktop
+        a(href="#").filter-menu__link Магнитные сверлильные станки RUKO
+      li.filter-menu__item.hidden-desktop
+        a(href="#").filter-menu__link Магнитные сверлильные станки Unibor
+    ul.filter-menu__list.hidden-desktop
+      +filter-menu__item-top('Корончатые сверла по металлу', 'first')
+      +filter-menu__item('Bohre станки Rotabroach')
+      +filter-menu__item('Корончатые сверла по металлу Karnasch')
+      +filter-menu__item('Корончатые сверла по металлу Rotabroach (Англия)')
+    ul.filter-menu__list.hidden-desktop
+      +filter-menu__item-top('Аксессуары к сверлильным станкам на магните', 'first')
+      +filter-menu__item('Адаптеры')
+      +filter-menu__item('Быстрозажимные патроны')
+      +filter-menu__item('Переходники')
+      +filter-menu__item('Пилоты')
+      +filter-menu__item('Сверла-метчики')
+      +filter-menu__item('Смазочно-охлаждающая жидкость')
+      +filter-menu__item('Спиральные сверла с хвостовиком Weldon')
+      +filter-menu__item('Удлинители')
+      +filter-menu__item('Фаскосъемники')
+    ul.filter-menu__list.hidden-desktop
+      +filter-menu__item-top('Бензогайковерты, комплектующие и запчасти', 'first')
+      +filter-menu__item('Бензогайковерт VESSEL GT-3500GE и комплектующие ')
+      +filter-menu__item('Запасные части бензогайковерта VESSEL GT-3500GE')
+    ul.filter-menu__list.hidden-desktop
+      +filter-menu__item-top('Борфрезы', 'first')
+      +filter-menu__item('Борфрезы тип A - цилиндрические с гладким торцом')
+      +filter-menu__item('Борфрезы тип B - цилиндрические с заточенным торцом')
+      +filter-menu__item('Борфрезы тип C - цилиндрические со сферическим концом')
+      +filter-menu__item('Борфрезы тип D - сферические')
+      +filter-menu__item('Борфрезы тип E - овальные')
+      +filter-menu__item('Борфрезы тип F - параболы с закругленной головкой')
+      +filter-menu__item('Борфрезы тип G - параболы с заостренной головкой')
+      +filter-menu__item('Борфрезы тип H - язычок пламени')
+      +filter-menu__item('Борфрезы тип J - конические 60 градусов')
+      +filter-menu__item('Борфрезы тип K - конические 90 градусов')
+      +filter-menu__item('Борфрезы тип L - сфероконические')
+      +filter-menu__item('Борфрезы тип M - конические')
+      +filter-menu__item('Борфрезы тип N - обратноконические')
+    ul.filter-menu__list.hidden-desktop
+      +filter-menu__item-top('Отрезные диски', 'first')
+    ul.filter-menu__list.hidden-desktop
+      +filter-menu__item-top('Отрезные пилы', 'first')
+    ul.filter-menu__list.hidden-desktop
+      +filter-menu__item-top('Рельсорезные станки и комплектующие', 'first')
+    ul.filter-menu__list.hidden-desktop
+      +filter-menu__item-top('Рельсосверлильные станки и комплектующие', 'first')
+      +filter-menu__item('Рельсовые корончатые сверла')
+      +filter-menu__item('Рельсосверлильные станки BDS-machines')
+      +filter-menu__item('Рельсосверлильные станки Rotabroach')
+      +filter-menu__item('Рельсосверлильные станки Вектор')
+      +filter-menu__item('Рельсосверлильные станки Хайтек инструмент')
+    ul.filter-menu__list.hidden-desktop
+      +filter-menu__item-top('Станки для снятия фаски', 'first')
+      +filter-menu__item('Аксессуары')
+      +filter-menu__item('Кромкорезные машины')
+      +filter-menu__item('Пластины твердосплавные')
+      +filter-menu__item('Ручные фаскосниматели')
+      +filter-menu__item('Фрезы и фрезерные головки')
+    ul.filter-menu__list.hidden-desktop
+      +filter-menu__item-top('Услуги', 'first')
+      +filter-menu__item('Аренда сверлильного станка на магните')
+      +filter-menu__item('Заточка корончатого сверла')
+      +filter-menu__item('Ремонт сверлильного станка на магните')
+      +filter-menu__item('Ремонт бензинового ударного гайковерта')
+
+    a(href="#").filter-menu__all.visible-desktop.open
+      span.visible-desktop__open Показать еще
+      span.visible-desktop__close Скрыть
+  //end filter-aside__menu
+
+  //begin filter-aside__form
+  form.filter-aside__form.filter-form
+
+    //begin filter-form-item
+    .filter-form__item.filter-form-item
+      .filter-form-item__header
+        h3.filter-form-item__title Цена, руб
+      .filter-form-item__body
+        .filter-form-item__double-inputs
+          label
+            span от
+            input(value='0')
+          label
+            span до
+            input(value='0')
+    //end filter-form-item
+
+    //begin filter-form-item
+    .filter-form__item.filter-form-item
+      .filter-form-item__header.filter-form-item__header--toggle.active
+        h3.filter-form-item__title Производитель
+        +svg('arr-left')
+      .filter-form-item__body
+        +filter-form-item__checkbox('Rotabroach')
+        +filter-form-item__checkbox('Euroboor')
+        +filter-form-item__checkbox('Вектор')
+        +filter-form-item__checkbox('Magtron')
+        +filter-form-item__checkbox('Rotabroach')
+        +filter-form-item__checkbox('Euroboor')
+        +filter-form-item__checkbox('Вектор')
+    //end filter-form-item
+
+    //begin filter-form-item
+    .filter-form__item.filter-form-item
+      .filter-form-item__header.filter-form-item__header--toggle.active
+        h3.filter-form-item__title Шпиндель
+        +svg('arr-left')
+      .filter-form-item__body
+        +filter-form-item__checkbox('Конус Морзе 1')
+        +filter-form-item__checkbox('Конус Морзе 2')
+        +filter-form-item__checkbox('Конус Морзе 3')
+        +filter-form-item__checkbox('Конус Морзе 4')
+    //end filter-form-item
+
+    //begin filter-form-item
+    .filter-form__item.filter-form-item
+      .filter-form-item__header
+        h3.filter-form-item__title Глубина сверления, мм
+      .filter-form-item__body
+        .filter-form-item__double-inputs
+          label
+            span от
+            input(value='0')
+          label
+            span до
+            input(value='0')
+    //end filter-form-item
+
+    //begin hidden filters
+    span.hidden-desktop--parent
+      //begin filter-form-item
+      .filter-form__item.filter-form-item.hidden-desktop
+        .filter-form-item__header
+          h3.filter-form-item__title Глубина сверления 2, мм
+        .filter-form-item__body
+          .filter-form-item__double-inputs
+            label
+              span от
+              input(value='0')
+            label
+              span до
+              input(value='0')
+      //end filter-form-item
+
+      //begin filter-form-item
+      .filter-form__item.filter-form-item.hidden-desktop
+        .filter-form-item__header
+          h3.filter-form-item__title Глубина сверления 3, мм
+        .filter-form-item__body
+          .filter-form-item__double-inputs
+            label
+              span от
+              input(value='0')
+            label
+              span до
+              input(value='0')
+      //end filter-form-item
+
+      a(href="#").filter-form__all.visible-desktop.open
+        span.visible-desktop__open Показать еще
+        span.visible-desktop__close Скрыть
+    //end hidden filters
+
+    .filter-form__submit
+      input(type='submit' value='Найти').filter-form__submit-btn
+
+    .filter-form__reset
+      +svg('reset')
+      span Сбросить
+      input(type='reset' value='').filter-form__reset-btn
+  //end filter-aside__form
+
+
+
+
+
+
+  include ../elements/pages-aside-banner
+//end filter-aside

@@ -1,0 +1,203 @@
+extends ../_template
+
+mixin popular-slider__card(pic, title, price)
+  .popular-slider__card
+    .popular-slider__img
+      img(src="assets/img/popular-slider-" + pic + ".jpg" alt="picture")
+      label.popular-slider__compare
+        input(type='checkbox')
+        span
+          | В сравнение
+          svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+
+    .popular-slider__title #{title}
+    .popular-slider__descr Характеристика 1: 220 Вт
+    .popular-slider__descr Характеристика с очень длинным названием: 220 Вт
+    .popular-slider__price
+      span #{price}
+      span ₽
+
+    .popular-slider__footer
+      a(href="#").popular-slider__basket В корзину
+      .popular-slider__counter
+        include ../elements/counter
+
+mixin popular-slider__card-sale(pic, title, priceNew, priceOld)
+  .popular-slider__card
+    .popular-slider__img
+     .popular-slider__sale-labels
+       .popular-slider__sale-label
+         span Хит продаж
+       .popular-slider__sale-label
+         span Спец цена
+     img(src="assets/img/popular-slider-" + pic + ".jpg" alt="picture")
+     label.popular-slider__compare
+        input(type='checkbox')
+        span
+          | В сравнение
+          svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+
+    .popular-slider__title #{title}
+    .popular-slider__descr Характеристика 1: 220 Вт
+    .popular-slider__descr Характеристика с очень длинным названием: 220 Вт
+    .popular-slider__price
+      .popular-slider__price-new
+        span #{priceNew}
+        span ₽
+      .popular-slider__price-old
+        span #{priceOld}
+        span ₽
+
+    .popular-slider__footer
+      a(href="#").popular-slider__basket В корзину
+      .popular-slider__counter
+        include ../elements/counter
+
+block variables
+  - var title           = 'Магнитные  сверлильные станки | Kerner'
+  - var description     = 'Магнитные  сверлильные станки | Kerner'
+  - var ogtitle         = 'Магнитные  сверлильные станки | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Магнитные  сверлильные станки'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+    include ../sections/catalog-menu
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+
+      .category
+        .container
+          include ../sections/headers/pages-header-category
+        .container
+          include ../sections/filter-aside
+
+          //begin category__body.category-body
+          .category__body.category-body
+            //begin category-body__popular
+            .category-body__popular.category-popular-filter.hidden-desktop--parent
+              .category-popular-filter__title Популярные подборки
+              ul.category-popular-filter__list
+                li.category-popular-filter__item
+                  a(href="#").category-popular-filter__link Rotabroach
+                li.category-popular-filter__item
+                  a(href="#").category-popular-filter__link Euroboor
+                li.category-popular-filter__item
+                  a(href="#").category-popular-filter__link Вектор
+                li.category-popular-filter__item
+                  a(href="#").category-popular-filter__link Magtron
+                li.category-popular-filter__item
+                  a(href="#").category-popular-filter__link Rotabroach
+                li.category-popular-filter__item
+                  a(href="#").category-popular-filter__link Euroboor
+                li.category-popular-filter__item
+                  a(href="#").category-popular-filter__link Вектор
+                li.category-popular-filter__item
+                  a(href="#").category-popular-filter__link Magtron
+                li.category-popular-filter__item.hidden-desktop
+                  a(href="#").category-popular-filter__link Euroboor
+                li.category-popular-filter__item.hidden-desktop
+                  a(href="#").category-popular-filter__link Вектор
+                li.category-popular-filter__item.hidden-desktop
+                  a(href="#").category-popular-filter__link Magtron
+                li.category-popular-filter__item.hidden-desktop
+                  a(href="#").category-popular-filter__link Rotabroach
+                li.category-popular-filter__item.hidden-desktop
+                  a(href="#").category-popular-filter__link Euroboor
+                li.category-popular-filter__item.hidden-desktop
+                  a(href="#").category-popular-filter__link Вектор
+              a(href="#").category-popular-filter__all.visible-desktop.open
+                span.visible-desktop__open Показать еще
+                span.visible-desktop__close Скрыть
+            //end category-body__popular
+
+            //begin category-body__sort
+            .category-body__sort.category-sort-filter
+              .category-sort-filter__left
+                .category-sort-filter__left-title Сортировать:
+                .category-sort-filter__left-filter
+                  .category-sort-filter__left-item
+                    a(href="#").category-sort-filter__left-link по умолчанию
+                  .category-sort-filter__left-item
+                    a(href="#").category-sort-filter__left-link по популярности
+                  .category-sort-filter__left-item.category-sort-filter__left-item--price.active
+                    a(href="#").category-sort-filter__left-link по цене
+                      +svg('filter-price-01')
+                    a(href="#").category-sort-filter__left-link по цене
+                      +svg('filter-price-02')
+
+
+
+              .category-sort-filter__right
+                a(href="#").category-sort-filter__right-link
+                  +svg('line-icon')
+                a(href="#").category-sort-filter__right-link.active
+                  +svg('card-icon')
+
+            //end category-body__sort
+
+            //begin category-body__list
+            .category-body__list
+              .popular-slider__item
+                +popular-slider__card('01', 'Магнитный электрический сверлильный станок COMMANDO', '48 000')
+              .popular-slider__item
+                +popular-slider__card('04', 'Магнитный сверлильный станок FE Powertools 36 X', '35 900')
+              .popular-slider__item
+                +popular-slider__card-sale('01', 'Магнитный электрический сверлильный станок COMMANDO', '48 000', '53 000')
+              .popular-slider__item
+                +popular-slider__card('04', 'Магнитный сверлильный станок FE Powertools 36 X', '35 900')
+              .popular-slider__item
+                +popular-slider__card('05', 'Магнитный сверлильный станок SCY-32HD "Cayken"', '38 000')
+              .popular-slider__item
+                +popular-slider__card('01', 'Магнитный электрический сверлильный станок COMMANDO', '48 000')
+              .popular-slider__item
+                +popular-slider__card-sale('01', 'Магнитный электрический сверлильный станок COMMANDO', '48 000', '53 000')
+              .popular-slider__item
+                +popular-slider__card('04', 'Магнитный сверлильный станок FE Powertools 36 X', '35 900')
+              .popular-slider__item
+                +popular-slider__card('01', 'Магнитный электрический сверлильный станок COMMANDO', '48 000')
+              .popular-slider__item
+                +popular-slider__card('04', 'Магнитный сверлильный станок FE Powertools 36 X', '35 900')
+              .popular-slider__item
+                +popular-slider__card('05', 'Магнитный сверлильный станок SCY-32HD "Cayken"', '38 000')
+              .popular-slider__item
+                +popular-slider__card('01', 'Магнитный электрический сверлильный станок COMMANDO', '48 000')
+              .popular-slider__item
+                +popular-slider__card('01', 'Магнитный электрический сверлильный станок COMMANDO', '48 000')
+              .popular-slider__item
+                +popular-slider__card('04', 'Магнитный сверлильный станок FE Powertools 36 X', '35 900')
+              .popular-slider__item
+                +popular-slider__card('01', 'Магнитный электрический сверлильный станок COMMANDO', '48 000')
+            //end category-body__list
+
+            //begin category-body__pagination
+            .category-body__pagination
+              include ../elements/pagination
+            //end category-body__pagination
+            //begin category__article
+            .category__article.category-article
+              .category-article__header
+                h2.category-article__title Заголовок
+              .category-article__text.hidden-desktop--parent
+                p Оборудование для металлообработки и сверления - многозадачные станки, выполняющие различные функции, заменяют сразу не один инструмент. Когда нужно фрезеровать, сверлить либо сделать резьбу в заготовках из металла, то можно использовать сверлильный магнитный станок. Их преимущество над фрезеровальными, а также привычными сверлильными устройствами - отличная маневренность.
+                p Оборудование для металлообработки и сверления - многозадачные станки, выполняющие различные функции, заменяют сразу не один инструмент. Когда нужно фрезеровать, сверлить либо сделать резьбу в заготовках из металла, то можно использовать сверлильный магнитный станок. Их преимущество над фрезеровальными, а также привычными сверлильными устройствами - отличная маневренность.
+                p.hidden-desktop Производители стремятся комплектовать оборудование для металлообработки и сверления электрическими приводами или пневматическими. Объясняется выбор следующим моментом: иногда нельзя подвести источник питания либо в здании имеется взрывоопасная атмосфера. В данной ситуации нужно применять только магнитный станок. В других ситуациях логично использовать модели с электрическим приводом, которые подключаются к рабочим сетям.
+                p.hidden-desktop Помимо этого, в комплекте с техникой могут идти аккумуляторы, если подача электроэнергии прекратится, то некоторое время вы сможете все равно продолжить работы. Выбирая магнитный станок, необходимо обратить внимание на то, как подается шпиндель. Когда требуется хорошая скорость обработки заготовок, то лучший вариант - автоматическая подача (работает на 30% мощнее).
+                a(href="#").category-article__text-btn.visible-desktop
+                  span.visible-desktop__open Читать далее
+                  span.visible-desktop__close Скрыть
+            //end category__article
+          //end category__body.category-body
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
+
+  include ../sections/scripts

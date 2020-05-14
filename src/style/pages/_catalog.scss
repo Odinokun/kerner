@@ -253,6 +253,28 @@
     margin: 0 auto;
   }
 }
+.popular-slider__sale-labels{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.popular-slider__sale-label{
+  display: block;
+  background-color: #C00606;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  text-align: center;
+  span {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+}
 
 //begin #compare
 .popular-slider__compare {
@@ -345,6 +367,7 @@
   display: flex;
   justify-content: center;
   margin: 15px 0;
+  white-space: nowrap;
   span {
     font-size: 24px;
     font-weight: bold;
@@ -353,6 +376,33 @@
     padding: 0 3px;
     color: #272425;
   }
+}
+.popular-slider__price-new{
+  padding-right: 10px;
+  span {
+  color: #C42323;
+
+  }
+
+}
+.popular-slider__price-old{
+  position: relative;
+  &::before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 11px;
+    background-color: #979EA0;
+  }
+span {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #979EA0;
+}
 }
 
 .popular-slider__footer {

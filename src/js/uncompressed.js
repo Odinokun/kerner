@@ -11,7 +11,8 @@ $(document).ready(function ($) {
     'brand',
     'reviews',
     'contacts',
-    'catalog'
+    'catalog',
+    'category'
     ]);
 });
 
@@ -75,4 +76,23 @@ $('.catalog-mobile-menu__item--first').on('click', function () {
     $(this).siblings().slideToggle();
     $(this).toggleClass('active');
   }
+});
+
+//open/close пункты в меню бокового фильтра
+$('.filter-menu__item--first').on('click', function (e) {
+  e.preventDefault();
+  $(this).siblings().slideToggle();
+});
+
+//open/close пункты в форме бокового фильтра
+$('.filter-form-item__header--toggle').on('click', function (e) {
+  e.preventDefault();
+  $(this).toggleClass('active');
+  $(this).siblings().slideToggle();
+});
+
+//цвет кнопок в фильтре переключения вида (линейный/карты)
+$('.category-sort-filter__right-link').on('click', function () {
+  $('.category-sort-filter__right-link').removeClass('active');
+  $(this).addClass('active');
 });

@@ -1,0 +1,64 @@
+//begin #pages-aside-banner
+.pages-aside-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding: 30px;
+  background-color: $brand;
+  background-image: url('../img/bg-help-line.svg');
+  background-repeat: no-repeat;
+  background-position: calc(100% + 10px) -10px;
+  background-size: 119px 125px;
+
+  @include max(767) {
+    display: none;
+  }
+}
+
+.pages-aside-banner__text {
+  font-size: 14px;
+  line-height: 24px;
+  display: block;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.pages-aside-banner__link {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  display: block;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #fff;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.pages-aside-banner__callback {
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  min-width: 150px;
+  height: 33px;
+  padding: 0 5px;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  border-radius: 17px !important;
+  background-color: $highlight;
+  box-shadow: none;
+  &:hover {
+    color: #fff;
+    background-color: $highlight-hov;
+  }
+}
+
+//end #pages-aside-banner

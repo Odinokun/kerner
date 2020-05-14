@@ -9,7 +9,8 @@
 @import 'elements/breadcrumbs';
 @import 'elements/slickBase';
 @import 'elements/popup';
-//@import 'elements/pagination';
+@import 'elements/pages-aside-banner';
+@import 'elements/pagination';
 
 //main section
 @import 'sections/header';
@@ -23,6 +24,7 @@
 @import 'sections/team-slider';
 @import 'sections/catalog-menu';
 @import 'sections/catalog-mobile-menu';
+@import 'sections/filter-aside';
 
 //hero section
 @import 'sections/hero/hero';
@@ -46,3 +48,4 @@
 @import 'pages/reviews';
 @import 'pages/contacts';
 @import 'pages/catalog';
+@import 'pages/category';

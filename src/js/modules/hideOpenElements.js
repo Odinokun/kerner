@@ -1,5 +1,15 @@
 module.exports = function() {
 
+  // begin hide/open elements in desktop version
+  $('.visible-desktop').on('click', function (e) {
+    e.preventDefault();
+    let clickParent = $(this).parents('.hidden-desktop--parent');
+
+    $(clickParent).find('.hidden-desktop').slideToggle();
+    $(clickParent).find('.visible-desktop__open, .visible-desktop__close').fadeToggle(0);
+  });
+  // end hide/open elements in desktop version
+
   // begin hide/open elements in mobile version
   $('.visible-767').on('click', function (e) {
     e.preventDefault();
