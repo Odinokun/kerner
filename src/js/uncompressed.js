@@ -12,7 +12,8 @@ $(document).ready(function ($) {
     'reviews',
     'contacts',
     'catalog',
-    'category'
+    'category',
+    'selection'
     ]);
 });
 
