@@ -7,11 +7,7 @@ module.exports = [
   './node_modules/slick-carousel/slick/slick.css',
 
   // include jQuery UI
-  // './src/vendors/jquery-ui/jquery-ui.min.css',
-
-
-  // include animate.css
-  // './node_modules/animate.css/animate.css',
+  './src/vendors/jquery-ui/jquery-ui.min.css',
 
   // include fancybox3
   './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'

@@ -1,0 +1,247 @@
+.category-table {
+  margin-bottom: 20px;
+}
+
+.category-table__header {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.category-table__th {
+  padding: 0 10px;
+  text-align: center;
+  &.active {
+    .category-table__th-link {
+      color: $highlight;
+      &::before {
+        background-image: url('../img/sort-01.png');
+      }
+    }
+  }
+  &:nth-child(1) {
+    width: 170px;
+    padding-left: 20px;
+  }
+  &:nth-child(2) {
+    width: 145px;
+  }
+  &:nth-child(3) {
+    width: 135px;
+  }
+  &:nth-child(4) {
+    width: 150px;
+  }
+  &:nth-child(5) {
+    width: 145px;
+  }
+  &:last-child {
+    flex: none;
+    width: 123px;
+    padding-left: 20px;
+  }
+}
+
+.category-table__th-link {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  position: relative;
+  display: block;
+  padding: 15px 16px 15px 0;
+  text-decoration: none;
+  color: #253a5a;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 10px;
+    height: 14px;
+    margin: auto;
+    content: '';
+    background-image: url('../img/blue-arrs.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+}
+
+.category-table__row {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid #f2f2f2;
+  background-color: #fff;
+  &:hover {
+    color: $highlight;
+  }
+}
+
+.category-table__td {
+  padding: 9px 5px;
+  transition: .5s;
+  text-align: center;
+
+  .popular-slider__basket {
+    cursor: pointer;
+    border: 1px solid #009bc9;
+    background-color: #fff;
+
+    svg {
+      fill: $highlight;
+      width: 25px;
+      height: 19px;
+    }
+  }
+
+  &:nth-child(1) {
+    width: 170px;
+    padding-left: 0;
+    text-align: left;
+  }
+  &:nth-child(2) {
+    width: 145px;
+  }
+  &:nth-child(3) {
+    width: 135px;
+  }
+  &:nth-child(4) {
+    width: 150px;
+  }
+  &:nth-child(5) {
+    width: 145px;
+  }
+  &:last-child {
+    flex: none;
+    width: 123px;
+    padding: 9px 0 9px 20px;
+  }
+}
+
+//begin #compare
+.category-table__compare {
+  position: relative;
+  display: block;
+  flex: none;
+  background-color: #fff;
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    opacity: 0;
+  }
+  span {
+    font-size: 14px;
+    line-height: 16px;
+    position: relative;
+    display: block;
+    padding-left: 26px;
+    user-select: none;
+    transition: .5s;
+    color: #272425;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      content: '';
+      transition: .5s;
+      border: 1px solid #e5e5e5;
+      background-color: #fff;
+    }
+    svg {
+      position: absolute;
+      top: 5px;
+      left: 4px;
+      width: 9px;
+      height: 7px;
+      transition: .5s;
+
+      stroke: transparent;
+    }
+  }
+}
+
+.category-table__row:hover {
+  .category-table__compare span {
+    color: $highlight;
+    &::before {
+      border-color: #979ea0;
+    }
+    svg {
+      stroke: #979ea0;
+    }
+  }
+}
+
+.category-table__compare input:checked + span {
+  &::before {
+    border-color: $highlight !important;
+  }
+  svg {
+    stroke: #253a5a !important;
+  }
+}
+
+//end #compare
+
+//begin #CATEGORY TABLE FOOTER
+.category-table__footer {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.category-table__footer-compare {
+  display: flex;
+  align-items: center;
+  .popular-slider__compare {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    margin-right: 0;
+  }
+}
+
+.category-table__footer-btn {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 150px;
+  height: 33px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 17px;
+  background-color: $highlight;
+  &:hover {
+    color: #fff;
+    background-color: $highlight-hov;
+  }
+}
+
+.category-table__footer-quantity {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  .ui-selectmenu-button-open,
+  .ui-selectmenu-button-close,
+  .selectbox-ui + .ui-corner-all {
+    padding-right: 0 !important;
+  }
+  .ui-button .ui-icon {
+    display: none;
+  }
+}
+
+//end #CATEGORY TABLE FOOTER

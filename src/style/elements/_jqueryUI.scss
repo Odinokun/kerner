@@ -1,0 +1,96 @@
+.selectbox-ui {
+  & + .ui-button,
+  & + .ui-corner-all,
+  & + .ui-button:focus,
+  & + .ui-button:active {
+    font-size: 14px;
+    line-height: 1;
+    padding: 10px 20px;
+    color: #253a5a;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background-color: transparent;
+  }
+}
+.ui-selectmenu-button.ui-button{
+  width: auto;
+}
+//.selectbox-ui + .ui-widget {
+.selectbox-ui + .ui-selectmenu-button-closed {
+  .ui-selectmenu-text {
+    margin-right: 0;
+    position: relative;
+    display: inline-block;
+    padding-right: 25px;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 12px;
+      height: 7px;
+      margin: auto;
+      content: '';
+      transform: rotate(180deg);
+      background-image: url('../img/blue-arr.png');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+    }
+  }
+}
+.selectbox-ui + .ui-selectmenu-button-open {
+  .ui-selectmenu-text {
+  position: relative;
+  display: inline-block;
+  padding-right: 25px;
+    margin-right: 0;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 12px;
+      height: 7px;
+      margin: auto;
+      content: '';
+      transform: rotate(0);
+      background-image: url('../img/blue-arr.png');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+    }
+  }
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active {
+  margin: 0;
+  border: none;
+  background-color: transparent;
+}
+.ui-widget-content .ui-state-active {
+  color: $highlight !important;
+}
+.ui-menu .ui-menu-item-wrapper {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  padding: 3px 0 15px 0;
+  color: #253a5a;
+}
+
+.ui-menu .ui-menu-item {
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.ui-widget.ui-widget-content{
+  border-radius: 0 !important;
+  max-width: 210px;
+  width: auto !important;
+  padding: 15px 20px 3px 20px !important;
+  box-shadow: 0 4px 34px rgba(37, 58, 90, .15);
+
+}

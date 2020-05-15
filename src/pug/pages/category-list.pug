@@ -1,0 +1,402 @@
+extends ../_template
+
+mixin compare(title)
+  .category-table__compare
+    input(type='checkbox')
+    span
+      | #{title}
+      svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+        path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+
+block variables
+  - var title           = 'Магнитные  сверлильные станки | Kerner'
+  - var description     = 'Магнитные  сверлильные станки | Kerner'
+  - var ogtitle         = 'Магнитные  сверлильные станки | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Магнитные  сверлильные станки'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+    include ../sections/catalog-menu
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+
+      .category
+        .container
+          include ../sections/headers/pages-header-category
+        .container
+          include ../sections/filter-aside
+
+          //begin category__body.category-body
+          .category__body.category-body
+            //begin category-body__popular
+            .category-body__popular.category-popular-filter.hidden-desktop--parent
+              .category-popular-filter__title Популярные подборки
+              ul.category-popular-filter__list
+                li.category-popular-filter__item
+                  a(href="#").category-popular-filter__link Rotabroach
+                li.category-popular-filter__item
+                  a(href="#").category-popular-filter__link Euroboor
+                li.category-popular-filter__item
+                  a(href="#").category-popular-filter__link Вектор
+                li.category-popular-filter__item
+                  a(href="#").category-popular-filter__link Magtron
+                li.category-popular-filter__item
+                  a(href="#").category-popular-filter__link Rotabroach
+                li.category-popular-filter__item
+                  a(href="#").category-popular-filter__link Euroboor
+                li.category-popular-filter__item
+                  a(href="#").category-popular-filter__link Вектор
+                li.category-popular-filter__item
+                  a(href="#").category-popular-filter__link Magtron
+                li.category-popular-filter__item.hidden-desktop
+                  a(href="#").category-popular-filter__link Euroboor
+                li.category-popular-filter__item.hidden-desktop
+                  a(href="#").category-popular-filter__link Вектор
+                li.category-popular-filter__item.hidden-desktop
+                  a(href="#").category-popular-filter__link Magtron
+                li.category-popular-filter__item.hidden-desktop
+                  a(href="#").category-popular-filter__link Rotabroach
+                li.category-popular-filter__item.hidden-desktop
+                  a(href="#").category-popular-filter__link Euroboor
+                li.category-popular-filter__item.hidden-desktop
+                  a(href="#").category-popular-filter__link Вектор
+              a(href="#").category-popular-filter__all.visible-desktop.open
+                span.visible-desktop__open Показать еще
+                span.visible-desktop__close Скрыть
+            //end category-body__popular
+
+            //begin category-body__sort
+            .category-body__sort.category-sort-filter
+              .category-sort-filter__left
+                .category-sort-filter__left-title Сортировать:
+                select.selectbox-ui
+                  option умолчанию
+                  option цене
+                  option мощности двигателя
+                  option(selected) весу
+                  option количеству скоростей
+                  option Ø нарезания резьбы
+                  option Ø сверления корончатым сверлом
+
+              .category-sort-filter__right
+                a(href="#").category-sort-filter__right-link
+                  +svg('line-icon')
+                a(href="#").category-sort-filter__right-link.active
+                  +svg('card-icon')
+            //end category-body__sort
+
+            //begin category-body__table
+            .category-body__table
+              .category-table
+                //begin category-table__header
+                .category-table__header
+                  .category-table__th
+                    a(href="#").category-table__th-link Производитель
+                  .category-table__th
+                    a(href="#").category-table__th-link Мощность двигателя
+                  .category-table__th.active
+                    a(href="#").category-table__th-link Вес
+                  .category-table__th
+                    a(href="#").category-table__th-link Шпиндель
+                  .category-table__th
+                    a(href="#").category-table__th-link Цена
+                  .category-table__th
+                //end category-table__header
+
+                //begin category-table__row
+                .category-table__row
+                  .category-table__td
+                    +compare('Euroboor')
+                  .category-table__td 1050 Вт
+                  .category-table__td 9.95 кг
+                  .category-table__td Weldon 19,05
+                  .category-table__td 36 000 ₽
+                  .category-table__td
+                    .popular-slider__footer
+                      .popular-slider__basket
+                        +svg('basket')
+                      .popular-slider__counter
+                        include ../elements/counter
+                //end category-table__row
+                //begin category-table__row
+                .category-table__row
+                  .category-table__td
+                    +compare('Euroboor')
+                  .category-table__td 1050 Вт
+                  .category-table__td 9.95 кг
+                  .category-table__td Weldon 19,05
+                  .category-table__td 36 000 ₽
+                  .category-table__td
+                    .popular-slider__footer
+                      .popular-slider__basket
+                        +svg('basket')
+                      .popular-slider__counter
+                        include ../elements/counter
+                //end category-table__row
+                //begin category-table__row
+                .category-table__row
+                  .category-table__td
+                    +compare('Вектор')
+                  .category-table__td 1050 Вт
+                  .category-table__td 9.95 кг
+                  .category-table__td Weldon 19,05
+                  .category-table__td 46 000 ₽
+                  .category-table__td
+                    .popular-slider__footer
+                      .popular-slider__basket
+                        +svg('basket')
+                      .popular-slider__counter
+                        include ../elements/counter
+                //end category-table__row
+                //begin category-table__row
+                .category-table__row
+                  .category-table__td
+                    +compare('Magtron')
+                  .category-table__td 1050 Вт
+                  .category-table__td 9.95 кг
+                  .category-table__td Weldon 19,05
+                  .category-table__td 76 000 ₽
+                  .category-table__td
+                    .popular-slider__footer
+                      .popular-slider__basket
+                        +svg('basket')
+                      .popular-slider__counter
+                        include ../elements/counter
+                //end category-table__row
+                //begin category-table__row
+                .category-table__row
+                  .category-table__td
+                    +compare('Euroboor')
+                  .category-table__td 1050 Вт
+                  .category-table__td 9.95 кг
+                  .category-table__td Weldon 19,05
+                  .category-table__td 36 000 ₽
+                  .category-table__td
+                    .popular-slider__footer
+                      .popular-slider__basket
+                        +svg('basket')
+                      .popular-slider__counter
+                        include ../elements/counter
+                //end category-table__row
+                //begin category-table__row
+                .category-table__row
+                  .category-table__td
+                    +compare('Euroboor')
+                  .category-table__td 1050 Вт
+                  .category-table__td 9.95 кг
+                  .category-table__td Weldon 19,05
+                  .category-table__td 36 000 ₽
+                  .category-table__td
+                    .popular-slider__footer
+                      .popular-slider__basket
+                        +svg('basket')
+                      .popular-slider__counter
+                        include ../elements/counter
+                //end category-table__row
+                //begin category-table__row
+                .category-table__row
+                  .category-table__td
+                    +compare('Вектор')
+                  .category-table__td 1050 Вт
+                  .category-table__td 9.95 кг
+                  .category-table__td Weldon 19,05
+                  .category-table__td 46 000 ₽
+                  .category-table__td
+                    .popular-slider__footer
+                      .popular-slider__basket
+                        +svg('basket')
+                      .popular-slider__counter
+                        include ../elements/counter
+                //end category-table__row
+                //begin category-table__row
+                .category-table__row
+                  .category-table__td
+                    +compare('Magtron')
+                  .category-table__td 1050 Вт
+                  .category-table__td 9.95 кг
+                  .category-table__td Weldon 19,05
+                  .category-table__td 76 000 ₽
+                  .category-table__td
+                    .popular-slider__footer
+                      .popular-slider__basket
+                        +svg('basket')
+                      .popular-slider__counter
+                        include ../elements/counter
+                //end category-table__row
+                //begin category-table__row
+                .category-table__row
+                  .category-table__td
+                    +compare('Euroboor')
+                  .category-table__td 1050 Вт
+                  .category-table__td 9.95 кг
+                  .category-table__td Weldon 19,05
+                  .category-table__td 36 000 ₽
+                  .category-table__td
+                    .popular-slider__footer
+                      .popular-slider__basket
+                        +svg('basket')
+                      .popular-slider__counter
+                        include ../elements/counter
+                //end category-table__row
+                //begin category-table__row
+                .category-table__row
+                  .category-table__td
+                    +compare('Euroboor')
+                  .category-table__td 1050 Вт
+                  .category-table__td 9.95 кг
+                  .category-table__td Weldon 19,05
+                  .category-table__td 36 000 ₽
+                  .category-table__td
+                    .popular-slider__footer
+                      .popular-slider__basket
+                        +svg('basket')
+                      .popular-slider__counter
+                        include ../elements/counter
+                //end category-table__row
+                //begin category-table__row
+                .category-table__row
+                  .category-table__td
+                    +compare('Вектор')
+                  .category-table__td 1050 Вт
+                  .category-table__td 9.95 кг
+                  .category-table__td Weldon 19,05
+                  .category-table__td 46 000 ₽
+                  .category-table__td
+                    .popular-slider__footer
+                      .popular-slider__basket
+                        +svg('basket')
+                      .popular-slider__counter
+                        include ../elements/counter
+                //end category-table__row
+                //begin category-table__row
+                .category-table__row
+                  .category-table__td
+                    +compare('Magtron')
+                  .category-table__td 1050 Вт
+                  .category-table__td 9.95 кг
+                  .category-table__td Weldon 19,05
+                  .category-table__td 76 000 ₽
+                  .category-table__td
+                    .popular-slider__footer
+                      .popular-slider__basket
+                        +svg('basket')
+                      .popular-slider__counter
+                        include ../elements/counter
+                //end category-table__row
+                //begin category-table__row
+                .category-table__row
+                  .category-table__td
+                    +compare('Euroboor')
+                  .category-table__td 1050 Вт
+                  .category-table__td 9.95 кг
+                  .category-table__td Weldon 19,05
+                  .category-table__td 36 000 ₽
+                  .category-table__td
+                    .popular-slider__footer
+                      .popular-slider__basket
+                        +svg('basket')
+                      .popular-slider__counter
+                        include ../elements/counter
+                //end category-table__row
+                //begin category-table__row
+                .category-table__row
+                  .category-table__td
+                    +compare('Euroboor')
+                  .category-table__td 1050 Вт
+                  .category-table__td 9.95 кг
+                  .category-table__td Weldon 19,05
+                  .category-table__td 36 000 ₽
+                  .category-table__td
+                    .popular-slider__footer
+                      .popular-slider__basket
+                        +svg('basket')
+                      .popular-slider__counter
+                        include ../elements/counter
+                //end category-table__row
+                //begin category-table__row
+                .category-table__row
+                  .category-table__td
+                    +compare('Вектор')
+                  .category-table__td 1050 Вт
+                  .category-table__td 9.95 кг
+                  .category-table__td Weldon 19,05
+                  .category-table__td 46 000 ₽
+                  .category-table__td
+                    .popular-slider__footer
+                      .popular-slider__basket
+                        +svg('basket')
+                      .popular-slider__counter
+                        include ../elements/counter
+                //end category-table__row
+                //begin category-table__row
+                .category-table__row
+                  .category-table__td
+                    +compare('Magtron')
+                  .category-table__td 1050 Вт
+                  .category-table__td 9.95 кг
+                  .category-table__td Weldon 19,05
+                  .category-table__td 76 000 ₽
+                  .category-table__td
+                    .popular-slider__footer
+                      .popular-slider__basket
+                        +svg('basket')
+                      .popular-slider__counter
+                        include ../elements/counter
+                //end category-table__row
+
+              //begin category-table__footer
+              .category-table__footer
+                .category-table__footer-compare
+                  label.popular-slider__compare
+                    input(type='checkbox')
+                    span
+
+                      svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+                  select.selectbox-ui
+                    option в корзину
+                    option(selected) в сравнение
+
+                a(href="#").category-table__footer-btn Применить
+
+                .category-table__footer-quantity
+                  .category-sort-filter__left-title Выводить на странице:
+                  select.selectbox-ui
+                    option 20
+                    option(selected) 30
+                    option 100
+                    option 200
+              //end category-table__footer
+            //end category-body__table
+
+            //begin category-body__pagination
+            .category-body__pagination
+              include ../elements/pagination
+            //end category-body__pagination
+            //begin category__article
+            .category__article.category-article
+              .category-article__header
+                h2.category-article__title Заголовок
+              .category-article__text.hidden-desktop--parent
+                p Пример текста в 213 слов. Производители стремятся комплектовать оборудование для металлообработки и сверления электрическими приводами или пневматическими. Объясняется выбор следующим моментом: иногда нельзя подвести источник питания либо в здании имеется взрывоопасная атмосфера. В данной ситуации нужно применять только магнитный станок. В других ситуациях логично использовать модели с электрическим приводом, которые подключаются к рабочим сетям.
+                p Помимо этого, в комплекте с техникой могут идти аккумуляторы, если подача электроэнергии прекратится, то некоторое время вы сможете все равно продолжить работы. Выбирая магнитный станок, необходимо обратить внимание на то, как подается шпиндель. Когда требуется хорошая скорость обработки заготовок, то лучший вариант - автоматическая подача (работает на 30% мощнее).
+                p.hidden-desktop Производители стремятся комплектовать оборудование для металлообработки и сверления электрическими приводами или пневматическими. Объясняется выбор следующим моментом: иногда нельзя подвести источник питания либо в здании имеется взрывоопасная атмосфера. В данной ситуации нужно применять только магнитный станок. В других ситуациях логично использовать модели с электрическим приводом, которые подключаются к рабочим сетям.
+                p.hidden-desktop Помимо этого, в комплекте с техникой могут идти аккумуляторы, если подача электроэнергии прекратится, то некоторое время вы сможете все равно продолжить работы. Выбирая магнитный станок, необходимо обратить внимание на то, как подается шпиндель. Когда требуется хорошая скорость обработки заготовок, то лучший вариант - автоматическая подача (работает на 30% мощнее).
+                p.hidden-desktop Производители стремятся комплектовать оборудование для металлообработки и сверления электрическими приводами или пневматическими.
+                a(href="#").category-article__text-btn.visible-desktop
+                  span.visible-desktop__open Читать далее
+                  span.visible-desktop__close Скрыть
+            //end category__article
+          //end category__body.category-body
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
+
+  include ../sections/scripts

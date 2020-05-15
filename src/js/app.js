@@ -24,6 +24,9 @@ $(function() {
   // begin open/close mobile menu, catalog menu & search
   require('./modules/openCloseMobileMenuCatalogMenuAndSearch')();
 
+  // begin jquery UI
+  require('./modules/UI')();
+
 
 
   // begin phone mask
