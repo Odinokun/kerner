@@ -1,8 +1,18 @@
 .pagination {
+  position: relative;
   display: flex;
   justify-content: center;
   padding: 10px 0;
   text-align: center;
+
+  @include max(1150) {
+    width: auto;
+    padding-top: 50px;
+  }
+  @include max(580) {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+  }
 }
 
 .pagination__list {
@@ -10,6 +20,11 @@
   align-items: center;
   margin: 0;
   padding: 0;
+
+  @include max(580) {
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 .pagination__item {
@@ -33,10 +48,22 @@
   color: $brand;
   border-radius: 50%;
   background-color: transparent;
+
+  @include max(580) {
+    font-size: 15px;
+    line-height: 20px;
+    width: 20px;
+    height: 30px;
+  }
   &.active {
     pointer-events: none;
     color: #fff;
     background-color: $highlight;
+
+    @include max(580) {
+      color: $highlight;
+      background-color: transparent;
+    }
   }
   &:hover {
     color: $highlight;
@@ -47,6 +74,27 @@
 .pagination-arr__right {
   position: relative;
   padding: 0 20px;
+
+  @include max(1150) {
+    position: absolute;
+    top: 0;
+    padding: 0 25px;
+  }
+  @include max(580) {
+    padding: 0 10px;
+  }
+}
+
+.pagination-arr__left {
+  @include max(1150) {
+    left: 0;
+  }
+}
+
+.pagination-arr__right {
+  @include max(1150) {
+    right: 0;
+  }
 }
 
 .pagination-arr__link {

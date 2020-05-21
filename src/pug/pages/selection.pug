@@ -81,67 +81,9 @@ block content
 
           //begin category__body.category-body
           .category__body.category-body
-            //begin category-body__popular
-            .category-body__popular.category-popular-filter.hidden-desktop--parent
-              .category-popular-filter__title Популярные подборки
-              ul.category-popular-filter__list
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Rotabroach
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Euroboor
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Вектор
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Magtron
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Rotabroach
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Euroboor
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Вектор
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Magtron
-                li.category-popular-filter__item.hidden-desktop
-                  a(href="#").category-popular-filter__link Euroboor
-                li.category-popular-filter__item.hidden-desktop
-                  a(href="#").category-popular-filter__link Вектор
-                li.category-popular-filter__item.hidden-desktop
-                  a(href="#").category-popular-filter__link Magtron
-                li.category-popular-filter__item.hidden-desktop
-                  a(href="#").category-popular-filter__link Rotabroach
-                li.category-popular-filter__item.hidden-desktop
-                  a(href="#").category-popular-filter__link Euroboor
-                li.category-popular-filter__item.hidden-desktop
-                  a(href="#").category-popular-filter__link Вектор
-              a(href="#").category-popular-filter__all.visible-desktop.open
-                span.visible-desktop__open Показать еще
-                span.visible-desktop__close Скрыть
-            //end category-body__popular
-
-            //begin category-body__sort
-            .category-body__sort.category-sort-filter
-              .category-sort-filter__left
-                .category-sort-filter__left-title Сортировать:
-                .category-sort-filter__left-filter
-                  .category-sort-filter__left-item
-                    a(href="#").category-sort-filter__left-link по умолчанию
-                  .category-sort-filter__left-item
-                    a(href="#").category-sort-filter__left-link по популярности
-                  .category-sort-filter__left-item.category-sort-filter__left-item--price.active
-                    a(href="#").category-sort-filter__left-link по цене
-                      +svg('filter-price-01')
-                    a(href="#").category-sort-filter__left-link по цене
-                      +svg('filter-price-02')
-
-
-
-              .category-sort-filter__right
-                a(href="#").category-sort-filter__right-link
-                  +svg('line-icon')
-                a(href="#").category-sort-filter__right-link.active
-                  +svg('card-icon')
-
-            //end category-body__sort
+            include ../elements/category-popular-filter
+            include ../elements/category-sort-filter
+            include ../elements/mobile-filter
 
             //begin category-body__list
             .category-body__list
@@ -181,19 +123,6 @@ block content
             .category-body__pagination
               include ../elements/pagination
             //end category-body__pagination
-            //begin category__article
-            .category__article.category-article
-              .category-article__header
-                h2.category-article__title Заголовок
-              .category-article__text.hidden-desktop--parent
-                p Оборудование для металлообработки и сверления - многозадачные станки, выполняющие различные функции, заменяют сразу не один инструмент. Когда нужно фрезеровать, сверлить либо сделать резьбу в заготовках из металла, то можно использовать сверлильный магнитный станок. Их преимущество над фрезеровальными, а также привычными сверлильными устройствами - отличная маневренность.
-                p Оборудование для металлообработки и сверления - многозадачные станки, выполняющие различные функции, заменяют сразу не один инструмент. Когда нужно фрезеровать, сверлить либо сделать резьбу в заготовках из металла, то можно использовать сверлильный магнитный станок. Их преимущество над фрезеровальными, а также привычными сверлильными устройствами - отличная маневренность.
-                p.hidden-desktop Производители стремятся комплектовать оборудование для металлообработки и сверления электрическими приводами или пневматическими. Объясняется выбор следующим моментом: иногда нельзя подвести источник питания либо в здании имеется взрывоопасная атмосфера. В данной ситуации нужно применять только магнитный станок. В других ситуациях логично использовать модели с электрическим приводом, которые подключаются к рабочим сетям.
-                p.hidden-desktop Помимо этого, в комплекте с техникой могут идти аккумуляторы, если подача электроэнергии прекратится, то некоторое время вы сможете все равно продолжить работы. Выбирая магнитный станок, необходимо обратить внимание на то, как подается шпиндель. Когда требуется хорошая скорость обработки заготовок, то лучший вариант - автоматическая подача (работает на 30% мощнее).
-                a(href="#").category-article__text-btn.visible-desktop
-                  span.visible-desktop__open Читать далее
-                  span.visible-desktop__close Скрыть
-            //end category__article
           //end category__body.category-body
     //end content
 

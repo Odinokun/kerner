@@ -81,64 +81,9 @@ block content
 
           //begin category__body.category-body
           .category__body.category-body
-            //begin category-body__popular
-            .category-body__popular.category-popular-filter.hidden-desktop--parent
-              .category-popular-filter__title Популярные подборки
-              ul.category-popular-filter__list
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Rotabroach
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Euroboor
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Вектор
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Magtron
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Rotabroach
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Euroboor
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Вектор
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Magtron
-                li.category-popular-filter__item.hidden-desktop
-                  a(href="#").category-popular-filter__link Euroboor
-                li.category-popular-filter__item.hidden-desktop
-                  a(href="#").category-popular-filter__link Вектор
-                li.category-popular-filter__item.hidden-desktop
-                  a(href="#").category-popular-filter__link Magtron
-                li.category-popular-filter__item.hidden-desktop
-                  a(href="#").category-popular-filter__link Rotabroach
-                li.category-popular-filter__item.hidden-desktop
-                  a(href="#").category-popular-filter__link Euroboor
-                li.category-popular-filter__item.hidden-desktop
-                  a(href="#").category-popular-filter__link Вектор
-              a(href="#").category-popular-filter__all.visible-desktop.open
-                span.visible-desktop__open Показать еще
-                span.visible-desktop__close Скрыть
-            //end category-body__popular
-
-            //begin category-body__sort
-            .category-body__sort.category-sort-filter
-              .category-sort-filter__left
-                .category-sort-filter__left-title Сортировать:
-                .category-sort-filter__left-filter
-                  .category-sort-filter__left-item
-                    a(href="#").category-sort-filter__left-link по умолчанию
-                  .category-sort-filter__left-item
-                    a(href="#").category-sort-filter__left-link по популярности
-                  .category-sort-filter__left-item.category-sort-filter__left-item--price.active
-                    a(href="#").category-sort-filter__left-link по цене
-                      +svg('filter-price-01')
-                    a(href="#").category-sort-filter__left-link по цене
-                      +svg('filter-price-02')
-
-              .category-sort-filter__right
-                a(href="#").category-sort-filter__right-link
-                  +svg('line-icon')
-                a(href="#").category-sort-filter__right-link.active
-                  +svg('card-icon')
-            //end category-body__sort
+            include ../elements/category-popular-filter
+            include ../elements/category-sort-filter
+            include ../elements/mobile-filter
 
             //begin category-body__list
             .category-body__list
@@ -178,6 +123,7 @@ block content
             .category-body__pagination
               include ../elements/pagination
             //end category-body__pagination
+
             //begin category__article
             .category__article.category-article
               .category-article__header

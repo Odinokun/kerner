@@ -1,0 +1,20 @@
+//begin category-body__sort
+.category-body__sort.category-sort-filter
+  .category-sort-filter__left
+    .category-sort-filter__left-title Сортировать:
+    .category-sort-filter__left-select
+      select.selectbox-ui
+        option умолчанию
+        option цене
+        option мощности двигателя
+        option(selected) весу
+        option количеству скоростей
+        option Ø нарезания резьбы
+        option Ø сверления корончатым сверлом
+
+  .category-sort-filter__right
+    a(href="#").category-sort-filter__right-link
+      +svg('line-icon')
+    a(href="#").category-sort-filter__right-link.active
+      +svg('card-icon')
+//end category-body__sort
