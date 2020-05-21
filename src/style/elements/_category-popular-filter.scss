@@ -1,0 +1,76 @@
+//begin #POPULAR FILTER
+.category-popular-filter {
+  margin-bottom: 5px;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  @include max(1023) {
+    display: none;
+  }
+}
+
+.category-popular-filter__title {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 15px;
+  color: #979ea0;
+}
+
+.category-popular-filter__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.category-popular-filter__item {
+  list-style: none;
+}
+
+.category-popular-filter__link {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  display: block;
+  margin-right: 12px;
+  margin-bottom: 15px;
+  padding: 6px 13px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #272425;
+  border: 1px solid #e5e5e5;
+  &:hover {
+    color: #272425;
+  }
+}
+
+.category-popular-filter__all {
+  display: block;
+  text-decoration: none;
+  span {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    position: relative;
+    padding: 0 25px 0 0;
+    color: $highlight;
+    &:first-child {
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
+    &::before {
+      position: absolute;
+      top: 3px;
+      right: 0;
+      width: 12px;
+      height: 7px;
+      content: '';
+      background-image: url('../img/blue-arr.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+//end #POPULAR FILTER

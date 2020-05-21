@@ -1,0 +1,136 @@
+.mobile-filter {
+  display: none;
+  margin-bottom: 20px;
+
+  @include max(1023) {
+    display: block;
+  }
+}
+
+.mobile-filter__header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 15px 0;
+  background-color: #f2f2f2;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 17px;
+    margin: auto;
+    content: '';
+    pointer-events: none;
+    background-color: #e5e5e5;
+  }
+}
+
+.mobile-filter__header-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+  &.active {
+    span {
+      color: $highlight;
+    }
+  }
+  i {
+    font-style: normal;
+  }
+  span {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    position: relative;
+    display: block;
+    padding-left: 26px;
+    color: #000;
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      margin: auto;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+}
+
+.mobile-filter__header-btn--filter {
+  span {
+    &::before {
+      background-image: url('../img/filter.png');
+    }
+  }
+}
+
+.mobile-filter__header-btn--sort {
+  span {
+    &::before {
+      background-image: url('../img/blue-arrs.png');
+    }
+  }
+}
+
+.mobile-filter__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-filter__footer-right {
+  display: flex;
+}
+
+.mobile-filter__footer-popular-btn {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 41px;
+  padding: 10px 13px;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #272425;
+  border: 1px solid #e5e5e5;
+}
+
+.mobile-filter__footer-right-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 41px;
+  height: 41px;
+  margin-left: 10px;
+  border: 1px solid #e5e5e5;
+
+  &.active {
+    svg {
+      fill: $highlight;
+    }
+  }
+  svg {
+    fill: #979ea0;
+    width: 15px;
+    height: 15px;
+    transition: .5s;
+  }
+}
+
+//end #SORT FILTER

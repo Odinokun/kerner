@@ -1,0 +1,16 @@
+//begin mobile-filter
+.mobile-filter
+  .mobile-filter__header
+    a(href="#").mobile-filter__header-btn.mobile-filter__header-btn--filter.active
+      span Фильтры <i>(2)</i>
+    a(href="#").mobile-filter__header-btn.mobile-filter__header-btn--sort
+      span Сортировка
+
+  .mobile-filter__footer
+    a(href="#").mobile-filter__footer-popular-btn Популярные подборки
+    .mobile-filter__footer-right
+      a(href="#").mobile-filter__footer-right-link
+        +svg('line-icon')
+      a(href="#").mobile-filter__footer-right-link.active
+        +svg('card-icon')
+//end mobile-filter

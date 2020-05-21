@@ -34,62 +34,9 @@ block content
 
           //begin category__body.category-body
           .category__body.category-body
-            //begin category-body__popular
-            .category-body__popular.category-popular-filter.hidden-desktop--parent
-              .category-popular-filter__title Популярные подборки
-              ul.category-popular-filter__list
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Rotabroach
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Euroboor
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Вектор
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Magtron
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Rotabroach
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Euroboor
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Вектор
-                li.category-popular-filter__item
-                  a(href="#").category-popular-filter__link Magtron
-                li.category-popular-filter__item.hidden-desktop
-                  a(href="#").category-popular-filter__link Euroboor
-                li.category-popular-filter__item.hidden-desktop
-                  a(href="#").category-popular-filter__link Вектор
-                li.category-popular-filter__item.hidden-desktop
-                  a(href="#").category-popular-filter__link Magtron
-                li.category-popular-filter__item.hidden-desktop
-                  a(href="#").category-popular-filter__link Rotabroach
-                li.category-popular-filter__item.hidden-desktop
-                  a(href="#").category-popular-filter__link Euroboor
-                li.category-popular-filter__item.hidden-desktop
-                  a(href="#").category-popular-filter__link Вектор
-              a(href="#").category-popular-filter__all.visible-desktop.open
-                span.visible-desktop__open Показать еще
-                span.visible-desktop__close Скрыть
-            //end category-body__popular
-
-            //begin category-body__sort
-            .category-body__sort.category-sort-filter
-              .category-sort-filter__left
-                .category-sort-filter__left-title Сортировать:
-                select.selectbox-ui
-                  option умолчанию
-                  option цене
-                  option мощности двигателя
-                  option(selected) весу
-                  option количеству скоростей
-                  option Ø нарезания резьбы
-                  option Ø сверления корончатым сверлом
-
-              .category-sort-filter__right
-                a(href="#").category-sort-filter__right-link
-                  +svg('line-icon')
-                a(href="#").category-sort-filter__right-link.active
-                  +svg('card-icon')
-            //end category-body__sort
+            include ../elements/category-popular-filter
+            include ../elements/category-sort-list-filter
+            include ../elements/mobile-filter
 
             //begin category-body__table
             .category-body__table
@@ -350,29 +297,7 @@ block content
                         include ../elements/counter
                 //end category-table__row
 
-              //begin category-table__footer
-              .category-table__footer
-                .category-table__footer-compare
-                  label.popular-slider__compare
-                    input(type='checkbox')
-                    span
-
-                      svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
-                        path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
-                  select.selectbox-ui
-                    option в корзину
-                    option(selected) в сравнение
-
-                a(href="#").category-table__footer-btn Применить
-
-                .category-table__footer-quantity
-                  .category-sort-filter__left-title Выводить на странице:
-                  select.selectbox-ui
-                    option 20
-                    option(selected) 30
-                    option 100
-                    option 200
-              //end category-table__footer
+              include ../elements/category-table-footer
             //end category-body__table
 
             //begin category-body__pagination

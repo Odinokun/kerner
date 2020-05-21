@@ -4,6 +4,10 @@
   padding-bottom: 60px;
 
   @include max(1023) {
+    display: none;
+  }
+
+  @include max(1023) {
     width: 250px;
   }
 }
