@@ -15,7 +15,8 @@ $(document).ready(function ($) {
     'category',
     'selection',
     'category-list',
-    'selection-list'
+    'selection-list',
+    'request'
     ]);
 });
 

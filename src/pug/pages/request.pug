@@ -1,0 +1,46 @@
+extends ../_template
+
+block variables
+  - var title           = 'Оформление заявки | Kerner'
+  - var description     = 'Оформление заявки | Kerner'
+  - var ogtitle         = 'Оформление заявки | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Оформление заявки'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+    include ../sections/catalog-menu
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+
+      //begin request
+      .request
+        .container
+          include ../sections/headers/pages-header-request
+        .container
+          .request__row
+            a(href="#").request__link
+              .request__icon
+                +svg('request-ur')
+              .request__text
+                span Юридическое лицо / ИП
+                +svg('arr-left')
+
+            a(href="#").request__link
+              .request__icon
+                +svg('request-fiz')
+              .request__text
+                span Частное лицо
+                +svg('arr-left')
+      //end request
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
+
+  include ../sections/scripts
