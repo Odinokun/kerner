@@ -4,7 +4,7 @@
 }
 
 .category-table {
-  min-width: 770px;
+  min-width: 870px;
   margin-bottom: 20px;
 }
 
@@ -29,6 +29,9 @@
   &:nth-child(1) {
     width: 170px;
     padding-left: 20px;
+    @include max(1023) {
+      margin-right: auto;
+    }
   }
   &:nth-child(2) {
     width: 145px;
@@ -107,6 +110,9 @@
     width: 170px;
     padding-left: 0;
     text-align: left;
+    @include max(1023) {
+      margin-right: auto;
+    }
   }
   &:nth-child(2) {
     width: 145px;
