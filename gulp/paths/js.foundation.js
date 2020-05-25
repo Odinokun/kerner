@@ -11,7 +11,7 @@ module.exports = [
   './src/vendors/jquery-ui/jquery-ui.min.js',
 
   // include Maskedinput
-  // './src/vendors/maskedinput/jquery.maskedinput.min.js',
+  './src/vendors/maskedinput/jquery.maskedinput.min.js',
 
   // include fancybox3
   './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js'

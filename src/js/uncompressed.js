@@ -16,7 +16,11 @@ $(document).ready(function ($) {
     'selection',
     'category-list',
     'selection-list',
-    'request'
+    'request',
+    'request-ur',
+    'request-ur-2',
+    'request-ur-3',
+    'request-fiz-1'
     ]);
 });
 
@@ -117,3 +121,13 @@ $('.category-table__row').on('click', function (e) {
     }
   }
 });
+
+//выбор варианта доставки на странице оформления заказа
+$('.request__delivery-radio').on('click', function () {
+  if($('#request__delivery-service').prop('checked')){
+    $('#request__delivery-company').slideDown();
+  } else{
+    $('#request__delivery-company').slideUp();
+  }
+});
+

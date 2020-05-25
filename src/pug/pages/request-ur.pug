@@ -1,0 +1,92 @@
+extends ../_template
+
+block variables
+  - var title           = 'Оформление заявки для Юридических лиц и ИП | Kerner'
+  - var description     = 'Оформление заявки для Юридических лиц и ИП | Kerner'
+  - var ogtitle         = 'Оформление заявки для Юридических лиц и ИП | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Оформление заявки для Юридических лиц и ИП'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+    include ../sections/catalog-menu
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+
+      //begin request
+      .request
+        .container
+          include ../sections/headers/pages-header-request
+        .container
+          .request__inn#request__inn
+            //begin request__left
+            form.request__form
+              //begin request__firm-wrap
+              .request__firm-wrap
+                .request__firm
+                  .request__firm-row
+                    label.request__firm-label
+                      span Введите ИНН <i>*</i>
+                      input(type='search' placeholder='ИНН' required).request__firm-input
+                    input(type='submit' value='Поиск').request__firm-submit.btn
+              //end request__firm-wrap
+            //end request__form
+
+            //begin request__card
+            .request__card-wrap#request__card-wrap
+              .request__card
+                h3.request__card-title Детали заявки
+                //begin request__card-price-wrap
+                .request__card-price-wrap
+                  .request__card-price
+                    .request__card-price-text
+                      span Сумма заявки
+                    .request__card-price-num
+                      span 38 571
+                      span ₽
+                  .request__card-price
+                    .request__card-price-text
+                      span В том числе НДС
+                    .request__card-price-num
+                      span 40 000
+                      span ₽
+                //end request__card-price-wrap
+
+                //begin request__card-prop-wrap
+                .request__card-prop-wrap
+                  .request__card-prop
+                    .request__card-prop-text
+                      span Объем
+                    .request__card-prop-num
+                      span 1,3 м
+                  .request__card-prop
+                    .request__card-prop-text
+                      span Масса
+                    .request__card-prop-num
+                      span 150 кг
+                //end request__card-prop-wrap
+
+                button.request__card-btn.btn.btn--light.btn--disabled Оформить заявку
+                button(data-popup='light-request-popup').request__card-btn.btn.btn--light.popup-open Упрощенная заявка
+
+                .request__card-agree Нажимая на кнопку “Оформить заявку”, Вы даете согласие на обработку <a href='#'>своих</a> персональных данных
+            //end request__card
+      //end request
+
+      //-begin request__mobile-footer
+      //-.request__mobile-footer
+        button.request__card-btn.btn.btn--dark Детали заявки
+        button(data-popup='light-request-popup').request__card-btn.btn.btn--light.popup-open Упрощенная заявка
+      //-end request__mobile-footer
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
+    include ../elements/popup
+
+  include ../sections/scripts

@@ -16,7 +16,7 @@
   left: 50%;
   display: none;
   overflow: auto;
-  width: 90%;
+  width: 95%;
   max-width: 670px;
   max-height: 95vh;
   padding: 50px;
@@ -140,6 +140,9 @@
   }
 }
 
+.popup-form__submit{
+  width: 100%;
+}
 .popup-form__submit-input {
   font-size: 14px;
   font-weight: normal;
@@ -175,5 +178,11 @@
       text-decoration: underline;
       color: $highlight;
     }
+  }
+}
+.light-request-popup {
+  max-width: 400px;
+  .popup-form__submit-input{
+    width: 100%;
   }
 }
