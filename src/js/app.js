@@ -12,6 +12,9 @@ $(function() {
   // begin фиксируем информационную строку при скролле
   require('./modules/stickyHeader')();
 
+  // begin фиксируем карточку заказа товара при скролле
+  require('./modules/stickyRequestCard')();
+
   // begin Slick slider
   require('./modules/slick')();
 
@@ -27,10 +30,10 @@ $(function() {
   // begin jquery UI
   require('./modules/UI')();
 
-
-
   // begin phone mask
-  // require('./modules/maskedinput')();
+  require('./modules/maskedinput')();
+
+
 
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();

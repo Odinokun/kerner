@@ -1,0 +1,190 @@
+extends ../_template
+
+block variables
+  - var title           = 'Оформление заявки для физических лиц | Kerner'
+  - var description     = 'Оформление заявки для физических лиц | Kerner'
+  - var ogtitle         = 'Оформление заявки для физических лиц | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Оформление заявки для физических лиц'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+    include ../sections/catalog-menu
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+
+      //begin request
+      .request
+        .container
+          include ../sections/headers/pages-header-request
+        .container
+          .request__inn#request__inn
+            //begin request__left
+            form.request__form
+              //begin request__firm-wrap
+              .request__firm-wrap
+                .request__firm
+                  .request__firm-row
+                    label.request__firm-label
+                      span Введите ИНН <i>*</i>
+                      input(type='search' placeholder='ИНН' required).request__firm-input
+                    input(type='submit' value='Поиск').request__firm-submit.btn
+              //end request__firm-wrap
+
+              //begin request__firm-wrap
+              .request__firm-wrap
+                .request__firm
+                  .request__firm-row
+
+                    label.request__firm-label
+                      span Название организации
+                      input(value='Организация из базы' placeholder='Название организации' disabled).request__firm-input
+
+                  .request__firm-row
+                    label.request__firm-label
+                      span ИНН
+                      input(value='10593847294' placeholder='ИНН' disabled).request__firm-input
+
+                  .request__firm-row
+                    label.request__firm-label
+                      span КПП
+                      input(value='049275839' placeholder='КПП' disabled).request__firm-input
+
+                  .request__firm-row
+                    label.request__firm-label
+                      span ОГРН
+                      input(value='84963' placeholder='ОГРН' disabled).request__firm-input
+              //end request__firm-wrap
+
+              //begin request__person-wrap
+              .request__person-wrap
+                .request__person
+                  .request__person-row
+                    label.request__person-label
+                      span Имя <i>*</i>
+                      input(placeholder='Имя' required).request__person-input
+
+                  .request__person-row
+                    label.request__person-label
+                      span Телефон <i>*</i>
+                      input(placeholder='+7(___)___-__-__' required).request__person-input.phone-mask
+                      .request__person-descr Менеджер свяжется с вами для подтверждения заявки
+
+
+                  .request__person-row
+                    label.request__person-label
+                      span Электронная почта <i>*</i>
+                      input(type='email' placeholder='Электронная почта' required).request__person-input
+                      .request__person-descr Мы отправим на него электронные копии документов
+              //end request__person-wrap
+
+              //begin request__checkbox-wrap
+              .request__checkbox-wrap
+                label.request__checkbox
+                  input(type='checkbox' checked)
+                  span
+                    | Создать аккаунт
+                    svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+
+                label.request__checkbox
+                  input(type='checkbox' checked)
+                  span
+                    | Подписаться на новинки ассортимента (письмо - 1 раз в месяц)
+                    svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+
+                label.request__checkbox
+                  input(type='checkbox' checked)
+                  span
+                    | Подписаться на новости и статьи (письмо - 2 раза в месяц)
+                    svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+              //end request__checkbox-wrap
+
+              //begin request__delivery-wrap
+              .request__delivery-wrap
+                h2.request__delivery-title Доставка
+
+                .request__delivery
+                  .request__delivery-radios
+                    label.request__delivery-radio
+                      input(type='radio' name='delivery' checked)
+                      span Самовывоз со склада: г.Санкт-Петербург, ул Садова, д 11А
+                    label.request__delivery-radio
+                      input(type='radio' name='delivery')
+                      span Доставка ТК
+
+                  h3.request__delivery-subtitle Рассчитайте примерную стоимость доставки
+                  .request__delivery-row
+                    label.request__delivery-label
+                      span Страна <i>*</i>
+                      input(placeholder='Страна' required).request__delivery-input
+                    label.request__delivery-label
+                      span Город <i>*</i>
+                      input(placeholder='Город' required).request__delivery-input
+
+                  .request__delivery-row
+                    select.selectbox-ui.request__delivery-select
+                      option Выберите ТК
+                      option Деловые линии
+                      option ЖелДорЭкмпедиция
+                      option ПЭК
+                      option КИТ
+                      option РАТЭК
+                    input(type="submit" value='Рассчитать').request__delivery-btn.btn.btn--disabled
+              //end request__delivery-wrap
+            //end request__form
+
+            //begin request__card
+            .request__card-wrap#request__card-wrap
+              .request__card
+                h3.request__card-title Детали заявки
+                //begin request__card-price-wrap
+                .request__card-price-wrap
+                  .request__card-price
+                    .request__card-price-text
+                      span Сумма заявки
+                    .request__card-price-num
+                      span 38 571
+                      span ₽
+                  .request__card-price
+                    .request__card-price-text
+                      span В том числе НДС
+                    .request__card-price-num
+                      span 40 000
+                      span ₽
+                //end request__card-price-wrap
+
+                //begin request__card-prop-wrap
+                .request__card-prop-wrap
+                  .request__card-prop
+                    .request__card-prop-text
+                      span Объем
+                    .request__card-prop-num
+                      span 1,3 м
+                  .request__card-prop
+                    .request__card-prop-text
+                      span Масса
+                    .request__card-prop-num
+                      span 150 кг
+                //end request__card-prop-wrap
+
+                button.request__card-btn.btn.btn--light.btn--disabled Оформить заявку
+                button(data-popup='light-request-popup').request__card-btn.btn.btn--light.popup-open Упрощенная заявка
+
+                .request__card-agree Нажимая на кнопку “Оформить заявку”, Вы даете согласие на обработку <a href='#'>своих</a> персональных данных
+            //end request__card
+      //end request
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
+    include ../elements/popup
+
+  include ../sections/scripts

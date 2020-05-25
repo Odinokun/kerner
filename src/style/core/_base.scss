@@ -289,3 +289,50 @@ svg {
   width: 100%;
   height: 100vh;
 }
+
+.btn {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 46px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: .5s;
+  text-align: center;
+  color: #fff;
+  border: none;
+  background-color: $highlight;
+  &:hover {
+    background-color: $highlight-hov;
+  }
+}
+.btn--light {
+  border: 1px solid $highlight;
+  color: $highlight;
+
+  background-color: transparent;
+  &:hover {
+    color: #ffffff;
+    background-color: $highlight;
+  }
+}
+.btn--dark{
+  border: 1px solid $brand;
+  color: #ffffff;
+  background-color: $brand;
+  &:hover {
+    border-color: $highlight;
+    background-color: $highlight;
+  }
+}
+.btn--disabled {
+  pointer-events: none;
+  border: none;
+
+  color: #979EA0;
+  background-color: #f2f2f2;
+
+}
