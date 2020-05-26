@@ -20,7 +20,8 @@ $(document).ready(function ($) {
     'request-ur',
     'request-ur-2',
     'request-ur-3',
-    'request-fiz-1'
+    'request-fiz-1',
+    'success'
     ]);
 });
 

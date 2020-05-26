@@ -26,6 +26,41 @@ block content
           .request__inn#request__inn
             //begin request__left
             form.request__form
+              //begin request__firm-wrap
+              .request__firm-wrap
+                .request__firm
+                  .request__firm-row
+                    label.request__firm-label
+                      span Введите ИНН <i>*</i>
+                      input(type='search' placeholder='ИНН' required).request__firm-input
+                    input(type='submit' value='Поиск').request__firm-submit.btn
+              //end request__firm-wrap
+
+              //begin request__firm-wrap
+              .request__firm-wrap
+                .request__firm
+                  .request__firm-row
+
+                    label.request__firm-label
+                      span Название организации
+                      input(value='Организация из базы' placeholder='Название организации' disabled).request__firm-input
+
+                  .request__firm-row
+                    label.request__firm-label
+                      span ИНН
+                      input(value='10593847294' placeholder='ИНН' disabled).request__firm-input
+
+                  .request__firm-row
+                    label.request__firm-label
+                      span КПП
+                      input(value='049275839' placeholder='КПП' disabled).request__firm-input
+
+                  .request__firm-row
+                    label.request__firm-label
+                      span ОГРН
+                      input(value='84963' placeholder='ОГРН' disabled).request__firm-input
+              //end request__firm-wrap
+
               //begin request__person-wrap
               .request__person-wrap
                 .request__person
@@ -103,13 +138,7 @@ block content
                       option КИТ
                       option РАТЭК
                     input(type="submit" value='Рассчитать').request__delivery-btn.btn.btn--disabled
-
-                  .request__delivery-row
-                    .request__delivery-result
-                      .request__delivery-result-text Примерная стоимость доставки до города:
-                      .request__delivery-result-price 8 571 ₽
-
-              //end request__form-delivery-wrap
+              //end request__delivery-wrap
             //end request__form
 
             //begin request__card
@@ -123,6 +152,12 @@ block content
                       span Сумма заявки
                     .request__card-price-num
                       span 38 571
+                      span ₽
+                  .request__card-price
+                    .request__card-price-text
+                      span В том числе НДС
+                    .request__card-price-num
+                      span 40 000
                       span ₽
                 //end request__card-price-wrap
 
@@ -140,7 +175,8 @@ block content
                       span 150 кг
                 //end request__card-prop-wrap
 
-                button.request__card-btn.btn.btn--disabled Оформить заявку
+                button.request__card-btn.btn.btn--light.btn--disabled Оформить заявку
+                button(data-popup='light-request-popup').request__card-btn.btn.btn--light.popup-open Упрощенная заявка
 
                 .request__card-agree Нажимая на кнопку “Оформить заявку”, Вы даете согласие на обработку <a href='#'>своих</a> персональных данных
             //end request__card
