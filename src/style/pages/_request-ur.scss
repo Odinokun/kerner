@@ -455,6 +455,9 @@
   font-size: 30px;
   line-height: 35px;
   color: #272425;
+  @include max(1150) {
+    font-size: 18px;
+  }
 }
 //end #request__delivery-wrap
 

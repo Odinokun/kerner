@@ -1,0 +1,80 @@
+extends ../_template
+
+mixin popular-slider__card(pic, title, price)
+  .popular-slider__card
+    .popular-slider__img
+      img(src="assets/img/popular-slider-" + pic + ".jpg" alt="picture")
+      label.popular-slider__compare
+        input(type='checkbox')
+        span
+          | В сравнение
+          svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+
+    .popular-slider__title #{title}
+    .popular-slider__descr Характеристика 1: 220 Вт
+    .popular-slider__descr Характеристика с очень длинным названием: 220 Вт
+    .popular-slider__price
+      span #{price}
+      span ₽
+
+    .popular-slider__footer
+      a(href="#").popular-slider__basket В корзину
+      .popular-slider__counter
+        include ../elements/counter
+
+block variables
+  - var title           = 'Заявка успешно отправлена | Kerner'
+  - var description     = 'Заявка успешно отправлена | Kerner'
+  - var ogtitle         = 'Заявка успешно отправлена | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Заявка успешно отправлена'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+    include ../sections/catalog-menu
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+
+      //begin success
+      .success
+        .container
+          include ../sections/headers/pages-header-success
+        .container
+          .success__header
+            p Ваша заявка <strong>№288</strong> успешно создана.<br>Вам перезвонит менеджер для подтверждения заказа и уточнения деталей в ближайшее время.
+          .success__copy
+            p Копия заявки отправлена вам на почту <a href='#'>sgs@fddf.ru</a>
+          .success__slider-sec
+            h2.success__slider-title Возможно, вас заинтересует
+
+            //begin popular-slider
+            .popular-slider
+              ul.popular-slider__list#success-slider__list
+                li.popular-slider__item
+                  +popular-slider__card('01', 'Магнитный электрический сверлильный станок COMMANDO', '48 000')
+                li.popular-slider__item
+                  +popular-slider__card('02', 'Пилот 6,34х103 "Bohre"', '400')
+                li.popular-slider__item
+                  +popular-slider__card('03', 'Смазочно-охлаждающая жидкость СОЖ (концентрат 1:10)', '4 000')
+                li.popular-slider__item
+                  +popular-slider__card('01', 'Магнитный электрический сверлильный станок COMMANDO', '48 000')
+                li.popular-slider__item
+                  +popular-slider__card('02', 'Пилот 6,34х103 "Bohre"', '400')
+                li.popular-slider__item
+                  +popular-slider__card('03', 'Смазочно-охлаждающая жидкость СОЖ (концентрат 1:10)', '4 000')
+            //end popular-slider
+
+
+      //end success
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
+
+  include ../sections/scripts
