@@ -21,7 +21,8 @@ $(document).ready(function ($) {
     'request-ur-2',
     'request-ur-3',
     'request-fiz-1',
-    'success'
+    'success',
+    'basket'
     ]);
 });
 
