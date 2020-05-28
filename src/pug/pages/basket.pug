@@ -1,0 +1,163 @@
+extends ../_template
+
+block variables
+  - var title           = 'Корзина | Kerner'
+  - var description     = 'Корзина | Kerner'
+  - var ogtitle         = 'Корзина | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Корзина'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+    include ../sections/catalog-menu
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+
+      //begin basket
+      .basket
+        .container
+          include ../sections/headers/pages-header
+          //begin basket-table
+          .basket__table.basket-table
+            //begin basket-table__header
+            .basket-table__header
+              .basket-table__th Наименование
+              .basket-table__th Размер
+              .basket-table__th Цена за ед.
+              .basket-table__th Кол-во
+              .basket-table__th Сумма
+              .basket-table__th
+            //end basket-table__header
+            //begin basket-table__row
+            .basket-table__row
+              .basket-table__td.basket-table__td--pic
+                img(src="assets/img/basket-01.jpg" alt="picture")
+              .basket-table__td.basket-table__td--name
+                span 00006044
+                a(href="#") Сверло корончатое из быстрорежущей стали 12х30 "Bohre"
+              .basket-table__td.basket-table__td--specifications
+                .basket-table__td-descr
+                  span Размер
+                .basket-table__td-body
+                  span 22x22x65
+                  span 0,15 кг
+              .basket-table__td.basket-table__td--price
+                .basket-table__td-descr
+                  span Цена за ед.
+                .basket-table__td-body
+                  span 1 091 ₽
+              .basket-table__td.basket-table__td--counter
+                .basket-table__td-descr
+                  span Кол-во
+                include ../elements/counter
+              .basket-table__td.basket-table__td--price
+                .basket-table__td-descr
+                  span Сумма
+                .basket-table__td-body
+                  span 2 182 ₽
+              .basket-table__td.basket-table__td--del
+                a(href="#").basket-table__del
+                  span Удалить
+                  +svg('trash')
+            //end basket-table__row
+
+            //begin basket-table__row
+            .basket-table__row
+              .basket-table__td.basket-table__td--pic
+                img(src="assets/img/basket-02.jpg" alt="picture")
+              .basket-table__td.basket-table__td--name
+                span 00006044
+                a(href="#") Аренда сверлильного станка на магните
+              .basket-table__td.basket-table__td--specifications
+                .basket-table__td-descr
+                  span Размер
+                .basket-table__td-body
+                  span 10x10x10 мм
+                  span 1 кг
+              .basket-table__td.basket-table__td--price
+                .basket-table__td-descr
+                  span Цена за ед.
+                .basket-table__td-body
+                  span 1 091 ₽
+              .basket-table__td.basket-table__td--counter
+                .basket-table__td-descr
+                  span Кол-во
+                include ../elements/counter
+              .basket-table__td.basket-table__td--price
+                .basket-table__td-descr
+                  span Сумма
+                .basket-table__td-body
+                  span 2 182 ₽
+              .basket-table__td.basket-table__td--del
+                a(href="#").basket-table__del
+                  span Удалить
+                  +svg('trash')
+            //end basket-table__row
+
+            //begin basket-table__row
+            .basket-table__row
+              .basket-table__td.basket-table__td--pic
+                img(src="assets/img/basket-03.jpg" alt="picture")
+              .basket-table__td.basket-table__td--name
+                span 00006044
+                a(href="#") Заточка корончатого сверла
+              .basket-table__td.basket-table__td--specifications
+                .basket-table__td-descr
+                  span Размер
+                .basket-table__td-body
+                  span 10x10x10 мм
+                  span 1 кг
+              .basket-table__td.basket-table__td--price
+                .basket-table__td-descr
+                  span Цена за ед.
+                .basket-table__td-body
+                  span 1 091 ₽
+              .basket-table__td.basket-table__td--counter
+                .basket-table__td-descr
+                  span Кол-во
+                include ../elements/counter
+              .basket-table__td.basket-table__td--price
+                .basket-table__td-descr
+                  span Сумма
+                .basket-table__td-body
+                  span 2 182 ₽
+              .basket-table__td.basket-table__td--del
+                a(href="#").basket-table__del
+                  span Удалить
+                  +svg('trash')
+            //end basket-table__row
+
+            //begin basket-table__footer
+            .basket-table__footer
+              a(href="#").basket-table__add-row
+                .basket-table__add-row-btn
+                span Добавить позицию
+              .basket-table__clear
+                button.basket-table__clear-btn.btn.btn--light Очистить корзину
+            //end basket-table__footer
+
+            //begin basket-table__sum
+            .basket-table__sum
+              .basket-table__sum-info
+                span.basket-table__sum-info-text Итого:
+                span.basket-table__sum-info-price 38 571 ₽
+            //end basket-table__sum
+
+            //begin basket-table__pay
+            .basket-table__pay
+              button.basket-table__pay-btn.btn Оформить заявку
+            //end basket-table__pay
+          //end basket-table
+
+      //end basket
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
+
+  include ../sections/scripts
