@@ -35,22 +35,30 @@
   }
   &::before {
     position: absolute;
-    top: 13px;
+    top: 14px;
     left: 0;
     width: 12px;
     height: 2px;
     content: '';
     background-color: $brand;
+
+    @include max(767) {
+      top: 12px;
+    }
   }
   &::after {
     position: absolute;
-    top: 13px;
+    top: 14px;
     left: 0;
     width: 12px;
     height: 2px;
     content: '';
     transform: rotate(90deg);
     background-color: $brand;
+
+    @include max(767) {
+      top: 12px;
+    }
   }
   &:hover {
     color: $highlight;
