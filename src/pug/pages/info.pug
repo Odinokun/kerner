@@ -1,0 +1,60 @@
+extends ../_template
+
+block variables
+  - var title           = 'Информация | Kerner'
+  - var description     = 'Информация | Kerner'
+  - var ogtitle         = 'Информация | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Информация'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+    include ../sections/catalog-menu
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+
+      //begin request
+      .request
+        .container
+          include ../sections/headers/pages-header
+        .container
+          .request__row
+            a(href="#").request__link
+              .request__icon
+                +svg('info-news')
+              .request__text
+                span Новости
+                +svg('arr-left')
+
+            a(href="#").request__link
+              .request__icon
+                +svg('info-articles')
+              .request__text
+                span Статьи
+                +svg('arr-left')
+
+            a(href="#").request__link
+              .request__icon
+                +svg('info-answers')
+              .request__text
+                span Вопрос-ответ
+                +svg('arr-left')
+
+            a(href="#").request__link
+              .request__icon
+                +svg('info-documents')
+              .request__text
+                span Документы
+                +svg('arr-left')
+      //end request
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
+
+  include ../sections/scripts
