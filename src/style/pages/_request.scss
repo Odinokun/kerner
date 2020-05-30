@@ -10,21 +10,20 @@
 .request__row {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 770px;
-  margin-bottom: 110px;
+  margin-bottom: 40px;
 
   @include max(767) {
-    margin-bottom: 40px;
-  }
-  @include max(767) {
-    flex-direction: column;
+    margin-bottom: 10px;
   }
 }
 
 .request__link {
   display: block;
   width: calc(50% - 15px);
+  margin-bottom: 30px;
   padding: 40px;
   transition: .5s;
   text-decoration: none;

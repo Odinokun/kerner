@@ -23,7 +23,8 @@ $(document).ready(function ($) {
     'request-fiz-1',
     'success',
     'basket',
-    'card'
+    'card',
+    'info'
     ]);
 });
 
