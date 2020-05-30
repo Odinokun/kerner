@@ -9,14 +9,21 @@
 
 .card {
   display: flex;
+
+  @include max(1150) {
+    flex-direction: column;
+  }
 }
 
 .card-body {
   max-width: calc(100% - 400px);
+
+  @include max(1150) {
+    max-width: 100%;
+  }
 }
 
 //begin #CARD SLIDER
-
 
 .card-body-slider {
   display: flex;
@@ -24,30 +31,46 @@
   align-items: flex-start;
   width: 100%;
   margin-bottom: 70px;
-  //outline: 1px solid red;
+
+  @include max(1150) {
+    margin-bottom: 30px;
+  }
+  @include max(767) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 //begin #LG
 .card-body-slider-lg__list {
+  width: 100%;
   max-width: 570px;
   height: 530px;
   margin: 10px 0;
   padding: 0;
-  //outline: 1px solid blueviolet;
+
+  @include max(767) {
+    height: auto;
+  }
 }
 
 .card-body-slider-lg__item {
-  list-style: none;
   display: flex !important;
   justify-content: center;
   align-items: center;
+  list-style: none;
+  user-select: none;
   img {
-    width: auto;
     display: block;
+    width: auto;
     max-height: 530px;
 
     object-fit: cover;
     object-position: center;
+    @include max(767) {
+      width: 100%;
+      max-height: 100%;
+    }
   }
 }
 
@@ -55,9 +78,15 @@
 
 //begin #SM
 .card-body-slider-sm__list.slick-slider {
-  margin: 0 auto 0 0;
   width: 71px;
+  margin: 0 auto 0 0;
   padding: 0;
+
+  @include max(767) {
+    width: 100%;
+    margin: 0;
+  }
+
   .slick-list {
     padding: 0 !important;
   }
@@ -65,36 +94,37 @@
   .next {
     position: absolute;
     z-index: 1;
-    left: 0;
     right: 0;
-    margin: auto;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 35px;
     height: 35px;
+    margin: auto;
     cursor: pointer;
     transition: .5s;
-    background-color: $highlight;
     transform: rotate(90deg);
+    background-color: $highlight;
     &:hover {
       background-color: $highlight-hov;
     }
   }
   .prev {
     top: -7px;
-
-
   }
   .next {
     bottom: -7px;
-
   }
 }
 
 .card-body-slider-sm__item {
   padding: 10px 0;
   list-style: none;
+
+  @include max(767) {
+    width: 90px !important;
+  }
   &.slick-current {
     .card-body-slider-sm__item-pic {
       border: 2px solid $highlight;
@@ -103,6 +133,9 @@
 }
 
 .card-body-slider-sm__item-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 70px;
   height: 70px;
   transition: border-color .5s;
@@ -118,11 +151,16 @@
 }
 
 //end #SM
-
 //end #CARD SLIDER
 
 //begin #CARD TABS
 //begin #card-tabs-header
+.card-tabs-header {
+  @include max(767) {
+    display: none;
+  }
+}
+
 .card-tabs-header__list {
   display: flex;
   margin: 0;
@@ -161,10 +199,108 @@
 
 //end #card-tabs-header
 
+//begin #card-tab__open/close
+.card-tab__open,
+.card-tab__close {
+  display: none;
+
+  @include max(767) {
+    display: flex;
+  }
+}
+
+.card-tab__open {
+  position: relative;
+  align-items: center;
+  width: calc(100% + 40px);
+  height: 55px;
+  margin-left: -20px;
+  padding: 9px 20px 9px 20px;
+  cursor: pointer;
+  transition: .5s;
+  background-color: transparent;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 1px;
+    content: '';
+    transition: opacity .5s;
+    opacity: 1;
+    background-color: #e5e5e5;
+  }
+}
+
+.card-tab__close {
+  align-items: center;
+  width: calc(100% + 40px);
+  height: 55px;
+  margin-left: -20px;
+  padding: 9px 20px 9px 20px;
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+
+.card-tab__open-text,
+.card-tab__close-text {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  transition: color .5s;
+  text-decoration: none;
+  color: $brand;
+}
+
+.card-tab__open-arr,
+.card-tab__close-arr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12px;
+  height: 12px;
+  margin-left: auto;
+  cursor: pointer;
+  transition: transform .5s;
+}
+
+.card-tab.open {
+  .card-tab__open {
+    background-color: #f2f2f2;
+    &::before {
+      opacity: 0;
+    }
+  }
+  .card-tab__open-text {
+    color: $highlight;
+  }
+  .card-tab__open-arr {
+    transform: rotate(-270deg);
+  }
+}
+
+.card-tab__open-arr {
+  transform: rotate(-90deg);
+}
+
+.card-tab__close-arr {
+  transform: rotate(-270deg);
+}
+
+//end #card-tab__open/close
+
 //begin #card-tabs-body
 .card-tab {
   display: none;
   padding-top: 40px;
+
+  @include max(767) {
+    display: block;
+    padding-top: 0;
+  }
   p {
     display: inline-block;
     margin-bottom: 20px;
@@ -174,12 +310,24 @@
   }
 }
 
+.card-tab__inn {
+  @include max(767) {
+    display: none;
+    padding-top: 30px;
+  }
+}
+
 .card-tab__title {
   font-size: 30px;
   font-weight: normal;
   line-height: 40px;
   margin-bottom: 20px;
   color: #272425;
+
+  @include max(767) {
+    font-size: 21px;
+    line-height: 26px;
+  }
 }
 
 .card-tab__subtitle {
@@ -188,6 +336,11 @@
   line-height: 32px;
   margin-bottom: 20px;
   color: #272425;
+
+  @include max(767) {
+    font-size: 20px;
+    line-height: 27px;
+  }
 }
 
 .card-tab__subsubtitle {
@@ -196,6 +349,11 @@
   line-height: 30px;
   margin-bottom: 20px;
   color: #272425;
+
+  @include max(767) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .card-tab__table {
@@ -212,11 +370,18 @@
     line-height: 24px;
     display: inline-block;
     width: 50%;
-    padding: 11px 0;
+    padding: 11px 11px 11px 0;
+
+    @include max(480) {
+      display: block;
+      width: 100%;
+    }
     &:first-child {
+      padding: 11px 11px 0 0;
       color: #253a5a;
     }
     &:last-child {
+      padding: 0 11px 11px 0;
       color: #272425;
     }
   }
@@ -379,13 +544,26 @@
 .card-tab__reviews-header {
   display: flex;
   justify-content: space-between;
-  //align-items: center;
   align-items: flex-end;
   margin-bottom: 30px;
+
+  @include max(480) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .btn {
+    @include max(480) {
+      width: 100%;
+    }
+  }
 }
 
 .card-tab__reviews-header-quantity {
   display: flex;
+
+  @include max(767) {
+    margin-bottom: 25px;
+  }
   span {
     font-size: 18px;
     font-weight: normal;
@@ -393,6 +571,11 @@
     padding-right: 4px;
     white-space: nowrap;
     color: #979ea0;
+
+    @include max(767) {
+      font-size: 15px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -404,6 +587,10 @@
   display: flex;
   align-items: center;
   padding: 15px 0;
+
+  @include max(480) {
+    flex-wrap: wrap;
+  }
 }
 
 .card-tab-review__name {
@@ -412,6 +599,11 @@
   line-height: 24px;
   padding-right: 7px;
   color: #253a5a;
+
+  @include max(767) {
+    font-size: 15px;
+    line-height: 20px;
+  }
 }
 
 .card-tab-review__company {
@@ -420,6 +612,11 @@
   line-height: 24px;
   padding-right: 15px;
   color: #979ea0;
+
+  @include max(767) {
+    font-size: 15px;
+    line-height: 20px;
+  }
 }
 
 .card-tab-review__date {
@@ -430,6 +627,12 @@
   text-align: right;
   white-space: nowrap;
   color: #c4c4c4;
+
+  @include max(480) {
+    width: 100%;
+    margin: 15px 0 5px 0;
+    text-align: left;
+  }
 }
 
 .card-tab-review__plus,
@@ -476,6 +679,10 @@
   margin-bottom: 30px;
   .btn {
     min-width: 153px;
+
+    @include max(480) {
+      width: 100%;
+    }
   }
 }
 
@@ -487,13 +694,40 @@
   flex: none;
   width: 370px;
   margin-left: 30px;
+
+  @include max(1150) {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 //begin #ASIDE TOP
 .card-aside-top {
+  display: none;
+
+  @include max(1150) {
+    display: block;
+  }
+}
+
+.card-aside {
+  .card-aside-top {
+    display: block;
+
+    @include max(1150) {
+      display: none;
+    }
+  }
+}
+
+.card-aside-top {
   position: relative;
   margin-bottom: 30px;
   border-bottom: 1px solid #e5e5e5;
+
+  @include max(1150) {
+    border-bottom: none;
+  }
   &::before {
     position: absolute;
     bottom: -5px;
@@ -502,6 +736,10 @@
     height: 1px;
     content: '';
     background-color: #e5e5e5;
+
+    @include max(1150) {
+      display: none;
+    }
   }
 }
 
@@ -538,6 +776,14 @@
   padding-right: 15px;
   white-space: nowrap;
   color: #c42323;
+
+  @include max(1150) {
+    font-weight: bold;
+  }
+  @include max(767) {
+    font-size: 32px;
+    line-height: 24px;
+  }
 }
 
 .card-aside-top__price-old {
@@ -546,6 +792,11 @@
   line-height: 44px;
   text-decoration: line-through;
   color: #979ea0;
+
+  @include max(767) {
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
 
 //begin #compare
@@ -613,8 +864,17 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
+
+  @include max(480) {
+    flex-direction: column;
+  }
   .btn {
     width: calc(50% - 15px);
+
+    @include max(480) {
+      width: 100%;
+      margin: 7px 0;
+    }
   }
 }
 
@@ -625,6 +885,12 @@
   margin-bottom: 30px;
   padding: 30px;
   background-color: #f2f2f2;
+
+  @include max(767) {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    padding: 30px 20px;
+  }
 }
 
 .card-aside__similar-title {
@@ -637,6 +903,7 @@
 
 .card-aside__similar-card {
   display: flex;
+  width: 100%;
   margin-bottom: 30px;
   &:last-child {
     margin-bottom: 0;
@@ -657,6 +924,7 @@
 .card-aside__similar-info {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   .btn {
     width: 125px;
     height: 40px;

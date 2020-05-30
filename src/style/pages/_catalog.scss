@@ -253,26 +253,28 @@
     margin: 0 auto;
   }
 }
-.popular-slider__sale-labels{
+
+.popular-slider__sale-labels {
   position: absolute;
   top: 0;
   left: 0;
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
+  align-items: flex-start;
 }
-.popular-slider__sale-label{
+
+.popular-slider__sale-label {
   display: block;
-  background-color: #C00606;
   margin-bottom: 5px;
   padding: 5px 10px;
   text-align: center;
+  background-color: #c00606;
   span {
-    font-weight: 500;
     font-size: 11px;
+    font-weight: 500;
     line-height: 14px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #fff;
   }
 }
 
@@ -377,32 +379,32 @@
     color: #272425;
   }
 }
-.popular-slider__price-new{
+
+.popular-slider__price-new {
   padding-right: 10px;
   span {
-  color: #C42323;
-
+    color: #c42323;
   }
-
 }
-.popular-slider__price-old{
+
+.popular-slider__price-old {
   position: relative;
   &::before {
-    content: '';
-    height: 1px;
-    width: 100%;
     position: absolute;
-    left: 0;
-    right: 0;
     top: 11px;
-    background-color: #979EA0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    content: '';
+    background-color: #979ea0;
   }
-span {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  color: #979EA0;
-}
+  span {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 24px;
+    color: #979ea0;
+  }
 }
 
 .popular-slider__footer {
@@ -435,7 +437,6 @@ span {
     color: #fff;
     background-color: $highlight-hov;
   }
-
 }
 
 .popular-slider__counter {
