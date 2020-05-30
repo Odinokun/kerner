@@ -1,0 +1,82 @@
+extends ../_template
+
+block variables
+  - var title           = 'Статьи | Kerner'
+  - var description     = 'Статьи | Kerner'
+  - var ogtitle         = 'Статьи | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Статьи'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+    include ../sections/catalog-menu
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+        
+      //begin page__content-wrap
+      .page__content-wrap
+        .container
+          include ../sections/pages-aside
+
+          //begin page-content
+          .page__content.articles.hidden-480--parent
+            include ../sections/headers/pages-header-info
+
+            //begin articles__list
+            ul.articles__list
+              //begin articles__item
+              li.articles__item
+                .articles__main
+                  a(href="#").articles__title Kerner - участник пятого сетевого совещания ЦДИ ОАО РЖД в Сочи
+                  span.articles__text 19 – 20 февраля 2020 г. в городе Сочи (отель Pullman Сочи Центр) прошло ежегодное сетевое совещание по подведению итогов производственно-хозяйственной деятельности инфраструктурного комплекса ОАО РЖД за 2019 год.
+                  span.articles__date 24 сентября 2019 в 15:23
+                a(href="#").articles__img(style='background-image: url("assets/img/articles-01.jpg")')
+              //end articles__item
+
+              //begin articles__item
+              li.articles__item
+                .articles__main
+                  a(href="#").articles__title Отрезные пилы по металлу
+                  span.articles__text Переносные инструменты для резки металлопроката
+                  span.articles__date 18 февраля 2019 в 08:28
+                a(href="#").articles__img(style='background-image: url("assets/img/articles-02.jpg")')
+              //end articles__item
+
+              //begin articles__item
+              li.articles__item
+                .articles__main
+                  a(href="#").articles__title Сверла по металлу
+                  span.articles__text Сверла по металлу - описания, виды, определения и характеристики.
+                  span.articles__date 18 февраля 2019 в 08:28
+                a(href="#").articles__img(style='background-image: url("assets/img/articles-03.jpg")')
+              //end articles__item
+
+              //begin articles__item
+              li.articles__item
+                .articles__main
+                  a(href="#").articles__title Сверла по металлу, что выбрать: корончатое сверло или спиральное сверло?
+                  span.articles__text Сравним два типа сверл для сверления отверстий в металлических изделиях - корончатые и спиральные сверла.
+                  span.articles__date 18 февраля 2019 в 08:28
+                a(href="#").articles__img(style='background-image: url("assets/img/articles-04.jpg")')
+              //end articles__item
+
+
+            //end articles__list
+
+            .articles__pagination
+              include ../elements/pagination
+
+          //end page-content
+      //end page__content-wrap
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
+    include ../elements/popup
+
+  include ../sections/scripts
