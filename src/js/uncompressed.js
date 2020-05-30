@@ -25,7 +25,8 @@ $(document).ready(function ($) {
     'basket',
     'card',
     'info',
-    'articles'
+    'articles',
+    'news'
     ]);
 });
 
