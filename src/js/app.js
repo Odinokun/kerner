@@ -33,4 +33,33 @@ $(function() {
   // begin phone mask
   require('./modules/maskedinput')();
 
+  // begin счетчик в карте товара
+  // begin появления счетчика по клику кнопки с слайдере каталога
+  require('./modules/counter')();
+
+  //begin выпадающий aside в мобильной версии
+  require('./modules/aside')();
+
+  //begin open/close пункты в мобильном меню каталога
+  require('./modules/catalog-menu')();
+
+  //begin аккордеон в FAQ
+  require('./modules/acordeon')();
+
+  //begin переключение десктопных табов в шапке карточки товара
+  require('./modules/tabs')();
+
+  //begin open/close пункты в меню бокового фильтра
+  //begin open/close пункты в форме бокового фильтра
+  require('./modules/aside-filter')();
+
+  //begin выбор чекбокса в строке таблицы сравнения товаров
+  require('./modules/checkbox')();
+
+  //begin выбор варианта доставки на странице оформления заказа
+  require('./modules/delivery')();
+
+  //begin цвет кнопок в фильтре переключения вида (линейный/карты)
+  require('./modules/topFilterBtns')();
+
 });
