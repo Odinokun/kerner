@@ -1,0 +1,70 @@
+extends ../_template
+
+block variables
+  - var title           = 'Вопрос-ответ | Kerner'
+  - var description     = 'Вопрос-ответ | Kerner'
+  - var ogtitle         = 'Вопрос-ответ | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Вопрос-ответ'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+    include ../sections/catalog-menu
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+        
+      //begin page__content-wrap
+      .page__content-wrap
+        .container
+          include ../sections/pages-aside
+
+          //begin page-content
+          .page__content.faq.hidden-480--parent
+            include ../sections/headers/pages-header-info
+
+            //begin faq__list
+            ul.faq__list
+              li.faq__item
+                .faq__question
+                  span Как получить информацию о товаре?
+                .faq__answer
+                  span Наша компания продает корончатые сверла (кольцевые фрезы) по металлу производителя Bohre. В каталоге продукции представлены сверла Bohre и коронки с напаянными твердосплавными пластинами.
+              li.faq__item
+                .faq__question
+                  span Как заказать товар?
+                .faq__answer
+                  span Наша компания продает корончатые сверла (кольцевые фрезы) по металлу производителя Bohre. В каталоге продукции представлены сверла Bohre и коронки с напаянными твердосплавными пластинами.
+              li.faq__item
+                .faq__question
+                  span Как воспользоваться гарантией?
+                .faq__answer
+                  span Наша компания продает корончатые сверла (кольцевые фрезы) по металлу производителя Bohre. В каталоге продукции представлены сверла Bohre и коронки с напаянными твердосплавными пластинами.
+              li.faq__item
+                .faq__question
+                  span Как оформить возврат?
+                .faq__answer
+                  span Наша компания продает корончатые сверла (кольцевые фрезы) по металлу производителя Bohre. В каталоге продукции представлены сверла Bohre и коронки с напаянными твердосплавными пластинами.
+              li.faq__item
+                .faq__question
+                  span Как заказать доставку?
+                .faq__answer
+                  span Наша компания продает корончатые сверла (кольцевые фрезы) по металлу производителя Bohre. В каталоге продукции представлены сверла Bohre и коронки с напаянными твердосплавными пластинами.
+            //end faq__list
+
+            .faq__footer
+              button.btn.btn--light Задать вопрос
+
+          //end page-content
+      //end page__content-wrap
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
+    include ../elements/popup
+
+  include ../sections/scripts

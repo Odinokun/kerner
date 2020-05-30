@@ -26,7 +26,8 @@ $(document).ready(function ($) {
     'card',
     'info',
     'articles',
-    'news'
+    'news',
+    'faq'
     ]);
 });
 
@@ -145,5 +146,12 @@ $('.card-tabs-header__link').on('click', function (e) {
   $('.card-tabs-header__link, .card-tab').removeClass('active');
   $(this).addClass('active');
   $(tabActive).addClass('active');
+});
 
+//аккордеон в FAQ
+$('.faq__question').on('click', function (e) {
+  e.preventDefault();
+  let question = $(this).parents('.faq__item');
+  $(question).toggleClass('active');
+  $(question).find('.faq__answer').slideToggle();
 });
