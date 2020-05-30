@@ -1,0 +1,112 @@
+extends ../_template
+
+block variables
+  - var title           = 'Сверла и борфрезы | Kerner'
+  - var description     = 'Сверла и борфрезы | Kerner'
+  - var ogtitle         = 'Сверла и борфрезы | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Сверла и борфрезы'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+    include ../sections/catalog-menu
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+        
+      //begin page__content-wrap
+      .page__content-wrap
+        .container
+          include ../sections/pages-aside
+
+          //begin page-content
+          .page__content.article
+            include ../sections/headers/pages-header-article
+
+            //begin article__top
+            .article__top
+              a(href="#").article__top-btn
+                svg(width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  path(d="M6 1L2 6L6 11" stroke="#253A5A" stroke-width="2")
+                span Назад к списку
+            //end article__top
+
+            //begin brand-item
+            .brand__top.brand-item.brand-item--mobile-hidden
+              .brand-item__inn
+                .brand__img
+                  img(src="assets/img/brand-img.jpg" alt="picture")
+                p В нашем каталоге представлен широкий ассортимент корончатых сверл, борфрез, комплектующих, смазочно-охлаждающей жидкости (СОЖ) производителя Bohre.
+            //end brand-item
+
+            //begin brand-item
+            .brand__item.brand-item
+              .brand-item__inn
+                h2.brand-item__title Продукция Bohre (Борэ)
+                ul.brand-item__list.custom-dots-list
+                  li.brand-item__item
+                    a(href="#").brand-item__link корончатые (кольцевые) HSS сверла по металлу Bohre;
+                  li.brand-item__item
+                    a(href="#").brand-item__link твердосплавные TCT коронки по металлу Bohre;
+                  li.brand-item__item
+                    a(href="#").brand-item__link борфрезы твердосплавные Bohre;
+                  li.brand-item__item
+                    a(href="#").brand-item__link смазочно-охлаждающая жидкость СОЖ Bohre.
+            //end brand-item
+
+            //begin brand-item
+            .brand__item.brand-item
+              .brand-item__inn
+                h3.brand-item__subtitle Преимущества Bohre (Борэ)
+                ul.brand-item__list.brand-item__list--lg.custom-dots-list
+                  li.brand-item__item Невысокая стоимость при достойном качестве
+                p Основным преимуществом марки Bohre является отсутствие наценки за бренд, что позволяет удерживать уровень цен на 50% ниже, чем у аналогов от ведущих европейских производителей, при сохранении того же высокого уровня качества.
+                ul.brand-item__list.brand-item__list--lg.custom-dots-list
+                  li.brand-item__item Широкий ассортимент продукции
+                p В нашем каталоге представлено 8 моделей быстрорежущих коронок, 2 модели твердосплавов и более 15 наименований борфрез. Продукция есть как в наличии, так и на заказ.
+            //end brand-item
+
+            //begin brand-item
+            .brand__item.brand-item
+              h3.brand-item__subtitle Каталог продукции Bohre
+              .brand-item__list-double
+                ul.brand-item__list.custom-dots-list
+                  li.brand-item__item HSS L30 — сверло Bohre, глубина отверстий до 30 мм;
+                  li.brand-item__item HSS L55 — сверло Bohre, глубина отверстий до 55 мм;
+                  li.brand-item__item HSS L80 — сверло Bohre, глубина отверстий до 80 мм;
+                  li.brand-item__item HSS L110 — сверло Bohre, глубина отверстий до 110 мм;
+                ul.brand-item__list.custom-dots-list
+                  li.brand-item__item HSS L30 — сверло Bohre, глубина отверстий до 30 мм;
+                  li.brand-item__item HSS L55 — сверло Bohre, глубина отверстий до 55 мм;
+                  li.brand-item__item HSS L80 — сверло Bohre, глубина отверстий до 80 мм;
+                  li.brand-item__item HSS L110 — сверло Bohre, глубина отверстий до 110 мм;
+            //end brand-item
+
+            //begin brand-item
+            .brand__item.brand-item
+              p В нашем каталоге представлены корончатые сверла двух видов:
+              ul.brand-item__list.custom-dots-list
+                li.brand-item__item Корончатые сверла по металлу Bohre из быстрорежущей стали HSS. Их используют при работе со сталью Ст3 (мягкой сталью). Данные фрезы являются износостойкими, зубья ломаются в крайне редких случаях.
+                li.brand-item__item Корончатые сверла по металлу Bohre с напаянными твердосплавными пластинами TCT. Их используют в первую очередь для сверления отверстий в более твердых сталях, например Ст45.
+            //end brand-item
+
+            //begin article__bottom
+            .article__bottom
+              a(href="#").article__top-btn
+                svg(width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  path(d="M6 1L2 6L6 11" stroke="#253A5A" stroke-width="2")
+                span Назад к списку
+            //end article__bottom
+          //end page-content
+      //end page__content-wrap
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
+    include ../elements/popup
+
+  include ../sections/scripts

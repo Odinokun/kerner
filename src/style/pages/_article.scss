@@ -1,0 +1,54 @@
+.article__top {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -25px;
+
+  @include max(767) {
+    display: none;
+  }
+}
+
+.article__top-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 170px;
+  height: 50px;
+  padding: 0 15px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #e5e5e5;
+  svg {
+    flex: none;
+    margin-right: 11px;
+
+    stroke: $brand;
+    stroke-width: 2px;
+  }
+  span {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 14px;
+    text-align: center;
+    color: #253a5a;
+  }
+}
+
+.article__img {
+  width: 100%;
+  margin-bottom: 40px;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.article__bottom {
+  display: none;
+  justify-content: center;
+  padding: 0 0 30px 0;
+
+  @include max(767) {
+    display: flex;
+  }
+}

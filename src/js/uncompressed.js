@@ -26,6 +26,7 @@ $(document).ready(function ($) {
     'card',
     'info',
     'articles',
+    'article',
     'news',
     'faq',
     'documents'
