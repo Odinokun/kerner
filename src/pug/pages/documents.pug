@@ -1,0 +1,98 @@
+extends ../_template
+
+block variables
+  - var title           = 'Документы | Kerner'
+  - var description     = 'Документы | Kerner'
+  - var ogtitle         = 'Документы | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Документы'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+    include ../sections/catalog-menu
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+        
+      //begin page__content-wrap
+      .page__content-wrap
+        .container
+          include ../sections/pages-aside
+
+          //begin page-content
+          .page__content.documents
+            include ../sections/headers/pages-header-info
+
+            //begin documents__list
+            ul.documents__list
+              //begin documents__item
+              li.documents__item
+                a(data-fancybox="documents" href="assets/img/pdf.pdf").documents__link
+                .documents__main
+                  span.documents__title Каталог продукции 2020
+                .documents__img
+                  img(src="assets/img/document.svg" alt="picture")
+              //end documents__item
+
+              //begin documents__item
+              li.documents__item
+                a(data-fancybox="documents" href="assets/img/pdf.pdf").documents__link
+                .documents__main
+                  span.documents__title Инструкция по эксплуатации Магнитного электрического сверлильного станка Rotabroach ELEMENT 30
+                .documents__img
+                  img(src="assets/img/document.svg" alt="picture")
+              //end documents__item
+
+              //begin documents__item
+              li.documents__item
+                a(data-fancybox="documents" href="assets/img/pdf.pdf").documents__link
+                .documents__main
+                  span.documents__title Каталог продукции 2020
+                .documents__img
+                  img(src="assets/img/document.svg" alt="picture")
+              //end documents__item
+
+              //begin documents__item
+              li.documents__item
+                a(data-fancybox="documents" href="assets/img/pdf.pdf").documents__link
+                .documents__main
+                  span.documents__title Каталог продукции 2020
+                .documents__img
+                  img(src="assets/img/document.svg" alt="picture")
+              //end documents__item
+
+              //begin documents__item
+              li.documents__item
+                a(data-fancybox="documents" href="assets/img/pdf.pdf").documents__link
+                .documents__main
+                  span.documents__title Инструкция по эксплуатации Магнитного электрического сверлильного станка Rotabroach ELEMENT 30
+                .documents__img
+                  img(src="assets/img/document.svg" alt="picture")
+              //end documents__item
+
+              //begin documents__item
+              li.documents__item
+                a(data-fancybox="documents" href="assets/img/pdf.pdf").documents__link
+                .documents__main
+                  span.documents__title Каталог продукции 2020
+                .documents__img
+                  img(src="assets/img/document.svg" alt="picture")
+              //end documents__item
+            //end documents__list
+
+            .documents__pagination
+              include ../elements/pagination
+
+          //end page-content
+      //end page__content-wrap
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
+    include ../elements/popup
+
+  include ../sections/scripts

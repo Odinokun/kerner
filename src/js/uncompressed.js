@@ -27,7 +27,8 @@ $(document).ready(function ($) {
     'info',
     'articles',
     'news',
-    'faq'
+    'faq',
+    'documents'
     ]);
 });
 
