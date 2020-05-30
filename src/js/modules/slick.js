@@ -129,6 +129,50 @@ module.exports = function() {
       }
     ]
   });
+
+
+  $('#card-body-slider-lg__list').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    infinite: false,
+    adaptiveHeight: true,
+    asNavFor: '#card-body-slider-sm__list'
+  });
+  $('#card-body-slider-sm__list').slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+    asNavFor: '#card-body-slider-lg__list',
+    prevArrow: "<div class='prev'><svg width=\"7\" height=\"12\" viewBox=\"0 0 7 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M6 1L2 6L6 11\" stroke=\"white\" stroke-width=\"2\"/></svg></div>",
+    nextArrow: "<div class='next'><svg width=\"7\" height=\"12\" viewBox=\"0 0 7 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M1 11L5 6L1 1\" stroke=\"white\" stroke-width=\"2\"/></svg></div>",
+    dots: false,
+    infinite: false,
+    centerMode: true,
+    focusOnSelect: true,
+    draggable: true,
+    touchMove: true,
+    swipe: true,
+    touchThreshold: 200,
+    swipeToSlide: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          variableWidth: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+          centerMode: false,
+          focusOnSelect: false,
+          vertical: false,
+          verticalSwiping: false,
+        }
+      }
+    ]
+  });
   // end Slick slider
 
 };

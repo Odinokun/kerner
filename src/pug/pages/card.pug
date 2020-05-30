@@ -1,0 +1,439 @@
+extends ../_template
+
+mixin card-body-slider-lg__item()
+  li.card-body-slider-lg__item
+    img(src="assets/img/card-slider-lg.jpg" alt="picture")
+
+mixin card-body-slider-sm__item()
+  li.card-body-slider-sm__item
+    .card-body-slider-sm__item-pic
+      img(src="assets/img/card-slider-sm.jpg" alt="picture")
+
+mixin popular-slider__card(pic, title, price)
+  .popular-slider__card
+    .popular-slider__img
+      img(src="assets/img/popular-slider-" + pic + ".jpg" alt="picture")
+      label.popular-slider__compare
+        input(type='checkbox')
+        span
+          | В сравнение
+          svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+
+    .popular-slider__title #{title}
+    .popular-slider__descr Характеристика 1: 220 Вт
+    .popular-slider__descr Характеристика с очень длинным названием: 220 Вт
+    .popular-slider__price
+      span #{price}
+      span ₽
+
+    .popular-slider__footer
+      a(href="#").popular-slider__basket В корзину
+      .popular-slider__counter
+        include ../elements/counter
+
+mixin card-tab__open(title)
+  //begin card-tab__open
+  .card-tab__open
+    span.card-tab__open-text #{title}
+    span.card-tab__open-arr
+      svg(width='7', height='12', viewBox='0 0 7 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+        path(d='M6 1L2 6L6 11', stroke='#253A5A', stroke-width='2')
+  //end card-tab__open
+
+mixin card-tab__close()
+  //begin card-tab__close
+  .card-tab__close
+    span.card-tab__close-text Свернуть
+    span.card-tab__close-arr
+      svg(width='7', height='12', viewBox='0 0 7 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+        path(d='M6 1L2 6L6 11', stroke='#253A5A', stroke-width='2')
+  //end card-tab__close
+
+block variables
+  - var title           = 'Магнитный сверлильный станок Euroboor ЕСО.30 | Kerner'
+  - var description     = 'Магнитный сверлильный станок Euroboor ЕСО.30 | Kerner'
+  - var ogtitle         = 'Магнитный сверлильный станок Euroboor ЕСО.30 | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Магнитный сверлильный станок Euroboor ЕСО.30'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+    include ../sections/catalog-menu
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+
+      //begin card-page
+      .card-page
+        .container
+          include ../sections/headers/pages-header-card
+        .container
+          //begin card
+          .card
+            //begin card__body
+            .card__body.card-body
+              //begin card-body__slider
+              .card-body__slider.card-body-slider
+                //begin card-body-slider-lg__list
+                ul.card-body-slider-lg__list#card-body-slider-lg__list
+                  +card-body-slider-lg__item()
+                  +card-body-slider-lg__item()
+                  +card-body-slider-lg__item()
+                  +card-body-slider-lg__item()
+                  +card-body-slider-lg__item()
+                  +card-body-slider-lg__item()
+                  +card-body-slider-lg__item()
+                  +card-body-slider-lg__item()
+                //end card-body-slider-lg__list
+
+                //begin card-body-slider-sm__list
+                ul.card-body-slider-sm__list#card-body-slider-sm__list
+                  +card-body-slider-sm__item()
+                  +card-body-slider-sm__item()
+                  +card-body-slider-sm__item()
+                  +card-body-slider-sm__item()
+                  +card-body-slider-sm__item()
+                  +card-body-slider-sm__item()
+                  +card-body-slider-sm__item()
+                  +card-body-slider-sm__item()
+                //end card-body-slider-sm__list
+              //end card-body__slider
+
+              //begin card-aside__top
+              .card-aside__top.card-aside-top
+                .card-aside-top__header
+                  span Бренд:
+                  a(href="#") Euroboor
+
+                .card-aside-top__price
+                  span.card-aside-top__price-new 38 571 ₽
+                  span.card-aside-top__price-old 40 571 ₽
+
+                label.card-aside-top__compare
+                  input(type='checkbox')
+                  span
+                    | В сравнение
+                    svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+
+                .card-aside-top__btn-row
+                  button.btn В корзину
+                  button.btn.btn--light Быстрый заказ
+              //end card-aside__top
+
+              //begin card-body__tabs
+              .card-body__tabs.card-tabs
+                //begin card-tabs-header
+                .card-tabs__header.card-tabs-header
+                  ul.card-tabs-header__list
+                    li.card-tabs-header__item
+                      span(data-tab='#card-tab-description').card-tabs-header__link.active Описание
+                    li.card-tabs-header__item
+                      span(data-tab='#card-tab-specification').card-tabs-header__link Документация
+                    li.card-tabs-header__item
+                      span(data-tab='#card-tab-reviews').card-tabs-header__link Отзывы (3)
+                //end card-tabs-header
+
+                //begin card-tabs__body
+                .card-tabs__body.card-tabs-body
+                  //begin card-tab--description
+                  .card-tab.card-tab--description.active#card-tab-description
+                    +card-tab__open('Описание')
+                    .card-tab__inn
+                      h2.card-tab__title Магнитный электрический сверлильный станок <br>FE Powertools 36 X
+                      p Оборудование для металлообработки и сверления - многозадачные станки, выполняющие различные функции, заменяют сразу не один инструмент. Когда нужно фрезеровать, сверлить либо сделать резьбу в заготовках из металла, то можно использовать сверлильный магнитный станок. Их преимущество над фрезеровальными, а также привычными сверлильными устройствами - отличная маневренность.
+                      //begin card-tab__table
+                      .card-tab__table.hidden-desktop--parent
+                        .card-tab__table-row
+                          span Мощность двигателя
+                          span 900 Вт
+                        .card-tab__table-row
+                          span Напряжение
+                          span 220 В
+                        .card-tab__table-row
+                          span Шпиндель
+                          span Weldon 19,05
+                        .card-tab__table-row
+                          span Ø сверления корончатым сверлом
+                          span 30 мм
+                        .card-tab__table-row
+                          span Глубина сверления
+                          span 50 мм
+                        .card-tab__table-row
+                          span Диаметр сверления спиральным сверлом
+                          span 14 мм
+                        .card-tab__table-row
+                          span Вес
+                          span 8.5 кг
+                        .card-tab__table-row.hidden-desktop
+                          span Ø сверления корончатым сверлом
+                          span 30 мм
+                        .card-tab__table-row.hidden-desktop
+                          span Глубина сверления
+                          span 50 мм
+                        .card-tab__table-row.hidden-desktop
+                          span Диаметр сверления спиральным сверлом
+                          span 14 мм
+                        .card-tab__table-row.hidden-desktop
+                          span Вес
+                          span 8.5 кг
+                        .card-tab__table-footer.visible-desktop.open
+                          span.visible-desktop__open Все характеристики
+                          span.visible-desktop__close Скрыть характеристики
+                      //end card-tab__table
+
+                      //begin card-tab__descr
+                      .card-tab__descr
+                        h3.card-tab__subtitle Описание
+                        p Является самым легким и самым компактным магнитным сверлильным станком в серии ECO. <br>Компактный размер и низкий вес позволяют разместить этот станок везде, где вы захотите. Мощный мотор и специальная коробка передач обеспечивают быстрое и эффективное сверление.
+                        .card-tab__video
+                          iframe(width='560', height='315', src='https://www.youtube.com/embed/EzoovG1IAiU?controls=0', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+                      //end card-tab__descr
+
+                      h3.card-tab__subtitle Пример блока с различными элементами
+                      h4.card-tab__subsubtitle Продажа промышленного оборудования
+                      ul.card-tab__line-list
+                        li.card-tab__line-item
+                          p Передовая техника и качественные расходные материалы.
+                          p Каждый поставляемый в Россию экземпляр техники и все комплектующие протестированы специалистами Kerner.
+                        li.card-tab__line-item
+                          p Широкая линейка промышленного оборудования для металлообработки и сверления.
+                          p Чтобы предложить нашим клиентам большой выбор, мы заключаем долгосрочные контракты с производителями. Это позволяет иметь весь спектр моделей промышленного оборудования для сверления и металлообработки. Например, в нашем каталоге представлено 11 сверлильных станков на магнитном основании и более 10 видов аксессуаров, спиральных и кольцевых сверл от компании Rotabroach.
+                        li.card-tab__line-item
+                          p Сервисный подход в работе с каждым проектом.
+                          p Мы предлагаем нашим клиентам не только продажу промышленного оборудования по выгодным ценам, но и доставку заказа в любой город России и мира. Это особенно актуально, когда компании с распределенной структурой требуется оперативно купить оборудование для удаленных работ. С помощью калькулятора предлагаем вам самостоятельно рассчитать стоимость и срок, за который произойдет поставка промышленного оборудования в требуемую локацию.
+                        li.card-tab__line-item
+                         p Быстрый заказ промышленного оборудования для металлообработки и сверления.
+                         p Не только у нас в офисе, но и удаленно онлайн вы можете оформить заказ на интересующее вас оборудование и расходные материалы.
+
+                      p Купить понравившийся товар просто — достаточно связаться с одним из наших специалистов любым удобным для вас способом:
+
+                      ol.card-tab__ol-list
+                        li.card-tab__ol-item Позвонить по телефону;
+                        li.card-tab__ol-item Заказать обратный звонок на сайте;
+                        li.card-tab__ol-item Инструкцию сверлильного станка Commando 40 и как установить быстрозажимной патрон вы сможете скачать на вкладке <a href=''>"Документация"</a>.
+                        li.card-tab__ol-item Подъехать на склад и купить товар самостоятельно.
+
+                      p Купить понравившийся товар просто — достаточно связаться с одним из наших специалистов любым удобным для вас способом:
+
+                      ul.card-tab__dots-list
+                        li.card-tab__dots-item позвонить по телефону;
+                        li.card-tab__dots-item заказать обратный звонок на сайте;
+                        li.card-tab__dots-item инструкцию сверлильного станка Commando 40 и как установить быстрозажимной патрон вы сможете скачать на вкладке <a href=''>"Документация"</a>.
+                        li.card-tab__dots-item подъехать на склад и купить товар самостоятельно.
+                      +card-tab__close()
+                  //end card-tab--description
+
+                  //begin card-tab--specification
+                  .card-tab.card-tab--specification#card-tab-specification
+                    +card-tab__open('Документация')
+                    .card-tab__inn
+                      h2.card-tab__subtitle Техническая документация для магнитного сверлильного станка Euroboor ЕСО.30
+                      ul.card-tab__specification-list
+                        li.card-tab__specification-item
+                          a(href="#").card-tab__specification-link Инструкция как установить быстрозажимной патрон
+                        li.card-tab__specification-item
+                          a(href="#").card-tab__specification-link Каталог Kerner
+                        li.card-tab__specification-item
+                          a(href="#").card-tab__specification-link Паспорт на станок Rotabroach COMMANDO 40
+
+                      h2.card-tab__subtitle Техническая документация для магнитного сверлильного станка Euroboor ЕСО.30
+                      ul.card-tab__specification-list
+                        li.card-tab__specification-item
+                          a(href="#").card-tab__specification-link Инструкция как установить быстрозажимной патрон
+                        li.card-tab__specification-item
+                          a(href="#").card-tab__specification-link Каталог Kerner
+                        li.card-tab__specification-item
+                          a(href="#").card-tab__specification-link Паспорт на станок Rotabroach COMMANDO 40
+
+                      h2.card-tab__subtitle Техническая документация для магнитного сверлильного станка Euroboor ЕСО.30
+                      ul.card-tab__specification-list
+                        li.card-tab__specification-item
+                          a(href="#").card-tab__specification-link Инструкция как установить быстрозажимной патрон
+                        li.card-tab__specification-item
+                          a(href="#").card-tab__specification-link Каталог Kerner
+                        li.card-tab__specification-item
+                          a(href="#").card-tab__specification-link Паспорт на станок Rotabroach COMMANDO 40
+                      +card-tab__close()
+                  //end card-tab--specification
+
+                  //begin card-tab--reviews
+                  .card-tab.card-tab--reviews#card-tab-reviews
+                    +card-tab__open('Отзывы (3)')
+                    .card-tab__inn
+                      h2.card-tab__title Озывы на магнитный сверлильный станок Euroboor ЕСО.30
+                      .card-tab__reviews-header
+                        .card-tab__reviews-header-quantity
+                          span Всего отзывов:
+                          span 7
+                        button.btn Добавить отзыв
+
+                      //begin card-tab__review
+                      .card-tab__review.card-tab-review
+                        .card-tab-review__header
+                          .card-tab-review__name Геннадий
+                          .card-tab-review__date 24 сентября 2019
+                        p Купил вместо уставшего BDS, который проработал 4 года. Станком остался доволен, работает исправно, ничего не сломалось,сверлим в 2 смены им, спустя год купил еще 1 , но цена уже стала чуть выше.. оно того стоит, аналогов не нашел, только если китайщину брать. по итогу: отличная замена немецкому БДС
+                        .card-tab-review__plus
+                          p 6 скоростей -очень удобно запихнул в него сверло 55 диаметром (хотя заводом предусмотрено до 40) патрон под ц/х сверла идет со станком
+                        .card-tab-review__minus
+                          p непривычное расположение панели управления - сзади, а не сбоку как было на bds. Вес - думаю можно было и в рамки 10кг уместиться
+                      //end card-tab__review
+
+                      //begin card-tab__review
+                      .card-tab__review.card-tab-review
+                        .card-tab-review__header
+                          .card-tab-review__name Дмитрий
+                          .card-tab-review__company (ООО «ДС Констракшн»)
+                          .card-tab-review__date 24 сентября 2019
+                        p Наша компания выполняет подрядные работы на объекте Охта-Центр в Санкт-Петербурге. Нам потребовался сверлильный станок на магните, для крепления двутавров и сверлением более 1000 отверстий. Обычной дрелью это не реально. Я позвонил в Кернер, по телефону рассказали что нужно использовать. Станок нужен был срочно, взяли из наличия с отсрочкой оплаты. Сверла также у них брали, все устроили. Будем дальше работать.
+                        .card-tab-review__plus
+                          p Мощный двигатель
+                          p Сильный магнит
+                          p Есть маленькие обороты
+                        .card-tab-review__minus
+                          p Не было нареканий
+                      //end card-tab__review
+
+                      //begin card-tab__review
+                      .card-tab__review.card-tab-review
+                        .card-tab-review__header
+                          .card-tab-review__name Дмитрий
+                          .card-tab-review__company (ООО «ДС Констракшн»)
+                          .card-tab-review__date 24 сентября 2019
+                        p Наша компания выполняет подрядные работы на объекте Охта-Центр в Санкт-Петербурге. Нам потребовался сверлильный станок на магните, для крепления двутавров и сверлением более 1000 отверстий. Обычной дрелью это не реально. Я позвонил в Кернер, по телефону рассказали что нужно использовать. Станок нужен был срочно, взяли из наличия с отсрочкой оплаты. Сверла также у них брали, все устроили. Будем дальше работать.
+                        .card-tab-review__plus
+                          p Мощный двигатель
+                          p Сильный магнит
+                          p Есть маленькие обороты
+                        .card-tab-review__minus
+                          p Не было нареканий
+                      //end card-tab__review
+
+                      .card-tab__reviews-footer
+                        button.btn.btn--light Показать еще
+                      +card-tab__close()
+                  //end card-tab--reviews
+                //end card-tabs__body
+              //end card-body__tabs
+            //end card__body
+            //begin card__aside
+            .card__aside.card-aside
+              //begin card-aside__top
+              .card-aside__top.card-aside-top
+                .card-aside-top__header
+                  span Бренд:
+                  a(href="#") Euroboor
+
+                .card-aside-top__price
+                  span.card-aside-top__price-new 38 571 ₽
+                  span.card-aside-top__price-old 40 571 ₽
+
+                label.card-aside-top__compare
+                  input(type='checkbox')
+                  span
+                    | В сравнение
+                    svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+
+                .card-aside-top__btn-row
+                  button.btn В корзину
+                  button.btn.btn--light Быстрый заказ
+              //end card-aside__top
+                
+              //begin card-aside__similar
+              .card-aside__similar
+                h3.card-aside__similar-title С этим также покупают:
+                //begin card-aside__similar-card
+                .card-aside__similar-card
+                  a(href="#").card-aside__similar-img
+                    img(src="assets/img/popular-slider-02.jpg" alt="picture")
+                  .card-aside__similar-info
+                    a(href="#").card-aside__similar-name Пилот 6,34х103 "Bohre"
+                    span.card-aside__similar-price 400 ₽
+                    button.btn В корзину
+                //end card-aside__similar-card
+                //begin card-aside__similar-card
+                .card-aside__similar-card
+                  a(href="#").card-aside__similar-img
+                    img(src="assets/img/popular-slider-03.jpg" alt="picture")
+                  .card-aside__similar-info
+                    a(href="#").card-aside__similar-name Смазочно-охлаждающая жидкость СОЖ (концентрат 1:10) "Bohre" 10 л
+                    span.card-aside__similar-price 4000 ₽
+                    button.btn В корзину
+                //end card-aside__similar-card
+                //begin card-aside__similar-card
+                .card-aside__similar-card
+                  a(href="#").card-aside__similar-img
+                    img(src="assets/img/similar-01.jpg" alt="picture")
+                  .card-aside__similar-info
+                    a(href="#").card-aside__similar-name Сверло корончатое из быстрорежущей стали 14х50 "Rotabroach" RAPL140
+                    span.card-aside__similar-price 1 562 ₽
+                    button.btn В корзину
+                //end card-aside__similar-card
+              //end card-aside__similar
+
+              //begin card-aside__about
+              .card-aside__about
+                //begin card-aside__about-row
+                .card-aside__about-row
+                  .card-aside__about-icon
+                    img(src="assets/img/aside-about-01.svg" alt="picture")
+                  .card-aside__about-descr
+                    h3.card-aside__about-title поставка оборудования <br>и запчастей
+                    span.card-aside__about-text От 11 ведущих производителей
+                //end card-aside__about-row
+                //begin card-aside__about-row
+                .card-aside__about-row
+                  .card-aside__about-icon
+                    img(src="assets/img/aside-about-02.svg" alt="picture")
+                  .card-aside__about-descr
+                    h3.card-aside__about-title рассрочка платежа
+                    span.card-aside__about-text До 45 дней с оформления заказа
+                //end card-aside__about-row
+                //begin card-aside__about-row
+                .card-aside__about-row
+                  .card-aside__about-icon
+                    img(src="assets/img/aside-about-03.svg" alt="picture")
+                  .card-aside__about-descr
+                    h3.card-aside__about-title доставка <br> товаров
+                    span.card-aside__about-text Международная и междугородняя<br>в срок до 10 дней
+                //end card-aside__about-row
+              //end card-aside__about
+            //end card__aside
+          //end card
+
+        .container
+          //begin catalog__popular
+          .catalog__popular
+            h2.catalog__popular__title Похожие товары
+            //begin popular-slider
+            .popular-slider
+              ul.popular-slider__list#popular-slider__list
+                li.popular-slider__item
+                  +popular-slider__card('01', 'Магнитный электрический сверлильный станок COMMANDO', '48 000')
+                li.popular-slider__item
+                  +popular-slider__card('02', 'Пилот 6,34х103 "Bohre"', '400')
+                li.popular-slider__item
+                  +popular-slider__card('03', 'Смазочно-охлаждающая жидкость СОЖ (концентрат 1:10)', '4 000')
+                li.popular-slider__item
+                  +popular-slider__card('01', 'Магнитный электрический сверлильный станок COMMANDO', '48 000')
+                li.popular-slider__item
+                  +popular-slider__card('02', 'Пилот 6,34х103 "Bohre"', '400')
+                li.popular-slider__item
+                  +popular-slider__card('03', 'Смазочно-охлаждающая жидкость СОЖ (концентрат 1:10)', '4 000')
+            //end popular-slider
+          //end catalog__popular
+      //end card-page
+
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
+
+  include ../sections/scripts

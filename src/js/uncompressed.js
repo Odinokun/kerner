@@ -22,7 +22,8 @@ $(document).ready(function ($) {
     'request-ur-3',
     'request-fiz-1',
     'success',
-    'basket'
+    'basket',
+    'card'
     ]);
 });
 
@@ -133,3 +134,13 @@ $('.request__delivery-radio').on('click', function () {
   }
 });
 
+//переключение десктопных табов в шапке карточки товара
+$('.card-tabs-header__link').on('click', function (e) {
+  e.preventDefault();
+  let tabActive = $(this).data('tab');
+
+  $('.card-tabs-header__link, .card-tab').removeClass('active');
+  $(this).addClass('active');
+  $(tabActive).addClass('active');
+
+});

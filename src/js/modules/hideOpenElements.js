@@ -48,4 +48,22 @@ module.exports = function() {
   });
   // end brand page hide/open elements in mobile version
 
+  // begin card page hide/open elements in mobile version
+  $('.card-tab__open').on('click', function (e) {
+    e.preventDefault();
+    let clickParent = $(this).parents('.card-tab');
+
+    $(clickParent).toggleClass('open');
+    $(clickParent).find('.card-tab__inn').slideToggle();
+  });
+
+  $('.card-tab__close').on('click', function (e) {
+    e.preventDefault();
+    let clickParent = $(this).parents('.card-tab');
+
+    $(clickParent).removeClass('open');
+    $(clickParent).find('.card-tab__inn').slideUp();
+  });
+  // end card page hide/open elements in mobile version
+
 };
