@@ -27,6 +27,15 @@ block content
           .page__content.documents
             include ../sections/headers/pages-header-info
 
+            //begin documents__search
+            form.documents__search.documents-search
+              input(type='search' placeholder='Поиск по сайту...').documents-search__input
+              input(type='submit').documents-search__submit
+              span.documents-search__btn
+                +svg('magnify')
+
+            //end documents__search
+
             //begin documents__list
             ul.documents__list
               //begin documents__item

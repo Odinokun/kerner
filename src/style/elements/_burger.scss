@@ -225,6 +225,7 @@
     background-color: #fff;
   }
 }
+
 .index .header-mobile.colored .header-mobile__burger {
   .burger label:before,
   .burger input:checked + label:before,
@@ -237,8 +238,10 @@
     }
   }
 }
+
 .index .header-mobile.open .header-mobile__burger,
-.page .header-mobile.open .header-mobile__burger {
+.page .header-mobile.open .header-mobile__burger,
+.page .header-mobile.blue .header-mobile__burger {
   .burger label:before,
   .burger input:checked + label:before,
   .burger label:after,
@@ -250,4 +253,5 @@
     }
   }
 }
+
 //end #colors

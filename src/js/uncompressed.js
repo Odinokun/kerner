@@ -64,10 +64,5 @@ function pageWidget(pages) {
     '</style>');
   widgetStilization.prependTo(".widget_wrap");
 }
-
 // END Меню для навигации при разработке
-
-
-//====== Begin Programmer code ======
-
 

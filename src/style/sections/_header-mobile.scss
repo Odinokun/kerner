@@ -15,7 +15,8 @@
     &.colored {
       background-color: #fff;
     }
-    &.open {
+    &.open,
+    &.blue {
       background-color: $brand;
     }
   }
@@ -52,7 +53,8 @@
 }
 
 .index .header-mobile.open,
-.page .header-mobile.open {
+.page .header-mobile.open,
+.page .header-mobile.blue {
   @include max(1150) {
     .header-mobile__logo--pages {
       display: none;
@@ -104,7 +106,8 @@
 }
 
 .index .header-mobile.open,
-.page .header-mobile.open {
+.page .header-mobile.open,
+.page .header-mobile.blue {
   @include max(1150) {
     .header-mobile__search,
     .header-mobile__call {

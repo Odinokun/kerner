@@ -1,0 +1,30 @@
+//begin filter-aside-mobile-sorted
+.filter-aside-mobile-sorted#filter-aside-mobile-sorted
+  .catalog-mobile-menu__header
+    .catalog-mobile-menu__close
+      +svg('arr-left')
+      span Назад
+
+  h3.filter-aside-mobile-sorted__title Сортировка
+  //begin filter-aside-mobile-sorted__list
+  ul.filter-aside-mobile-sorted__list
+    li.filter-aside-mobile-sorted__item
+      a(href="#").filter-aside-mobile-sorted__link
+        img(src="assets/img/blue-arrs.png" alt="picture")
+        span по умолчанию
+    li.filter-aside-mobile-sorted__item
+      a(href="#").filter-aside-mobile-sorted__link.active
+        +svg('filter-price-01')
+        span по цене
+    li.filter-aside-mobile-sorted__item
+      a(href="#").filter-aside-mobile-sorted__link
+        +svg('filter-price-02')
+        span по цене
+    li.filter-aside-mobile-sorted__item
+      a(href="#").filter-aside-mobile-sorted__link
+        +svg('filter-price-02')
+        span по цене
+  //end filter-aside-mobile-sorted__list
+
+
+//end filter-aside-mobile-sorted

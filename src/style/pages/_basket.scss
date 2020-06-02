@@ -57,7 +57,7 @@
   @include max(1023) {
     flex-direction: column;
     padding: 20px 0 0 0;
-    border-bottom: 1px solid #f2f2f2;
+    border-bottom: 1px solid #e5e5e5;
   }
 }
 
@@ -74,6 +74,10 @@
 
 .basket-table__td-descr {
   display: none;
+  width: 50%;
+  max-width: 110px;
+  padding-right: 10px;
+  text-align: left;
 
   @include max(1023) {
     display: block;
