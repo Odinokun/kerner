@@ -1,0 +1,125 @@
+mixin filter-mobile-menu__item-top(text, className)
+  li(class="filter-mobile-menu__item filter-mobile-menu__item--" + className)
+    a(href="#").filter-mobile-menu__link #{text}
+
+mixin filter-mobile-menu__item(text)
+  li.filter-mobile-menu__item
+    a(href="#").filter-mobile-menu__link #{text}
+
+mixin filter-mobile-form-item__checkbox(text)
+  label.filter-mobile-form-item__checkbox
+    input(type='checkbox')
+    span
+      |#{text}
+      svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+        path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+
+//begin filter-aside-mobile
+.filter-aside-mobile#filter-aside-mobile
+  .catalog-mobile-menu__header
+    .catalog-mobile-menu__close
+      +svg('arr-left')
+      span Назад
+
+  .filter-aside-mobile__header
+    span Фильтры (2)
+
+  //begin filter-aside-mobile__menu
+  .filter-aside-mobile__menu.filter-mobile-menu
+    h3.filter-aside-mobile__menu-title Категории
+    .filter-aside-mobile__menu-subtitle.active
+      span Магнитные сверлильные станки
+      +svg('arr-left')
+
+    .filter-mobile-menu__list-wrap
+      ul.filter-mobile-menu__list.active
+        li.filter-mobile-menu__item
+          a(href="#").filter-mobile-menu__link Магнитные сверлильные станки Rotabroach
+        li.filter-mobile-menu__item
+          a(href="#").filter-mobile-menu__link Магнитные сверлильные станки Euroboor
+        li.filter-mobile-menu__item
+          a(href="#").filter-mobile-menu__link Магнитные сверлильные станки Rotabroach
+        li.filter-mobile-menu__item
+          a(href="#").filter-mobile-menu__link Магнитные сверлильные станки Euroboor
+        li.filter-mobile-menu__item
+          a(href="#").filter-mobile-menu__link Магнитные сверлильные станки Rotabroach
+        li.filter-mobile-menu__item
+          a(href="#").filter-mobile-menu__link Магнитные сверлильные станки Euroboor
+        li.filter-mobile-menu__item
+          a(href="#").filter-mobile-menu__link Магнитные сверлильные станки Rotabroach
+        li.filter-mobile-menu__item
+          a(href="#").filter-mobile-menu__link Магнитные сверлильные станки Euroboor
+        li.filter-mobile-menu__item
+          a(href="#").filter-mobile-menu__link Магнитные сверлильные станки Euroboor
+      .filter-aside-mobile__menu-all
+        span Показать все категории
+        +svg('arr-left')
+  //end filter-aside-mobile__menu
+
+  //begin filter-aside-mobile__form
+  form.filter-aside-mobile__form.filter-mobile-form
+    //begin filter-mobile-form-item
+    .filter-mobile-form__item.filter-mobile-form-item
+      .filter-mobile-form-item__header
+        h3.filter-mobile-form-item__title Цена, руб
+      .filter-mobile-form-item__body
+        .filter-mobile-form-item__double-inputs
+          label
+            span от
+            input(value='0')
+          label
+            span до
+            input(value='0')
+    //end filter-mobile-form-item
+
+    //begin filter-mobile-form-item
+    .filter-mobile-form__item.filter-mobile-form-item
+      .filter-mobile-form-item__header.filter-mobile-form-item__header--toggle.active
+        h3.filter-mobile-form-item__title Производитель
+        +svg('arr-left')
+      .filter-mobile-form-item__body
+        +filter-mobile-form-item__checkbox('Rotabroach')
+        +filter-mobile-form-item__checkbox('Euroboor')
+        +filter-mobile-form-item__checkbox('Вектор')
+        +filter-mobile-form-item__checkbox('Magtron')
+        +filter-mobile-form-item__checkbox('Rotabroach')
+        +filter-mobile-form-item__checkbox('Euroboor')
+        +filter-mobile-form-item__checkbox('Вектор')
+    //end filter-mobile-form-item
+
+    //begin filter-mobile-form-item
+    .filter-mobile-form__item.filter-mobile-form-item
+      .filter-mobile-form-item__header.filter-mobile-form-item__header--toggle.active
+        h3.filter-mobile-form-item__title Шпиндель
+        +svg('arr-left')
+      .filter-mobile-form-item__body
+        +filter-mobile-form-item__checkbox('Конус Морзе 1')
+        +filter-mobile-form-item__checkbox('Конус Морзе 2')
+        +filter-mobile-form-item__checkbox('Конус Морзе 3')
+        +filter-mobile-form-item__checkbox('Конус Морзе 4')
+    //end filter-mobile-form-item
+
+    //begin filter-mobile-form-item
+    .filter-mobile-form__item.filter-mobile-form-item
+      .filter-mobile-form-item__header
+        h3.filter-mobile-form-item__title Глубина сверления, мм
+      .filter-mobile-form-item__body
+        .filter-mobile-form-item__double-inputs
+          label
+            span от
+            input(value='0')
+          label
+            span до
+            input(value='0')
+    //end filter-mobile-form-item
+
+    .filter-mobile-form__btns
+      .filter-mobile-form__submit
+        input(type='submit' value='Найти').filter-mobile-form__submit-btn
+
+      .filter-mobile-form__reset
+        +svg('reset')
+        span Сбросить
+        input(type='reset' value='').filter-mobile-form__reset-btn
+  //end filter-aside-mobile__form
+//end filter-aside-mobile

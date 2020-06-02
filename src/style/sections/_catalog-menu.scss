@@ -9,6 +9,7 @@
   pointer-events: none;
   opacity: 0;
   background-color: $brand;
+
   @include max(1150) {
     display: none !important;
   }
@@ -58,12 +59,20 @@
 .catalog-menu__list {
   margin: 0 0 35px 0;
   padding: 0 0 0 33px;
+
+  @include maxh(950) {
+    margin: 0 0 10px 0;
+  }
 }
 
 .catalog-menu__item {
   position: relative;
   margin-bottom: 9px;
   list-style: none;
+
+  @include maxh(950) {
+    margin-bottom: 5px;
+  }
   &:first-child {
     margin-bottom: 15px;
     &::before {

@@ -32,7 +32,7 @@ block content
                   .request__firm-row
                     label.request__firm-label
                       span Введите ИНН <i>*</i>
-                      input(type='search' placeholder='ИНН' required).request__firm-input
+                      input(type='search' placeholder='ИНН' required).request__firm-input.request__firm-input--search
                     input(type='submit' value='Поиск').request__firm-submit.btn
               //end request__firm-wrap
 
@@ -114,30 +114,31 @@ block content
                 .request__delivery
                   .request__delivery-radios
                     label.request__delivery-radio
-                      input(type='radio' name='delivery' checked)
+                      input(type='radio' name='delivery')
                       span Самовывоз со склада: г.Санкт-Петербург, ул Садова, д 11А
                     label.request__delivery-radio
-                      input(type='radio' name='delivery')
+                      input(type='radio' name='delivery' checked)#request__delivery-service
                       span Доставка ТК
 
-                  h3.request__delivery-subtitle Рассчитайте примерную стоимость доставки
-                  .request__delivery-row
-                    label.request__delivery-label
-                      span Страна <i>*</i>
-                      input(placeholder='Страна' required).request__delivery-input
-                    label.request__delivery-label
-                      span Город <i>*</i>
-                      input(placeholder='Город' required).request__delivery-input
+                  .request__delivery-company#request__delivery-company
+                    h3.request__delivery-subtitle Рассчитайте примерную стоимость доставки
+                    .request__delivery-row
+                      label.request__delivery-label
+                        span Страна <i>*</i>
+                        input(placeholder='Страна' required).request__delivery-input
+                      label.request__delivery-label
+                        span Город <i>*</i>
+                        input(placeholder='Город' required).request__delivery-input
 
-                  .request__delivery-row
-                    select.selectbox-ui.request__delivery-select
-                      option Выберите ТК
-                      option Деловые линии
-                      option ЖелДорЭкмпедиция
-                      option ПЭК
-                      option КИТ
-                      option РАТЭК
-                    input(type="submit" value='Рассчитать').request__delivery-btn.btn.btn--disabled
+                    .request__delivery-row
+                      select.selectbox-ui.request__delivery-select
+                        option Выберите ТК
+                        option Деловые линии
+                        option ЖелДорЭкмпедиция
+                        option ПЭК
+                        option КИТ
+                        option РАТЭК
+                      input(type="submit" value='Рассчитать').request__delivery-btn.btn.btn--disabled
               //end request__delivery-wrap
             //end request__form
 
