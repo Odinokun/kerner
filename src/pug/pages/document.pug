@@ -1,0 +1,84 @@
+extends ../_template
+
+block variables
+  - var title           = 'Документ | Kerner'
+  - var description     = 'Документ | Kerner'
+  - var ogtitle         = 'Документ | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Инструкция по эксплуатации Магнитного электрического сверлильного станка Rotabroach ELEMENT 34'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+    include ../sections/catalog-menu
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+        
+      //begin page__content-wrap
+      .page__content-wrap
+        .container
+          //begin page-content
+          .page__content.document
+            include ../sections/headers/pages-header-documents
+
+            .document__under-header
+              .document__under-header-desktop
+                a(href="#").document__under-header-btn
+                  +svg('email')
+                a(href="#").document__under-header-btn
+                  +svg('printer')
+                a(href="#").article__top-btn
+                  svg(width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    path(d="M6 1L2 6L6 11" stroke="#253A5A" stroke-width="2")
+                  span Назад к документам
+              .document__under-header-mobile
+                a(href="#").document__under-header-mobile-btn Скачать документ
+
+            .document__img
+              img(src="assets/img/document-01.jpg" alt="picture")
+
+            //begin brand-item
+            .brand__item.brand-item
+              .brand-item__inn
+                h3.brand-item__subtitle Преимущества Bohre (Борэ)
+                ul.brand-item__list.brand-item__list--lg.custom-dots-list
+                  li.brand-item__item Невысокая стоимость при достойном качестве
+                p Основным преимуществом марки Bohre является отсутствие наценки за бренд, что позволяет удерживать уровень цен на 50% ниже, чем у аналогов от ведущих европейских производителей, при сохранении того же высокого уровня качества.
+                ul.brand-item__list.brand-item__list--lg.custom-dots-list
+                  li.brand-item__item Широкий ассортимент продукции
+                p В нашем каталоге представлено 8 моделей быстрорежущих коронок, 2 модели твердосплавов и более 15 наименований борфрез. Продукция есть как в наличии, так и на заказ.
+            //end brand-item
+
+            .document__img
+              img(src="assets/img/document-01.jpg" alt="picture")
+
+            //begin brand-item
+            .brand__item.brand-item
+              .brand-item__inn
+                h3.brand-item__subtitle Преимущества Bohre (Борэ)
+                ul.brand-item__list.brand-item__list--lg.custom-dots-list
+                  li.brand-item__item Невысокая стоимость при достойном качестве
+                p Основным преимуществом марки Bohre является отсутствие наценки за бренд, что позволяет удерживать уровень цен на 50% ниже, чем у аналогов от ведущих европейских производителей, при сохранении того же высокого уровня качества.
+                ul.brand-item__list.brand-item__list--lg.custom-dots-list
+                  li.brand-item__item Широкий ассортимент продукции
+                p В нашем каталоге представлено 8 моделей быстрорежущих коронок, 2 модели твердосплавов и более 15 наименований борфрез. Продукция есть как в наличии, так и на заказ.
+            //end brand-item
+
+            .document__footer
+              a(href="#").article__top-btn
+                svg(width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  path(d="M6 1L2 6L6 11" stroke="#253A5A" stroke-width="2")
+                span Назад к документам
+          //end page-content
+      //end page__content-wrap
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
+    include ../elements/popup
+
+  include ../sections/scripts
