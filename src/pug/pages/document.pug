@@ -27,7 +27,7 @@ block content
 
             .document__under-header
               .document__under-header-desktop
-                a(href="#").document__under-header-btn
+                a(href="#" data-popup='document-popup').document__under-header-btn.popup-open
                   +svg('email')
                 a(href="#").document__under-header-btn
                   +svg('printer')
@@ -36,7 +36,7 @@ block content
                     path(d="M6 1L2 6L6 11" stroke="#253A5A" stroke-width="2")
                   span Назад к документам
               .document__under-header-mobile
-                a(href="#").document__under-header-mobile-btn Скачать документ
+                a(href="#" data-popup='document-popup').document__under-header-mobile-btn.popup-open Скачать документ
 
             .document__img
               img(src="assets/img/document-01.jpg" alt="picture")
@@ -69,7 +69,7 @@ block content
             //end brand-item
 
             .document__footer
-              a(href="#").article__top-btn
+              a(href="#" ).article__top-btn
                 svg(width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg")
                   path(d="M6 1L2 6L6 11" stroke="#253A5A" stroke-width="2")
                 span Назад к документам

@@ -1,7 +1,9 @@
 module.exports = function() {
 
   // begin popup open
-  $('.popup-open').on('click', function() {
+  $('.popup-open').on('click', function(e) {
+    e.preventDefault();
+
     let targetPopup = '#' + $(this).data('popup');
     $(targetPopup + ', #popup__layer').fadeIn();
   });

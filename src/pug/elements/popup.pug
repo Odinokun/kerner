@@ -53,3 +53,22 @@
         input(type='submit' value='Оформить заявку').popup-form__submit-input.btn
       span.popup-form__submit-agree Нажимая на кнопку, Вы даете согласие на <a href='#'>обработку</a> своих персональных данных
 //end light-request-popup
+
+//begin light-request-popup
+.popup.light-request-popup#document-popup
+  .popup__close
+    +svg('close')
+
+  //-.popup__header
+    h2.popup__title Заказ документа
+
+  .popup__body
+    form.popup__form.popup-form
+      label.popup-form__label
+        span Почта <i>*</i>
+        input(type='email' name='email' placeholder='' required).popup-form__input
+
+      .popup-form__submit
+        input(type='submit' value='Заказать документ').popup-form__submit-input.btn
+      span.popup-form__submit-agree Нажимая на кнопку, Вы даете согласие на <a href='#'>обработку</a> своих персональных данных
+//end light-request-popup
