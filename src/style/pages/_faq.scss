@@ -79,70 +79,9 @@
 }
 
 .faq__footer {
+  display: flex;
+  justify-content: flex-start;
   .btn {
     min-width: 280px;
   }
 }
-
-//.articles__item {
-//  display: flex;
-//  margin-bottom: 20px;
-//  padding: 16px 16px 16px 32px;
-//  list-style: none;
-//  border: 1px solid #e5e5e5;
-//
-//  @include max(1023) {
-//    flex-direction: column-reverse;
-//    padding: 20px;
-//  }
-//}
-//
-//.articles__main {
-//  display: flex;
-//  flex-direction: column;
-//  flex: 1;
-//  padding-right: 22px;
-//}
-//
-//.articles__title {
-//  font-size: 18px;
-//  line-height: 24px;
-//  display: block;
-//  margin-bottom: 10px;
-//  text-decoration: none;
-//  color: #253a5a;
-//}
-//
-//.articles__text {
-//  font-size: 14px;
-//  line-height: 24px;
-//  display: block;
-//  margin-bottom: 20px;
-//  color: #272425;
-//}
-//
-//.articles__date {
-//  font-size: 14px;
-//  line-height: 1;
-//  display: block;
-//  margin-top: auto;
-//  color: #c4c4c4;
-//}
-//
-//.articles__img {
-//  display: block;
-//  flex: none;
-//  width: 230px;
-//  min-height: 175px;
-//  background-repeat: no-repeat;
-//  background-position: 50% 50%;
-//  background-size: cover;
-//
-//  @include max(1023) {
-//    display: none;
-//  }
-//}
-//
-//.articles__pagination {
-//  padding: 10px 0 50px 0;
-//}

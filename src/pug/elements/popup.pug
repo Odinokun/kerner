@@ -32,6 +32,31 @@
         span.popup-form__submit-agree Нажимая на кнопку, Вы даете согласие на <a href='#'>обработку</a> своих персональных данных
 //end review-popup
 
+//begin faq-popup
+.popup.faq-popup#faq-popup
+  .popup__close
+    +svg('close')
+
+  .popup__header
+    h2.popup__title Задать вопрос
+
+  .popup__body
+    form.popup__form.popup-form
+      label.popup-form__label
+        span Имя <i>*</i>
+        input(name='name' placeholder='' required).popup-form__input
+      label.popup-form__label
+        span Почта <i>*</i>
+        input(type='email' name='email' placeholder='' required).popup-form__input
+      label.popup-form__label
+        span Коментарий <i>*</i>
+        textarea(name='message' placeholder='').popup-form__textarea
+
+      .popup-form__submit
+        input(type='submit' value='Отправить').popup-form__submit-input
+        span.popup-form__submit-agree Нажимая на кнопку, Вы даете согласие на <a href='#'>обработку</a> своих персональных данных
+//end faq-popup
+
 //begin light-request-popup
 .popup.light-request-popup#light-request-popup
   .popup__close
@@ -58,9 +83,6 @@
 .popup.light-request-popup#document-popup
   .popup__close
     +svg('close')
-
-  //-.popup__header
-    h2.popup__title Заказ документа
 
   .popup__body
     form.popup__form.popup-form

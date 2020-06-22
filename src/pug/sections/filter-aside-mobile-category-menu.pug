@@ -1,3 +1,25 @@
+mixin filter-mobile-menu__list-wrap
+  .filter-mobile-menu__list-wrap
+    ul.filter-mobile-menu__list
+      li.filter-mobile-menu__item
+        a(href="#").filter-mobile-menu__link Магнитные сверлильные станки Rotabroach
+      li.filter-mobile-menu__item
+        a(href="#").filter-mobile-menu__link Магнитные сверлильные станки Euroboor
+      li.filter-mobile-menu__item
+        a(href="#").filter-mobile-menu__link Магнитные сверлильные станки Rotabroach
+      li.filter-mobile-menu__item
+        a(href="#").filter-mobile-menu__link Магнитные сверлильные станки Euroboor
+      li.filter-mobile-menu__item
+        a(href="#").filter-mobile-menu__link Магнитные сверлильные станки Rotabroach
+      li.filter-mobile-menu__item
+        a(href="#").filter-mobile-menu__link Магнитные сверлильные станки Euroboor
+      li.filter-mobile-menu__item
+        a(href="#").filter-mobile-menu__link Магнитные сверлильные станки Rotabroach
+      li.filter-mobile-menu__item
+        a(href="#").filter-mobile-menu__link Магнитные сверлильные станки Euroboor
+      li.filter-mobile-menu__item
+        a(href="#").filter-mobile-menu__link Магнитные сверлильные станки Euroboor
+
 //begin filter-aside-mobile-category-menu
 .filter-aside-mobile-category-menu#filter-aside-mobile-category-menu
   .catalog-mobile-menu__header
@@ -6,30 +28,61 @@
       span Назад
 
   //begin filter-aside-mobile__menu
-  .filter-aside-mobile__menu.filter-mobile-menu
-    .filter-aside-mobile__menu-subtitle.active
-      span Магнитные сверлильные станки
-    .filter-mobile-menu__list-wrap
-      ul.filter-mobile-menu__list
-        li.filter-mobile-menu__item
-          a(href="#").filter-mobile-menu__link Корончатые сверла по металлу
-        li.filter-mobile-menu__item
-          a(href="#").filter-mobile-menu__link Аксессуары к сверлильным станкам на магните
-        li.filter-mobile-menu__item
-          a(href="#").filter-mobile-menu__link Бензогайковерты, комплектующие и запчасти
-        li.filter-mobile-menu__item
-          a(href="#").filter-mobile-menu__link Борфрезы
-        li.filter-mobile-menu__item
-          a(href="#").filter-mobile-menu__link Отрезные диски
-        li.filter-mobile-menu__item
-          a(href="#").filter-mobile-menu__link Отрезные пилы
-        li.filter-mobile-menu__item
-          a(href="#").filter-mobile-menu__link Рельсорезные станки и комплектующие
-        li.filter-mobile-menu__item
-          a(href="#").filter-mobile-menu__link Рельсосверлильные станки и комплектующие
-        li.filter-mobile-menu__item
-          a(href="#").filter-mobile-menu__link Станки для снятия фаски
-        li.filter-mobile-menu__item
-          a(href="#").filter-mobile-menu__link Услуги
+  .filter-aside-mobile__menu.filter-aside-mobile__menu--all.filter-mobile-menu
+    div
+      .filter-aside-mobile__menu-subtitle
+        span Магнитные сверлильные станки
+        +svg('arr-left')
+      +filter-mobile-menu__list-wrap
+    div
+      .filter-aside-mobile__menu-subtitle
+        span Корончатые сверла по металлу
+        +svg('arr-left')
+      +filter-mobile-menu__list-wrap
+    div
+      .filter-aside-mobile__menu-subtitle
+        span Аксессуары к сверлильным станкам на магните
+        +svg('arr-left')
+      +filter-mobile-menu__list-wrap
+    div
+      .filter-aside-mobile__menu-subtitle
+        span Бензогайковерты, комплектующие и запчасти
+        +svg('arr-left')
+      +filter-mobile-menu__list-wrap
+    div
+      .filter-aside-mobile__menu-subtitle
+        span Борфрезы
+        +svg('arr-left')
+      +filter-mobile-menu__list-wrap
+    div
+      .filter-aside-mobile__menu-subtitle
+        span Отрезные диски
+        +svg('arr-left')
+      +filter-mobile-menu__list-wrap
+    div
+      .filter-aside-mobile__menu-subtitle
+        span Отрезные пилы
+        +svg('arr-left')
+      +filter-mobile-menu__list-wrap
+    div
+      .filter-aside-mobile__menu-subtitle
+        span Рельсорезные станки и комплектующие
+        +svg('arr-left')
+      +filter-mobile-menu__list-wrap
+    div
+      .filter-aside-mobile__menu-subtitle
+        span Рельсосверлильные станки и комплектующие
+        +svg('arr-left')
+      +filter-mobile-menu__list-wrap
+    div
+      .filter-aside-mobile__menu-subtitle
+        span Станки для снятия фаски
+        +svg('arr-left')
+      +filter-mobile-menu__list-wrap
+    div
+      .filter-aside-mobile__menu-subtitle
+        span Услуги
+        +svg('arr-left')
+      +filter-mobile-menu__list-wrap
   //end filter-aside-mobile__menu
 //end filter-aside-mobile-category-menu

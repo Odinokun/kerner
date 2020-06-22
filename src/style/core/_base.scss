@@ -302,6 +302,7 @@ svg {
   cursor: pointer;
   transition: .5s;
   text-align: center;
+  text-decoration: none;
   color: #fff;
   border: none;
   background-color: $highlight;
@@ -309,30 +310,30 @@ svg {
     background-color: $highlight-hov;
   }
 }
-.btn--light {
-  border: 1px solid $highlight;
-  color: $highlight;
 
+.btn--light {
+  color: $highlight;
+  border: 1px solid $highlight;
   background-color: transparent;
   &:hover {
-    color: #ffffff;
+    color: #fff;
     background-color: $highlight;
   }
 }
-.btn--dark{
+
+.btn--dark {
+  color: #fff;
   border: 1px solid $brand;
-  color: #ffffff;
   background-color: $brand;
   &:hover {
     border-color: $highlight;
     background-color: $highlight;
   }
 }
+
 .btn--disabled {
   pointer-events: none;
+  color: #979ea0;
   border: none;
-
-  color: #979EA0;
   background-color: #f2f2f2;
-
 }
