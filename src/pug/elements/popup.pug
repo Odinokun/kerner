@@ -94,3 +94,70 @@
         input(type='submit' value='Заказать документ').popup-form__submit-input.btn
       span.popup-form__submit-agree Нажимая на кнопку, Вы даете согласие на <a href='#'>обработку</a> своих персональных данных
 //end light-request-popup
+
+//begin light-request-popup
+.popup.login-popup#login-popup
+  .popup__close
+    +svg('close')
+
+  .popup__header
+    h2.popup__title Войти
+
+  .popup__body
+    form.popup__form.popup-form
+      label.popup-form__label
+        span Электронная почта
+        input(type='email' name='email' placeholder='@' required).popup-form__input
+      label.popup-form__label
+        span Пароль
+        input(type='password' name='password' placeholder='' required).popup-form__input
+
+      a(href="#" data-popup='forgot-popup').popup-form__forgot-password.popup-open Забыли пароль?
+
+      .popup-form__btns
+        input(type='submit' value='Зарегистрироваться').btn.btn--transparent
+        input(type='submit' value='Войти').btn
+//end light-request-popup
+
+//begin light-request-popup
+.popup.login-popup#register-popup
+  .popup__close
+    +svg('close')
+
+  .popup__header
+    h2.popup__title Регистрация
+
+  .popup__body
+    form.popup__form.popup-form
+      label.popup-form__label
+        span Имя
+        input(type='text' name='name' placeholder='' required).popup-form__input
+      label.popup-form__label
+        span Электронная почта
+        input(type='email' name='email' placeholder='@' required).popup-form__input
+
+      .popup-form__btns
+        input(type='submit' value='Зарегистрироваться').btn
+        .popup-form__btn-user
+          +svg('user')
+          input(type='submit' value='Войти').btn.btn--transparent
+//end light-request-popup
+
+//begin light-request-popup
+.popup.login-popup#forgot-popup
+  .popup__close
+    +svg('close')
+
+  .popup__header
+    h2.popup__title Восстановить пароль
+
+  .popup__body
+    form.popup__form.popup-form
+      label.popup-form__label
+        span Электронная почта
+        input(type='email' name='email' placeholder='@' required).popup-form__input
+
+      .popup-form__btns
+        input(type='submit' value='Отмена').btn.btn--transparent
+        input(type='submit' value='Восстановить').btn.btn--100
+//end light-request-popup

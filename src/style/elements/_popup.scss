@@ -183,9 +183,72 @@
 }
 
 .faq-popup,
-.light-request-popup {
+.light-request-popup,
+.login-popup{
   max-width: 400px;
+  @include max(480) {
+    max-width: 95%;
+  }
   .popup-form__submit-input {
     width: 100%;
+  }
+}
+
+.popup-form__forgot-password {
+  margin-top: -15px;
+  margin-bottom: 40px;
+  @include max(480) {
+    margin-bottom: 20px;
+  }
+}
+
+.popup-form__btns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @include max(480) {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn {
+    padding-right: 30px;
+    padding-left: 30px;
+    @include max(480) {
+      width: 100%;
+      margin-bottom: 15px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .btn--100{
+    width: 100%;
+  }
+}
+.popup-form__btn-user{
+  position: relative;
+  @include max(480) {
+    width: 100%;
+  }
+  svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 22px;
+    cursor: pointer;
+    fill: #009bc9;
+    width: 14px;
+    height: 17px;
+    margin: auto;
+    @include max(480) {
+      display: none;
+    }
+  }
+  .btn{
+    padding-right: 15px;
+    padding-left: 47px;
+    @include max(480) {
+      padding-left: 15px;
+    }
   }
 }

@@ -25,13 +25,13 @@ header.header
     .header__login.header-login
       ul.header-login__list
         li.header-login__item
-          a(href="#").header-login__link
+          a(href="#" data-popup='login-popup').header-login__link.popup-open
             +svg('user')
             span.header-login__text Войти
             //span.header-login__text Личный кабинет
         li.header-login__item
-          a(href="#").header-login__link
+          a(href="#" data-popup='register-popup').header-login__link.popup-open
             span.header-login__text Регистрация
-            //span.header-login__text Выйти
+            //-span.header-login__text Выйти
     //end header__login
 // end header
