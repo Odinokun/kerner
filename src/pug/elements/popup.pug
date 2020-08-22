@@ -161,3 +161,11 @@
         input(type='submit' value='Отмена').btn.btn--transparent
         input(type='submit' value='Восстановить').btn.btn--100
 //end light-request-popup
+
+//begin delete-order-popup
+.popup.delete-order-popup#delete-order-popup
+  .popup__close
+    +svg('close')
+
+  h3.delete-order-popup__title Ваш заказ успешно отменен
+//end delete-order-popup

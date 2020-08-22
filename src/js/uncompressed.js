@@ -30,7 +30,8 @@ $(document).ready(function ($) {
     'news',
     'faq',
     'documents',
-    'document'
+    'document',
+    'cabinet',
     ]);
 });
 

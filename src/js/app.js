@@ -43,10 +43,10 @@ $(function() {
   //begin open/close пункты в мобильном меню каталога
   require('./modules/catalog-menu')();
 
-  //begin аккордеон в FAQ
+  //begin аккордеон в FAQ и кабинете
   require('./modules/acordeon')();
 
-  //begin переключение десктопных табов в шапке карточки товара
+  //begin переключение десктопных табов в шапке карточки товара и кабинете
   require('./modules/tabs')();
 
   //begin open/close пункты в меню бокового фильтра

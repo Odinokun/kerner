@@ -9,4 +9,16 @@ module.exports = function() {
   });
   //end аккордеон в FAQ
 
+  //begin аккордеон в кабинете
+  $('.cabinet-tab-order__more').on('click', function (e) {
+    e.preventDefault();
+    let order = $(this).parents('.cabinet-tab-order');
+
+    $(this).toggleClass('active');
+    $(order).toggleClass('active');
+
+    $(order).find('.cabinet-tab-order__basket').slideToggle();
+  });
+  //end аккордеон в кабинете
+
 };

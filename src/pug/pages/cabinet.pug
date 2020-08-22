@@ -1,0 +1,310 @@
+extends ../_template
+
+mixin basket()
+  //begin basket-table
+  .basket__table.basket-table
+    //begin basket-table__header
+    .basket-table__header
+      .basket-table__th Наименование
+      .basket-table__th Размер
+      .basket-table__th Цена за ед.
+      .basket-table__th Кол-во
+      .basket-table__th Сумма
+      .basket-table__th
+    //end basket-table__header
+    //begin basket-table__row
+    .basket-table__row
+      .basket-table__td.basket-table__td--pic
+        img(src="assets/img/basket-01.jpg" alt="picture")
+      .basket-table__td.basket-table__td--name
+        span 00006044
+        a(href="#") Сверло корончатое из быстрорежущей стали 12х30 "Bohre"
+      .basket-table__td.basket-table__td--specifications
+        .basket-table__td-descr
+          span Размер
+        .basket-table__td-body
+          span 22x22x65
+          span 0,15 кг
+      .basket-table__td.basket-table__td--price
+        .basket-table__td-descr
+          span Цена за ед.
+        .basket-table__td-body
+          span 1 091 ₽
+      .basket-table__td.basket-table__td--counter
+        .basket-table__td-descr
+          span Кол-во
+        include ../elements/counter
+      .basket-table__td.basket-table__td--price
+        .basket-table__td-descr
+          span Сумма
+        .basket-table__td-body
+          span 2 182 ₽
+      .basket-table__td.basket-table__td--del
+    //end basket-table__row
+
+    //begin basket-table__row
+    .basket-table__row
+      .basket-table__td.basket-table__td--pic
+        img(src="assets/img/basket-02.jpg" alt="picture")
+      .basket-table__td.basket-table__td--name
+        span 00006044
+        a(href="#") Аренда сверлильного станка на магните
+      .basket-table__td.basket-table__td--specifications
+        .basket-table__td-descr
+          span Размер
+        .basket-table__td-body
+          span 10x10x10 мм
+          span 1 кг
+      .basket-table__td.basket-table__td--price
+        .basket-table__td-descr
+          span Цена за ед.
+        .basket-table__td-body
+          span 1 091 ₽
+      .basket-table__td.basket-table__td--counter
+        .basket-table__td-descr
+          span Кол-во
+        include ../elements/counter
+      .basket-table__td.basket-table__td--price
+        .basket-table__td-descr
+          span Сумма
+        .basket-table__td-body
+          span 2 182 ₽
+      .basket-table__td.basket-table__td--del
+    //end basket-table__row
+
+    //begin basket-table__row
+    .basket-table__row
+      .basket-table__td.basket-table__td--pic
+        img(src="assets/img/basket-03.jpg" alt="picture")
+      .basket-table__td.basket-table__td--name
+        span 00006044
+        a(href="#") Заточка корончатого сверла
+      .basket-table__td.basket-table__td--specifications
+        .basket-table__td-descr
+          span Размер
+        .basket-table__td-body
+          span 10x10x10 мм
+          span 1 кг
+      .basket-table__td.basket-table__td--price
+        .basket-table__td-descr
+          span Цена за ед.
+        .basket-table__td-body
+          span 1 091 ₽
+      .basket-table__td.basket-table__td--counter
+        .basket-table__td-descr
+          span Кол-во
+        include ../elements/counter
+      .basket-table__td.basket-table__td--price
+        .basket-table__td-descr
+          span Сумма
+        .basket-table__td-body
+          span 2 182 ₽
+      .basket-table__td.basket-table__td--del
+    //end basket-table__row
+
+
+
+    //begin basket-table__sum
+    .basket-table__sum
+      .basket-table__sum-info
+        span.basket-table__sum-info-text Итого:
+        span.basket-table__sum-info-price 38 571 ₽
+    //end basket-table__sum
+
+
+  //end basket-table
+
+block variables
+  - var title           = 'Личный кабинет | Kerner'
+  - var description     = 'Личный кабинет | Kerner'
+  - var ogtitle         = 'Личный кабинет | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Личный кабинет'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+    include ../sections/catalog-menu
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+
+      //begin cabinet
+      .cabinet
+        .container
+          include ../sections/headers/pages-header
+        .container
+          .cabinet__tabs.cabinet-tabs
+            //begin cabinet-tabs-header
+            .cabinet-tabs__header.cabinet-tabs-header
+              ul.cabinet-tabs-header__list
+                li.cabinet-tabs-header__item
+                  span(data-tab='#cabinet-tab-forms').cabinet-tabs-header__link
+                    span.cabinet-tabs-header__link--desktop Личные данные
+                    span.cabinet-tabs-header__link--mobile Данные
+                li.cabinet-tabs-header__item
+                  span(data-tab='#cabinet-tab-orders').cabinet-tabs-header__link.active
+                    span.cabinet-tabs-header__link--desktop Ваши заказы
+                    span.cabinet-tabs-header__link--mobile Заказы
+            //end cabinet-tabs-header
+
+            //begin cabinet-tabs__body
+            .cabinet-tabs__body.cabinet-tabs-body
+              //begin cabinet-tab--forms
+              .cabinet-tab.cabinet-tab--forms#cabinet-tab-forms
+                .cabinet-tab__inn
+                  //begin cabinet-tab__form
+                  form.cabinet-tab__form.cabinet-tab-form
+                    label.cabinet-tab-form__label
+                      span Контактное лицо
+                      input(placeholder='Владимир').cabinet-tab-form__input
+
+                    label.cabinet-tab-form__label
+                      span E-mail
+                      input(type='email' placeholder='123@mail.ri').cabinet-tab-form__input
+
+                    label.cabinet-tab-form__label
+                      span Телефон
+                      input(placeholder='+7(___)___-__-__').cabinet-tab-form__input.phone-mask
+
+                    label.cabinet-tab-form__label
+                      span Компания
+                      input(placeholder='Снежинка').cabinet-tab-form__input
+
+                    label.cabinet-tab-form__label
+                      span Адрес доставки
+                      input(placeholder='Омск, ул. Ленина 1').cabinet-tab-form__input
+
+                    input(type='submit' value='Сохранить изменения').btn
+                  //end cabinet-tab__form
+
+                  //begin cabinet-tab__form
+                  form.cabinet-tab__form.cabinet-tab-form
+                    label.cabinet-tab-form__label
+                      span Старый пароль
+                      input(type='password' placeholder='').cabinet-tab-form__input
+                    label.cabinet-tab-form__label
+                      span Новый пароль
+                      input(type='password' placeholder='').cabinet-tab-form__input
+                    label.cabinet-tab-form__label
+                      span Еще раз новый пароль
+                      input(type='password' placeholder='').cabinet-tab-form__input
+
+                    input(type='submit' value='Сменить пароль').btn
+                  //end cabinet-tab__form
+
+                  //begin cabinet-tab__banner
+                  .cabinet-tab__banner.cabinet-tab-banner
+                    .cabinet-tab-banner__header
+                      .cabinet-tab-banner__header-icon
+                        img(src="assets/img/sale.svg" alt="picture")
+                      h3.cabinet-tab-banner__header-title Оптом дешевле!
+                    .cabinet-tab-banner__body
+                      p Хотите стать оптовым клиентом и получить скидку?
+                      p Для оптовых клиентов мы предоставляем скидку 30% на свёрла и аксессуары и 16,5% на станки.
+                    .cabinet-tab-banner__footer
+                      .cabinet-tab-banner__footer-icon
+                        img(src="assets/img/clock.svg" alt="picture")
+                      span.cabinet-tab-banner__footer-text Ваш запрос отправлен
+                  //end cabinet-tab__banner
+
+              //begin cabinet-tab--orders
+              .cabinet-tab.cabinet-tab--orders.active#cabinet-tab-orders
+                .cabinet-tab__inn
+                  //begin cabinet-tab__order
+                  .cabinet-tab__order.cabinet-tab-order
+                    //begin cabinet-tab-order__row
+                    .cabinet-tab-order__row
+                      .cabinet-tab-order__item.cabinet-tab-order__item--number
+                        .cabinet-tab-order__number №231
+                      .cabinet-tab-order__item.cabinet-tab-order__item--date
+                        .cabinet-tab-order__date от 17 июля 2020
+                      .cabinet-tab-order__item.cabinet-tab-order__item--status
+                        .cabinet-tab-order__status.cabinet-tab-order__status--delete Отменен
+                      .cabinet-tab-order__item.cabinet-tab-order__item--delete
+                      .cabinet-tab-order__item.cabinet-tab-order__item--more
+                        .cabinet-tab-order__more
+                          .cabinet-tab-order__more-open
+                            span Детали заказа
+                          .cabinet-tab-order__more-close
+                            span Скрыть
+                          +svg('arr-down')
+                    //end cabinet-tab-order__row
+
+                    //begin cabinet-tab-order__basket
+                    .cabinet-tab-order__basket
+                      +basket()
+                    //end cabinet-tab-order__basket
+                  //end cabinet-tab__order
+
+                  //begin cabinet-tab__order
+                  .cabinet-tab__order.cabinet-tab-order
+                    //begin cabinet-tab-order__row
+                    .cabinet-tab-order__row
+                      .cabinet-tab-order__item.cabinet-tab-order__item--number
+                        .cabinet-tab-order__number №234
+                      .cabinet-tab-order__item.cabinet-tab-order__item--date
+                        .cabinet-tab-order__date от 17 июля 2020
+                      .cabinet-tab-order__item.cabinet-tab-order__item--status
+                        .cabinet-tab-order__status.cabinet-tab-order__status--new Новый
+                      .cabinet-tab-order__item.cabinet-tab-order__item--delete
+                        a(href="#" data-popup='delete-order-popup').cabinet-tab-order__delete.popup-open
+                          +svg('close')
+                          span Отменить заказ
+                      .cabinet-tab-order__item.cabinet-tab-order__item--more
+                        .cabinet-tab-order__more
+                          span.cabinet-tab-order__more-open Детали заказа
+                          span.cabinet-tab-order__more-close Скрыть
+                          +svg('arr-down')
+                    //end cabinet-tab-order__row
+
+                    //begin cabinet-tab-order__basket
+                    .cabinet-tab-order__basket
+                      +basket()
+                    //end cabinet-tab-order__basket
+                  //end cabinet-tab__order
+
+                  //begin cabinet-tab__order
+                  .cabinet-tab__order.cabinet-tab-order
+                    //begin cabinet-tab-order__row
+                    .cabinet-tab-order__row
+                      .cabinet-tab-order__item.cabinet-tab-order__item--number
+                        .cabinet-tab-order__number №2434
+                      .cabinet-tab-order__item.cabinet-tab-order__item--date
+                        .cabinet-tab-order__date от 17 июля 2020
+                      .cabinet-tab-order__item.cabinet-tab-order__item--status
+                        .cabinet-tab-order__status.cabinet-tab-order__status--new Новый
+                      .cabinet-tab-order__item.cabinet-tab-order__item--delete
+                        a(href="#" data-popup='delete-order-popup').cabinet-tab-order__delete.popup-open
+                          +svg('close')
+                          span Отменить заказ
+                      .cabinet-tab-order__item.cabinet-tab-order__item--more
+                        .cabinet-tab-order__more
+                          span.cabinet-tab-order__more-open Детали заказа
+                          span.cabinet-tab-order__more-close Скрыть
+                          +svg('arr-down')
+                    //end cabinet-tab-order__row
+
+                    //begin cabinet-tab-order__basket
+                    .cabinet-tab-order__basket
+                      +basket()
+                    //end cabinet-tab-order__basket
+                  //end cabinet-tab__order
+
+              //end cabinet-tab--orders
+
+
+
+
+
+      //end cabinet
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
+    include ../elements/popup
+
+  include ../sections/scripts
