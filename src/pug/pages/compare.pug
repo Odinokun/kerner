@@ -1,0 +1,301 @@
+extends ../_template
+
+mixin popular-slider__card(pic, title, price)
+  .popular-slider__card
+    .popular-slider__img
+      img(src="assets/img/popular-slider-" + pic + ".jpg" alt="picture")
+
+    .popular-slider__title #{title}
+    .popular-slider__price
+      span #{price}
+      span ₽
+
+    .popular-slider__footer
+      a(href="#").popular-slider__basket В корзину
+      .popular-slider__counter
+        include ../elements/counter
+    .popular-slider__trash
+      a(href="#").popular-slider__trash-icon
+        +svg('trash')
+
+mixin popular-slider__card-sale(pic, title, priceNew, priceOld)
+  .popular-slider__card
+    .popular-slider__img
+      .popular-slider__sale-labels
+        .popular-slider__sale-label
+          span Хит продаж
+        .popular-slider__sale-label
+          span Спец цена
+      img(src="assets/img/popular-slider-" + pic + ".jpg" alt="picture")
+
+    .popular-slider__title #{title}
+    .popular-slider__price
+      .popular-slider__price-new
+        span #{priceNew}
+        span ₽
+      .popular-slider__price-old
+        span #{priceOld}
+        span ₽
+
+    .popular-slider__footer
+      a(href="#").popular-slider__basket В корзину
+      .popular-slider__counter
+        include ../elements/counter
+    .popular-slider__trash
+      a(href="#").popular-slider__trash-icon
+        +svg('trash')
+
+block variables
+  - var title           = 'Сравнение товаров | Kerner'
+  - var description     = 'Сравнение товаров | Kerner'
+  - var ogtitle         = 'Сравнение товаров | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Сравнение товаров'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+    include ../sections/catalog-menu
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+
+      //begin compare
+      .compare
+        .container
+          include ../sections/headers/pages-header
+        .container
+          .compare__inn
+            //begin compare__descr
+            .compare__descr
+              .compare__slide-row.compare__slide-row--1
+                h3.compare__select-title Категория
+                select.compare__select.selectbox-ui
+                  option Сверлильные станки
+                  option Сверлильные станки 1
+                  option Сверлильные станки 2
+                  option Сверлильные станки 3
+
+                label.popular-slider__compare
+                  input(type='checkbox')
+                  span
+                    | Скрыть дубликаты
+                    svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+                a(href="#").compare__clear
+                  .compare__clear-icon
+                    +svg('reset')
+                  span Очистить сравнение
+              .compare__slide-row.compare__slide-row--2
+                span.compare__slide-td Вес, кг
+              .compare__slide-row.compare__slide-row--3
+                span.compare__slide-td Размеры (ДхШхВ), мм
+              .compare__slide-row.compare__slide-row--4
+                span.compare__slide-td Мощность двигателя, Вт
+              .compare__slide-row.compare__slide-row--5
+                span.compare__slide-td Ø сверления корончатым сверлом, мм
+              .compare__slide-row.compare__slide-row--6
+                span.compare__slide-td Глубина сверления , мм
+              .compare__slide-row.compare__slide-row--7
+                span.compare__slide-td Шпиндель
+              .compare__slide-row.compare__slide-row--8
+                span.compare__slide-td Диаметр сверления спиральным сверлом, мм
+              .compare__slide-row.compare__slide-row--9
+                span.compare__slide-td Размер магнита (ШхДхВ), мм
+              .compare__slide-row.compare__slide-row--10
+                span.compare__slide-td Поворотное основание
+              .compare__slide-row.compare__slide-row--price.compare__slide-row--11
+                span.compare__slide-td Цена
+              .compare__slide-row.compare__slide-row--button.compare__slide-row--12
+                span.compare__slide-td
+            //end compare__descr
+            //begin compare__slider
+            ul.compare__slider#compare__slider
+              //begin compare__slide
+              li.compare__slide
+                .compare__slide-row.compare__slide-row--1
+                  +popular-slider__card('01', 'Магнитный электрический сверлильный станок COMMANDO', '48 000')
+                .compare__slide-row.compare__slide-row--2
+                  span.compare__slide-td-descr Вес, кг
+                  span.compare__slide-td 350
+                .compare__slide-row.compare__slide-row--3
+                  span.compare__slide-td-descr Размеры (ДхШхВ), мм
+                  span.compare__slide-td.highlight 83x19x19
+                .compare__slide-row.compare__slide-row--4
+                  span.compare__slide-td-descr Мощность двигателя, Вт
+                  span.compare__slide-td 1100.00
+                .compare__slide-row.compare__slide-row--5
+                  span.compare__slide-td-descr Ø сверления корончатым сверлом, мм
+                  span.compare__slide-td 35.00
+                .compare__slide-row.compare__slide-row--6
+                  span.compare__slide-td-descr Глубина сверления , мм
+                  span.compare__slide-td 50.00
+                .compare__slide-row.compare__slide-row--7
+                  span.compare__slide-td-descr Шпиндель
+                  span.compare__slide-td Weldon 19,05
+                .compare__slide-row.compare__slide-row--8
+                  span.compare__slide-td-descr Диаметр сверления спиральным сверлом, мм
+                  span.compare__slide-td 220.00
+                .compare__slide-row.compare__slide-row--9
+                  span.compare__slide-td-descr Размер магнита (ШхДхВ), мм
+                  span.compare__slide-td 80х50х160
+                .compare__slide-row.compare__slide-row--10
+                  span.compare__slide-td-descr Поворотное основание
+                  span.compare__slide-td
+                .compare__slide-row.compare__slide-row--price.compare__slide-row--11
+                  .popular-slider__price
+                    span 48 000
+                    span ₽
+                .compare__slide-row.compare__slide-row--button.compare__slide-row--12
+                  .popular-slider__footer
+                    a(href="#").popular-slider__basket В корзину
+                    .popular-slider__counter
+                      include ../elements/counter
+              //end compare__slide
+
+              //begin compare__slide
+              li.compare__slide
+                .compare__slide-row.compare__slide-row--1
+                  +popular-slider__card('04', 'Магнитный сверлильный станок FE Powertools 36 X', '35 900')
+                .compare__slide-row.compare__slide-row--2
+                  span.compare__slide-td-descr Вес, кг
+                  span.compare__slide-td 460
+                .compare__slide-row.compare__slide-row--3
+                  span.compare__slide-td-descr Размеры (ДхШхВ), мм
+                  span.compare__slide-td.highlight 83x19x19
+                .compare__slide-row.compare__slide-row--4
+                  span.compare__slide-td-descr Мощность двигателя, Вт
+                  span.compare__slide-td 1840.00
+                .compare__slide-row.compare__slide-row--5
+                  span.compare__slide-td-descr Ø сверления корончатым сверлом, мм
+                  span.compare__slide-td 100.00
+                .compare__slide-row.compare__slide-row--6
+                  span.compare__slide-td-descr Глубина сверления , мм
+                  span.compare__slide-td 110.00
+                .compare__slide-row.compare__slide-row--7
+                  span.compare__slide-td-descr Шпиндель
+                  span.compare__slide-td Конус Морзе №3
+                .compare__slide-row.compare__slide-row--8
+                  span.compare__slide-td-descr Диаметр сверления спиральным сверлом, мм
+                  span.compare__slide-td.highlight 220.00
+                .compare__slide-row.compare__slide-row--9
+                  span.compare__slide-td-descr Размер магнита (ШхДхВ), мм
+                  span.compare__slide-td 108х50х240
+                .compare__slide-row.compare__slide-row--10
+                  span.compare__slide-td-descr Поворотное основание
+                  span.compare__slide-td.highlight Угловое смещение 5°, продольное смещение 5 мм
+                .compare__slide-row.compare__slide-row--price.compare__slide-row--11
+                  .popular-slider__price
+                    span 35 900
+                    span ₽
+                .compare__slide-row.compare__slide-row--button.compare__slide-row--12
+                  .popular-slider__footer
+                    a(href="#").popular-slider__basket В корзину
+                    .popular-slider__counter
+                      include ../elements/counter
+              //end compare__slide
+
+              //begin compare__slide
+              li.compare__slide
+                .compare__slide-row.compare__slide-row--1
+                  +popular-slider__card-sale('01', 'Магнитный электрический сверлильный станок COMMANDO', '48 000', '53 000')
+                .compare__slide-row.compare__slide-row--2
+                  span.compare__slide-td-descr Вес, кг
+                  span.compare__slide-td 580
+                .compare__slide-row.compare__slide-row--3
+                  span.compare__slide-td-descr Размеры (ДхШхВ), мм
+                  span.compare__slide-td 83x19x19
+                .compare__slide-row.compare__slide-row--4
+                  span.compare__slide-td-descr Мощность двигателя, Вт
+                  span.compare__slide-td 1200.00
+                .compare__slide-row.compare__slide-row--5
+                  span.compare__slide-td-descr Ø сверления корончатым сверлом, мм
+                  span.compare__slide-td 60.00
+                .compare__slide-row.compare__slide-row--6
+                  span.compare__slide-td-descr Глубина сверления , мм
+                  span.compare__slide-td 55.00
+                .compare__slide-row.compare__slide-row--7
+                  span.compare__slide-td-descr Шпиндель
+                  span.compare__slide-td Конус Морзе №2
+                .compare__slide-row.compare__slide-row--8
+                  span.compare__slide-td-descr Диаметр сверления спиральным сверлом, мм
+                  span.compare__slide-td 22.00 - 220.00
+                .compare__slide-row.compare__slide-row--9
+                  span.compare__slide-td-descr Размер магнита (ШхДхВ), мм
+                  span.compare__slide-td 90х50х190
+                .compare__slide-row.compare__slide-row--10
+                  span.compare__slide-td-descr Поворотное основание
+                  span.compare__slide-td
+                .compare__slide-row.compare__slide-row--price.compare__slide-row--11
+                  .popular-slider__price
+                    .popular-slider__price-new
+                      span 48 000
+                      span ₽
+                    .popular-slider__price-old
+                      span 53 000
+                      span ₽
+                .compare__slide-row.compare__slide-row--button.compare__slide-row--12
+                  .popular-slider__footer
+                    a(href="#").popular-slider__basket В корзину
+                    .popular-slider__counter
+                      include ../elements/counter
+              //end compare__slide
+
+              //begin compare__slide
+              li.compare__slide
+                .compare__slide-row.compare__slide-row--1
+                  +popular-slider__card('04', 'Магнитный сверлильный станок FE Powertools 36 X', '35 900')
+                .compare__slide-row.compare__slide-row--2
+                  span.compare__slide-td-descr Вес, кг
+                  span.compare__slide-td 460
+                .compare__slide-row.compare__slide-row--3
+                  span.compare__slide-td-descr Размеры (ДхШхВ), мм
+                  span.compare__slide-td 83x19x19
+                .compare__slide-row.compare__slide-row--4
+                  span.compare__slide-td-descr Мощность двигателя, Вт
+                  span.compare__slide-td 1840.00
+                .compare__slide-row.compare__slide-row--5
+                  span.compare__slide-td-descr Ø сверления корончатым сверлом, мм
+                  span.compare__slide-td 100.00
+                .compare__slide-row.compare__slide-row--6
+                  span.compare__slide-td-descr Глубина сверления , мм
+                  span.compare__slide-td 110.00
+                .compare__slide-row.compare__slide-row--7
+                  span.compare__slide-td-descr Шпиндель
+                  span.compare__slide-td Конус Морзе №3
+                .compare__slide-row.compare__slide-row--8
+                  span.compare__slide-td-descr Диаметр сверления спиральным сверлом, мм
+                  span.compare__slide-td 220.00
+                .compare__slide-row.compare__slide-row--9
+                  span.compare__slide-td-descr Размер магнита (ШхДхВ), мм
+                  span.compare__slide-td 108х50х240
+                .compare__slide-row.compare__slide-row--10
+                  span.compare__slide-td-descr Поворотное основание
+                  span.compare__slide-td Угловое смещение 5°, продольное смещение 5 мм
+                .compare__slide-row.compare__slide-row--price.compare__slide-row--11
+                  .popular-slider__price
+                    span 35 900
+                    span ₽
+                .compare__slide-row.compare__slide-row--button.compare__slide-row--12
+                  .popular-slider__footer
+                    a(href="#").popular-slider__basket В корзину
+                    .popular-slider__counter
+                      include ../elements/counter
+              //end compare__slide
+            //end compare__slider
+          a(href="#").compare__print
+            .compare__print-icon
+              +svg('printer')
+            .compare__print-text
+              span Распечатать сравнение
+      //end compare
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
+    include ../elements/popup
+
+  include ../sections/scripts

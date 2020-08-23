@@ -7,4 +7,9 @@ module.exports = function() {
   });
   // end jquery UI
 
+  $( ".search-res-tabs__header-select" )
+    .selectmenu()
+    .selectmenu( "menuWidget" )
+    .addClass( "search-res-tabs__header-select-option" );
+
 };

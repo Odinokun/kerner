@@ -12,9 +12,6 @@
 //begin #cabinet-tabs-header
 .cabinet-tabs-header {
   display: flex;
-  //  @include max(767) {
-  //    display: none;
-  //  }
 }
 
 .cabinet-tabs-header__list {
@@ -54,10 +51,11 @@
   user-select: none;
   text-decoration: none;
   color: #009bc9;
+
   @include max(576) {
-    padding: 11px 5px;
-    min-width: 0;
     font-size: 14px;
+    min-width: 0;
+    padding: 11px 5px;
   }
 
   &.active {
@@ -66,13 +64,16 @@
     background-color: #f2f2f2;
   }
 }
-.cabinet-tabs-header__link--desktop{
+
+.cabinet-tabs-header__link--desktop {
   @include max(576) {
     display: none;
   }
 }
-.cabinet-tabs-header__link--mobile{
+
+.cabinet-tabs-header__link--mobile {
   display: none;
+
   @include max(576) {
     display: block;
   }
@@ -236,6 +237,7 @@
   padding: 15px;
   transition: .5s;
   border: 1px solid #e5e5e5;
+
   @include max(767) {
     padding-top: 22px;
     padding-bottom: 50px;
@@ -248,9 +250,10 @@
 .cabinet-tab-order__row {
   display: flex;
   justify-content: space-between;
+
   @include max(767) {
-    flex-wrap: wrap;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
 }
 
@@ -267,14 +270,15 @@
   line-height: 18px;
   padding: 0 25px;
   color: #000;
+
   @include max(860) {
     padding: 0 25px 0 0;
   }
-
 }
 
 .cabinet-tab-order__item--date {
   width: 100%;
+
   @include max(767) {
     width: auto;
   }
@@ -289,6 +293,7 @@
 
 .cabinet-tab-order__item--status {
   padding: 0 110px 0 73px;
+
   @include max(1150) {
     padding: 0 50px;
   }
@@ -296,8 +301,8 @@
     padding: 0 30px;
   }
   @include max(767) {
-    padding: 20px 0 0 0;
     width: 100%;
+    padding: 20px 0 0 0;
   }
 }
 
@@ -325,6 +330,7 @@
 .cabinet-tab-order__item--delete {
   flex: none;
   width: 140px;
+
   @include max(767) {
     display: none;
   }
@@ -336,17 +342,17 @@
   cursor: pointer;
   text-decoration: none;
   &:hover {
-    svg{
+    svg {
       transform: rotate(180deg);
     }
   }
   svg {
-    transition: transform .5s;
     flex: none;
     fill: $highlight;
     width: 16px;
     height: 16px;
     margin-right: 11px;
+    transition: transform .5s;
   }
   span {
     font-size: 14px;
@@ -364,6 +370,7 @@
   padding-bottom: 5px;
   padding-left: 110px;
   cursor: pointer;
+
   @include max(1150) {
     padding-left: 50px;
   }
@@ -371,13 +378,13 @@
     padding-left: 30px;
   }
   @include max(767) {
-    padding: 0;
     position: absolute;
     bottom: 15px;
     left: 0;
-    margin: auto;
-    width: 100%;
     justify-content: center;
+    width: 100%;
+    margin: auto;
+    padding: 0;
   }
   &.active {
     svg {
@@ -429,13 +436,13 @@
     margin-left: auto;
     padding-top: 15px;
     border-top: 1px solid #e5e5e5;
+
     @include max(860) {
-    width: 100%;
+      width: 100%;
     }
     @include max(767) {
-      padding-top: 0;
       margin-bottom: 15px;
-
+      padding-top: 0;
     }
   }
   .basket-table__header {
@@ -447,7 +454,7 @@
       display: none;
     }
   }
-  .basket-table__td--pic{
+  .basket-table__td--pic {
     @include max(1023) {
       display: none;
     }
@@ -458,11 +465,12 @@
   .basket-table__sum {
     padding-right: 30px;
     padding-bottom: 0;
+
     @include max(1023) {
       padding-right: 0;
     }
   }
-  .basket-table__sum-info{
+  .basket-table__sum-info {
     @include max(480) {
       min-width: 0;
     }

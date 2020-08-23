@@ -62,4 +62,7 @@ $(function() {
   //begin цвет кнопок в фильтре переключения вида (линейный/карты)
   require('./modules/topFilterBtns')();
 
+  //begin выравнивание высоты ячеек в сравнении
+  require('./modules/tdHeight')();
+
 });

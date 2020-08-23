@@ -32,6 +32,8 @@ $(document).ready(function ($) {
     'documents',
     'document',
     'cabinet',
+    'search-res',
+    'compare',
     ]);
 });
 

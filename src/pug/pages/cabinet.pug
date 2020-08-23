@@ -142,11 +142,11 @@ block content
             .cabinet-tabs__header.cabinet-tabs-header
               ul.cabinet-tabs-header__list
                 li.cabinet-tabs-header__item
-                  span(data-tab='#cabinet-tab-forms').cabinet-tabs-header__link
+                  span(data-tab='#cabinet-tab-forms').cabinet-tabs-header__link.active
                     span.cabinet-tabs-header__link--desktop Личные данные
                     span.cabinet-tabs-header__link--mobile Данные
                 li.cabinet-tabs-header__item
-                  span(data-tab='#cabinet-tab-orders').cabinet-tabs-header__link.active
+                  span(data-tab='#cabinet-tab-orders').cabinet-tabs-header__link
                     span.cabinet-tabs-header__link--desktop Ваши заказы
                     span.cabinet-tabs-header__link--mobile Заказы
             //end cabinet-tabs-header
@@ -154,7 +154,7 @@ block content
             //begin cabinet-tabs__body
             .cabinet-tabs__body.cabinet-tabs-body
               //begin cabinet-tab--forms
-              .cabinet-tab.cabinet-tab--forms#cabinet-tab-forms
+              .cabinet-tab.cabinet-tab--forms.active#cabinet-tab-forms
                 .cabinet-tab__inn
                   //begin cabinet-tab__form
                   form.cabinet-tab__form.cabinet-tab-form
@@ -210,9 +210,10 @@ block content
                         img(src="assets/img/clock.svg" alt="picture")
                       span.cabinet-tab-banner__footer-text Ваш запрос отправлен
                   //end cabinet-tab__banner
+              //end cabinet-tab--forms
 
               //begin cabinet-tab--orders
-              .cabinet-tab.cabinet-tab--orders.active#cabinet-tab-orders
+              .cabinet-tab.cabinet-tab--orders#cabinet-tab-orders
                 .cabinet-tab__inn
                   //begin cabinet-tab__order
                   .cabinet-tab__order.cabinet-tab-order
@@ -295,11 +296,7 @@ block content
                   //end cabinet-tab__order
 
               //end cabinet-tab--orders
-
-
-
-
-
+            //begin cabinet-tabs__body
       //end cabinet
     //end content
 

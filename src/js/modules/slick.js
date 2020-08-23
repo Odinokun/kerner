@@ -1,7 +1,6 @@
 module.exports = function() {
 
   // begin Slick slider
-
   $('#team-slider__list').slick({
     dots: true,
     infinite: true,
@@ -169,6 +168,31 @@ module.exports = function() {
           focusOnSelect: false,
           vertical: false,
           verticalSwiping: false,
+        }
+      }
+    ]
+  });
+
+  $('#compare__slider').slick({
+    dots: false,
+    infinite: false,
+    autoplay: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: "<div class='prev'><svg width=\"7\" height=\"12\" viewBox=\"0 0 7 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M6 1L2 6L6 11\" stroke=\"white\" stroke-width=\"2\"/></svg></div>",
+    nextArrow: "<div class='next'><svg width=\"7\" height=\"12\" viewBox=\"0 0 7 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M1 11L5 6L1 1\" stroke=\"white\" stroke-width=\"2\"/></svg></div>",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 577,
+        settings: {
+          arrows: false,
+          slidesToShow: 1
         }
       }
     ]

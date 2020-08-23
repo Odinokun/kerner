@@ -1,0 +1,237 @@
+extends ../_template
+
+mixin popular-slider__card(pic, title, price)
+  .popular-slider__card
+    .popular-slider__img
+      img(src="assets/img/popular-slider-" + pic + ".jpg" alt="picture")
+      label.popular-slider__compare
+        input(type='checkbox')
+        span
+          | В сравнение
+          svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+
+    .popular-slider__title #{title}
+    .popular-slider__descr Характеристика 1: 220 Вт
+    .popular-slider__descr Характеристика с очень длинным названием: 220 Вт
+    .popular-slider__price
+      span #{price}
+      span ₽
+
+    .popular-slider__footer
+      a(href="#").popular-slider__basket В корзину
+      .popular-slider__counter
+        include ../elements/counter
+mixin popular-slider__card-sale(pic, title, priceNew, priceOld)
+  .popular-slider__card
+    .popular-slider__img
+      .popular-slider__sale-labels
+        .popular-slider__sale-label
+          span Хит продаж
+        .popular-slider__sale-label
+          span Спец цена
+      img(src="assets/img/popular-slider-" + pic + ".jpg" alt="picture")
+      label.popular-slider__compare
+        input(type='checkbox')
+        span
+          | В сравнение
+          svg(width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M1 2.33333L3.8 5L8 1" stroke-width="2")
+
+    .popular-slider__title #{title}
+    .popular-slider__descr Характеристика 1: 220 Вт
+    .popular-slider__descr Характеристика с очень длинным названием: 220 Вт
+    .popular-slider__price
+      .popular-slider__price-new
+        span #{priceNew}
+        span ₽
+      .popular-slider__price-old
+        span #{priceOld}
+        span ₽
+
+    .popular-slider__footer
+      a(href="#").popular-slider__basket В корзину
+      .popular-slider__counter
+        include ../elements/counter
+
+block variables
+  - var title           = 'Результаты поиска | Kerner'
+  - var description     = 'Результаты поиска | Kerner'
+  - var ogtitle         = 'Результаты поиска | Kerner'
+  - var ogimage         = 'assets/img/social.jpg'
+  - var pageHeaderTitle = 'Результаты поиска'
+
+block content
+  .main-wrap.page
+    include ../sections/headers/header
+    include ../sections/headers/header-mobile
+    include ../sections/catalog-menu
+
+    //begin content
+    main.main
+      include ../sections/under-header
+      include ../sections/info-line
+
+      //begin search-res
+      .search-res
+        .container
+          include ../sections/headers/pages-header
+        .container
+          .search-res__request
+            span По запросу: сверло
+
+          .search-res__tabs.search-res-tabs
+            //begin search-res-tabs-header
+            .search-res-tabs__header.search-res-tabs-header
+              select.search-res-tabs__header-select
+                option(value='#search-res-tab-products' selected) Товары
+                option(value='#search-res-tab-category') Категории
+                option(value='#search-res-tab-news') Новости
+                option(value='#search-res-tab-articles') Статьи
+                option(value='#search-res-tab-docs') Документация
+              ul.search-res-tabs-header__list
+                li.search-res-tabs-header__item
+                  span(data-tab='#search-res-tab-products').search-res-tabs-header__link.active Товары
+                li.search-res-tabs-header__item
+                  span(data-tab='#search-res-tab-category').search-res-tabs-header__link Категории
+                li.search-res-tabs-header__item
+                  span(data-tab='#search-res-tab-news').search-res-tabs-header__link Новости
+                li.search-res-tabs-header__item
+                  span(data-tab='#search-res-tab-articles').search-res-tabs-header__link Статьи
+                li.search-res-tabs-header__item
+                  span(data-tab='#search-res-tab-docs').search-res-tabs-header__link Документация
+            //end search-res-tabs-header
+
+            //begin search-res-tabs__body
+            .search-res-tabs__body.search-res-tabs-body
+              //begin search-res-tab--products
+              .search-res-tab.search-res-tab--products#search-res-tab-products.active
+                .search-res-tab__inn
+                  //begin search-res-tab__products-list
+                  .search-res-tab__products-list
+                    .popular-slider__item
+                      +popular-slider__card('01', 'Магнитный электрический сверлильный станок COMMANDO', '48 000')
+                    .popular-slider__item
+                      +popular-slider__card('04', 'Магнитный сверлильный станок FE Powertools 36 X', '35 900')
+                    .popular-slider__item
+                      +popular-slider__card-sale('01', 'Магнитный электрический сверлильный станок COMMANDO', '48 000', '53 000')
+                    .popular-slider__item
+                      +popular-slider__card('04', 'Магнитный сверлильный станок FE Powertools 36 X', '35 900')
+                  //end search-res-tab__products-list
+
+                  //begin pagination
+                  .category-body__pagination
+                    include ../elements/pagination
+                  //end pagination
+              //end search-res-tab--products
+
+              //begin search-res-tab--category
+              .search-res-tab.search-res-tab--category#search-res-tab-category
+                .search-res-tab__inn
+                  ul.search-res-tab__category-list
+                    li.search-res-tab__category-item
+                      a(href="#").search-res-tab__category-link Бензогайковерты, комплектующие и запчасти
+                    li.search-res-tab__category-item
+                      a(href="#").search-res-tab__category-link Корончатые сверла по металлу
+                    li.search-res-tab__category-item
+                      a(href="#").search-res-tab__category-link Станки для снятия фаски
+                    li.search-res-tab__category-item
+                      a(href="#").search-res-tab__category-link Бензогайковерты, комплектующие и запчасти
+                    li.search-res-tab__category-item
+                      a(href="#").search-res-tab__category-link Корончатые сверла по металлу
+                    li.search-res-tab__category-item
+                      a(href="#").search-res-tab__category-link Станки для снятия фаски
+
+                //begin pagination
+                .category-body__pagination
+                  include ../elements/pagination
+                //end pagination
+              //end search-res-tab--category
+
+              //begin search-res-tab--news
+              .search-res-tab.search-res-tab--news#search-res-tab-news
+                .search-res-tab__inn
+                  //begin articles__list
+                  ul.articles__list
+                    //begin articles__item
+                    li.articles__item
+                      .articles__main
+                        a(href="#").articles__title Kerner - участник пятого сетевого совещания ЦДИ ОАО РЖД в Сочи
+                        span.articles__text 19 – 20 февраля 2020 г. в городе Сочи (отель Pullman Сочи Центр) прошло ежегодное сетевое совещание по подведению итогов производственно-хозяйственной деятельности инфраструктурного комплекса ОАО РЖД за 2019 год.
+                        span.articles__date 24 сентября 2019 в 15:23
+                      a(href="#").articles__img(style='background-image: url("assets/img/articles-01.jpg")')
+                    //end articles__item
+
+                    //begin articles__item
+                    li.articles__item
+                      .articles__main
+                        a(href="#").articles__title Отрезные пилы по металлу
+                        span.articles__text Переносные инструменты для резки металлопроката
+                        span.articles__date 18 февраля 2019 в 08:28
+                      a(href="#").articles__img(style='background-image: url("assets/img/articles-02.jpg")')
+                    //end articles__item
+                  //end articles__list
+
+                //begin pagination
+                .category-body__pagination
+                  include ../elements/pagination
+                //end pagination
+              //end search-res-tab--news
+
+              //begin search-res-tab--articles
+              .search-res-tab.search-res-tab--articles#search-res-tab-articles
+                .search-res-tab__inn
+                  //begin articles__list
+                  ul.articles__list
+                    //begin articles__item
+                    li.articles__item
+                      .articles__main
+                        a(href="#").articles__title Kerner - участник пятого сетевого совещания ЦДИ ОАО РЖД в Сочи
+                        span.articles__text 19 – 20 февраля 2020 г. в городе Сочи (отель Pullman Сочи Центр) прошло ежегодное сетевое совещание по подведению итогов производственно-хозяйственной деятельности инфраструктурного комплекса ОАО РЖД за 2019 год.
+                        span.articles__date 24 сентября 2019 в 15:23
+                      a(href="#").articles__img(style='background-image: url("assets/img/articles-01.jpg")')
+                    //end articles__item
+
+                    //begin articles__item
+                    li.articles__item
+                      .articles__main
+                        a(href="#").articles__title Отрезные пилы по металлу
+                        span.articles__text Переносные инструменты для резки металлопроката
+                        span.articles__date 18 февраля 2019 в 08:28
+                      a(href="#").articles__img(style='background-image: url("assets/img/articles-02.jpg")')
+                    //end articles__item
+                  //end articles__list
+
+                //begin pagination
+                .category-body__pagination
+                  include ../elements/pagination
+                //end pagination
+              //end search-res-tab--articles
+
+              //begin search-res-tab--docs
+              .search-res-tab.search-res-tab--docs#search-res-tab-docs
+                .search-res-tab__inn
+                  ul.search-res-tab__docs-list
+                    li.search-res-tab__docs-item
+                      a(href="#").search-res-tab__docs-link
+                        span Инструкция по эксплуатации Магнитного электрического сверлильного станка Rotabroach ELEMENT 30
+                        img(src="assets/img/document.svg" alt="picture")
+                    li.search-res-tab__docs-item
+                      a(href="#").search-res-tab__docs-link
+                        span Инструкция по эксплуатации Магнитного электрического сверлильного станка Rotabroach ELEMENT 30
+                        img(src="assets/img/document.svg" alt="picture")
+
+                //begin pagination
+                .category-body__pagination
+                  include ../elements/pagination
+                //end pagination
+              //end search-res-tab--docs
+            //end search-res-tabs__body
+      //end search-res
+    //end content
+
+    include ../sections/footer-top
+    include ../sections/footer
+    include ../elements/popup
+
+  include ../sections/scripts
