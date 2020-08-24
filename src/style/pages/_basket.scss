@@ -203,6 +203,15 @@
     display: flex;
     align-items: center;
   }
+  .counter--cabinet{
+    width: 85px;
+    .counter__input{
+
+    @include max(1023) {
+      margin-left: 0;
+    }
+    }
+  }
   .counter__count {
     font-size: 20px;
     cursor: pointer;
