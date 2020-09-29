@@ -1,0 +1,40 @@
+#info-line-mob__wrap {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+
+  @include max(1150) {
+    display: block;
+  }
+}
+
+.info-line-mob {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: $brand;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .info-line__compare,
+  .info-line__basket {
+    @include max(480) {
+      justify-content: center;
+      width: 50%;
+    }
+  }
+  .info-line__compare-text {
+    font-size: 16px;
+    color: #979ea0;
+
+    @include max(480) {
+      font-size: 12px;
+      line-height: 1.3;
+      white-space: inherit;
+    }
+  }
+}
